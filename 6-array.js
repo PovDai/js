@@ -51,8 +51,65 @@ const dictionary=['pomidoras','agurkas','bulve','kefyras','druska','svogunu lais
 const sentence1='Patiekalui reikes:'+dictionary[0]+','+dictionary[1]+','+dictionary[2]+','+dictionary[3];
 console.log(sentence1); /// taip iki begalybes kiek nariu reikia. Toks ilgas sprendimo budas. 
 
-const sentence2='Patiekalui reikes:';
+let sentence2='Patiekalui reikes:';
+sentence2+=dictionary[0];
+sentence2=sentence2+',';
+sentence2=sentence2+dictionary[1];
+sentence2=sentence2+',';
+sentence2=sentence2+dictionary[2];
+sentence2=sentence2+',';
+sentence2=sentence2+dictionary[3];
+sentence2=sentence2+',';
+sentence2=sentence2+dictionary[4];
 console.log(sentence2);
+sentence2=sentence2+'.';
+console.log(sentence2);
+
+// arba greitesnis budas tiesiog kopijuoti. 
+console.clear();
+
+let index =0;
+let sentence3='Patiekalui reikes:';
+sentence3+=dictionary[index]+',';
+index+=1;
+sentence3+=dictionary[index]+',';
+index+=1;
+sentence3+=dictionary[index]+',';
+index+=1;
+sentence3+=dictionary[index]+',';
+index+=1;
+sentence3+=dictionary[index]+',';
+index+=1;
+console.log(sentence3);
+
+let k=0;
+k=k+1;
+k+=1;
+k++; // visi reiskia ta pati kad padidines vienu vienetu. Padidins po panaudojimo.
+++k;// kada padidins, padidins pries panaudojant
+
+let i=0;
+let sentence4='Patiekalui reikes:';
+
+sentence4+=dictionary[i++]+',';
+sentence4+=dictionary[i++]+',';
+sentence4+=dictionary[i++]+',';
+console.log(sentence4);
+
+let j=-1 /// jeigu padarai -1 tada galima naudoti ++j po. 
+sentence5='++Patiekalui reikes:';
+sentence5+=dictionary[++j]+',';
+sentence5+=dictionary[++j]+',';
+sentence5+=dictionary[++j]+',';
+sentence5+=dictionary[++j]+',';
+console.log(sentence5);
+
+
+
+
+
+
+
 
 
 
