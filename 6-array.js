@@ -46,12 +46,12 @@ console.log(totalSum2);
 
 const dictionary=['pomidoras','agurkas','bulve','kefyras','druska','svogunu laiskai','lasiniai'];
 
-// patiekalui reikes;a,b,c,d.
+// patiekalui reikes;a,b,c,d. pirmas budas kaip pateikti.
 
 const sentence1='Patiekalui reikes:'+dictionary[0]+','+dictionary[1]+','+dictionary[2]+','+dictionary[3];
 console.log(sentence1); /// taip iki begalybes kiek nariu reikia. Toks ilgas sprendimo budas. 
 
-let sentence2='Patiekalui reikes:';
+let sentence2='Patiekalui reikes:';// antras bufas kai rasoma sentence2+=dictionary[0]+''; ir isloginam i console. 
 sentence2+=dictionary[0];
 sentence2=sentence2+',';
 sentence2=sentence2+dictionary[1];
@@ -65,7 +65,7 @@ console.log(sentence2);
 sentence2=sentence2+'.';
 console.log(sentence2);
 
-// arba greitesnis budas tiesiog kopijuoti. 
+// arba greitesnis budas tiesiog kopijuoti. reikia deklaruotis indexa let index=0; let sentence3='Patiekalui reikes';
 console.clear();
 
 let index =0;
@@ -89,14 +89,14 @@ k++; // visi reiskia ta pati kad padidines vienu vienetu. Padidins po panaudojim
 ++k;// kada padidins, padidins pries panaudojant
 
 let i=0;
-let sentence4='Patiekalui reikes:';
+let sentence4='Patiekalui reikes:';// cia kai naudojama k++ reiksme. Butinai reikia deklaruoti 0 reiksme.
 
 sentence4+=dictionary[i++]+',';
 sentence4+=dictionary[i++]+',';
 sentence4+=dictionary[i++]+',';
 console.log(sentence4);
 
-let j=-1 /// jeigu padarai -1 tada galima naudoti ++j po. 
+let j=-1 /// jeigu padarai -1 tada galima naudoti ++j po.
 sentence5='++Patiekalui reikes:';
 sentence5+=dictionary[++j]+',';
 sentence5+=dictionary[++j]+',';
