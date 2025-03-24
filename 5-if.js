@@ -5,6 +5,7 @@ Palyginimo operatoriai:
 -naudotini: >,<, >=, <=,  ===,  !==. === lygu !== nelygu.
 -nenaudotini:==, !=.==.
 
+/// === tikrina ir reiskmes. o == nenaudojamas del to kad jis netikrina reiksmiu. 
 
 Kodo sablonai:
 
@@ -82,3 +83,12 @@ if(temp2<0){
 }else {
     console.log("karsta");
 }
+
+console.clear();
+
+if (4==='4'){
+    console.log("Tenkina");
+}else {
+    console.log("ne-tenkina");
+}
+
