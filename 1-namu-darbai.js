@@ -110,14 +110,23 @@ console.log(lis2);
 /*    Apskaičiuoti vertę iš sąrašų kurių verčių tipas yra skaičiai, pagal pateiktą logiką
 1-2+3-4+5
 */
-
-const a7=[1,-2,3,-4,5];
-
-const verte=a7.reduce((a,b)=>a+b,0);
+let b8=[1,-2,3,-4,5];
+const verte=b8[0]-b8[2]+b8[3]-b8[4]+b8[5];
 console.log(verte);
+
 5./*Sujungti sąrašų vertes, kurių tipas yra tekstai, nuo sąrašo galo iki pradžios taip, jog tarp jų būtų kablelis ir tarpas*/
 
-const g=['volvo','audi','bwm','dacia'];
+
+let vardai=['volvo','audi','bwm','dacia'];
+
+    let sakinys1= 'Apsuktas tektas:';
+    sakinys1+=vardai[3]+' ,';
+    sakinys1+=vardai[2]+' ,';
+    sakinys1+=vardai[1]+' ,';
+    sakinys1+=vardai[0]+' ,';
+
+console.log(sakinys1);
+
 
 /*Kintamųjų palyginimas
 Priklausomai nuo sąlygos, susikurkite 2 skirtingų reikšmių nurodyto tipo kintamuosius.
@@ -184,8 +193,7 @@ if (h1<=h2){
     console.log('Pomidoras');
 }else {
     console.log('Bandykite dar karta');
-}
-console.clear();
+};
 
 const h3="Jonas";
 const h4="Petras"
@@ -302,7 +310,7 @@ Susikurkite 2 kintamuosius kurie -pirmas nurodo jūsų mėgstamą žanrą ir ant
 Padarykite funkciją, kuri iš pasirinktų 3 filmų, pagal jūsų norimą žanrą ir įvertį išveda į console kokie filmai jums patiktų. Jei joks filmas netinka, turi tai pranešti.
 */
 
-console.clear();
+
 const q1= ['Povilas',10,9,8,7,6];
 const w1= ["Raimonda",1,2,3,4,5];
 const e1 =  ['Barbora',7,6,4,5,4];
@@ -346,5 +354,38 @@ console.log(pridetiIrPerskaiciuoti(e1, 10));
 console.log(pridetiIrPerskaiciuoti(r1, 10));
 console.log(pridetiIrPerskaiciuoti(t1, 10));
 console.log(pridetiIrPerskaiciuoti(y1, 10));
+
+/*Funkcija pavadinimu “dalyba”:
+turi priimti du kintamuosius
+reikia sugalvoti ir įgyvendinti kuo daugiau logiškų patikrinimų, kurie padėtų apsaugoti funkciją nuo neteisingo panaudojimo
+esant blogoms sąlygoms, išvesti atitinkamą pranešimą
+esant geroms - tęsti darbą
+į atskirą kintamąjį išsaugoti apskaičiuotą dviejų skaičių dalybos reikšmę
+daliname pirmąjį skaičių iš antrojo
+grąžinti suskaičiuotą reikšmę
+TESTAI:
+sugalvoti bent 5 testus, kurie bendrai iš esmės patvirtintu gerą funkcijos veikimą
+*/
+console.clear();
+
+function dalyba(a,b){
+if (b===0){
+    return `Dalyba iš nulio yra negalima !`
+}else { const atsakymas=a/b;
+    return`Dalybos atsakymas yra: ${atsakymas}`
+}
+};
+console.log(dalyba(5,2));
+console.log(dalyba(1,0));
+console.log(dalyba(10,5));
+console.log(dalyba(0,0));
+console.log(dalyba(5,-5));
+console.log(dalyba(-5,-2));
+console.log(dalyba(5,Infinity));
+console.log(dalyba(Infinity,5));
+
+
+
+
 
 
