@@ -17,6 +17,8 @@ Aritmetiniai operatoriai:
 Aritmetiniai priskyrimo operatoriai:
 +=, -=, *=, /=, **= (kelimas laipsniu), %= (dalybos liekana)
 
+++ - pridedama vienas. 
+
 */
 
 

@@ -162,6 +162,58 @@ const filmoBalai=filmai.map((filmai)=>{
 });
 console.log(filmoBalai);
 
+/* reikalinga funkcija, kuri gauna vartotojo amziu(metais) ir atitinkami grazina zodi;
+-suauges
+-vaikas
+Amziaus ribos kriterijus : >=18metu. 
+*/
+console.clear();
+function isAdult(year){
+    if (year>=18){
+        return `Vartotojo amžius yra ${year} ir jis yra: suauges `;
+    } else {
+        return `Vartotjo amžius yra ${year} ir jis yra: vaikas `;
+    }
+};
+console.log(isAdult(99));
+console.log(isAdult(18));
+console.log(isAdult(17));
+console.log(isAdult(1));
+
+/* Reikalinga funkcija kuri gauna teksta, kuri grazina rezultata, priklausomai nuo teksto ilgio.
+- jei tuscias:"Tuscias tekstas"
+- jei maziau 10 simboli:"Trumpas tekstas is N simboliu"
+- jei maziau 20 simboli:"Trumpas tekstas is N simboliu"
+-- jei ilgesnis: "Ilgas tekstas is N simboliu"
+*/
+function textSize(text){
+textSum=text.length;
+if (textSum===0){
+    return `Tuscias tekstas`}
+    else if (textSum<10) {
+        return  `Trumpas tekstas is ${textSum} simboliu`;
+    } else if (textSum<20){
+     return `Trumpas tekstas is ${textSum} simboliu`;
+
+} else { return `Ilgas tekstas is ${textSum} simboliu`}
+
+    };
+
+console.log(textSize(''));
+console.log(textSize('Labas'));
+console.log(textSize('Labanaktis'));
+console.log(textSize('Besipasikiskekopusteliaudavome'));
+
+// if(){}else if (){} else { }
+
+/* Funkcija pavadinimu “tusciaFunkcija”:
+nepriima jokių kintamųjų
+neatlieka jokios vidinės logikos
+gražina boolean tipo reikšmę “false”
+TESTAS:
+console.log( tusciaFunkcija() );
+rezultatas: false
+*/
 
 
 

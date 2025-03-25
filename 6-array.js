@@ -118,7 +118,7 @@ sentence4 += dictionary[i++] + ', ';
 sentence4 += dictionary[i++] + '.';
 console.log(sentence4);
 
-let j = -1; /// padarius -1 galima naudoti ++j, bet geriau einasi j++. 
+let j = -1; /// padarius -1 galima naudoti ++j, bet geriau einasi j++.
 let sentence5 = '++ Patiekalui reikes: ';
 sentence5 += dictionary[++j] + ', ';
 sentence5 += dictionary[++j] + ', ';
