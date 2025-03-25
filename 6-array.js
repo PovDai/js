@@ -27,12 +27,12 @@ console.log(students[1]);
 console.log(students[2]);
 
 console.log(empty.length);
-console.log(luckyNumbers.length); /// issilogint .lenght funkcija kiek skaiciu, 
+console.log(luckyNumbers.length); /// issilogint .lenght funkcija kiek skaiciu,
 console.log(students.length);
 
 
 const numbers= [10,2,8,4,6];
-const totalSum1=numbers[0]+numbers[1]+numbers[2]+numbers[3]+numbers[4];/// Paprastu budu sudetis eilutes. 
+const totalSum1=numbers[0]+numbers[1]+numbers[2]+numbers[3]+numbers[4];/// Paprastu budu sudetis eilutes.
 console.log(totalSum1);
 let totalSum2=0;
 console.log(totalSum2);
@@ -49,7 +49,7 @@ const dictionary=['pomidoras','agurkas','bulve','kefyras','druska','svogunu lais
 // patiekalui reikes;a,b,c,d. pirmas budas kaip pateikti.
 
 const sentence1='Patiekalui reikes:'+dictionary[0]+','+dictionary[1]+','+dictionary[2]+','+dictionary[3];
-console.log(sentence1); /// taip iki begalybes kiek nariu reikia. Toks ilgas sprendimo budas. 
+console.log(sentence1); /// taip iki begalybes kiek nariu reikia. Toks ilgas sprendimo budas.
 
 let sentence2='Patiekalui reikes:';// antras bufas kai rasoma sentence2+=dictionary[0]+''; ir isloginam i console. 
 sentence2+=dictionary[0];
@@ -105,7 +105,7 @@ sentence5+=dictionary[++j]+',';
 console.log(sentence5);
 
 /*
-ARRAY - sąrašas, Arėjus, matrica, masyvas, list'as, rinkinys/ nuo cia destytojo failas. 
+ARRAY - sąrašas, Arėjus, matrica, masyvas, list'as, rinkinys/ nuo cia destytojo failas.
 */
 
 const empty = [];
