@@ -14,6 +14,8 @@ if(){} else{}
 if(){} else if()else{}
 if(){}else if (){} else { }
 
+if (a!=='number'||isNAN(a)); tinkamas jeigu atsakymas vienodas ar NaN ar infinity nesvarbu, beti jeigu atsakymas skirtingas darome isFinite(); arba IsNaN.
+
 
 
 */

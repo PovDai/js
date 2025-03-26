@@ -215,6 +215,105 @@ console.log( tusciaFunkcija() );
 rezultatas: false
 */
 
+function empty(){
+    return "false";
+}
+;
+console.log(empty());
+
+// daugyba multiply sukueti folderi, taska,. kuriame tuos padaryti darbus. 
+
+function multiply(a,b ){
+    if (typeof a !=='number'){
+        return `Pirmasis parametras turi buti skaičius`
+    } if(typeof b !=='number') {
+        return `Antrasis parametras turi buti skaičius`}
+    if (isNaN(a)){
+        return `Pirmasis parametras turi buti skaičius`; /// jeigu ieskome a ar nera NaN kuriame isNaN
+    } if(isNaN(b)){return `Antras blogas`}
+    
+    if (isFinite(b)=== false   ){
+        return `Antrasis skaicius nera normalus skaicius`;
+    };
+    if (a===Infinity||a=== -Infinity){
+        return `Pirmasis parametras negal but infinitis`;
+    } if (b===Infinity||b=== -Infinity){ // ieskome ar a arba b nera infinitis. 
+        return `Antras parametras negal but infinitis`;
+    }  /// isFinite, tikrina ar ta reiksme normalus skaicius. 
+        ats=a*b
+    return ats;
+
+// if(){}else if (){} else { }.
+};
+console.log(multiply(2,2));
+console.log(multiply(7,5));
+console.log(multiply(7,-5));
+console.log(multiply(-7,5));
+console.log(multiply(-7,-5));
+console.log(multiply(-7,0));
+console.log(multiply(0,5));
+console.log(multiply(0,5));
+console.log(multiply(0,-5));
+console.log(multiply(0,Infinity));
+console.log(multiply(0,NaN));
+console.log(multiply(0,'Labas'));
+console.log(multiply(NaN,NaN));
+console.log(multiply('labas',0));
+console.log(multiply(2,5.5));
+
+
+
+/*if (typeof kiekis!=='number'||isNaN(kiekis ))  {
+    return "Pateikta netinkamo tipo reiksme";
+    } else  {
+        const skaiciaus=kiekis.toString().length;
+    return skaiciaus;
+    }}*/
+
+
+console.clear();
+
+// Pazymiu vidurkis skaiciuojamas.Suskaiciuoti pazymiu vidurki,
+console.clear();
+
+
+function marksAverage(list){
+    if (typeof list==='array')
+    // patikriname ar gavome masyva.
+    // sumuojame visus  skaicius ir ju kieki;
+    let sum=0;
+    let count=0;
+
+
+    // einame per visa masyva ir imame kiekviena skaiciu;
+    // jei sutinkame ne skaiciu tai ji, ignoruojame.
+    // jeigu sutinkame, skaiciu, kuris nera sveikasis nuo 1 iki 10(imtinai), tai ignoruojame. 
+// // jei sutinkame ne skaiciu tai ji, padidinam suma.
+// jeigu sutinkame skaiciu, padidiname kieki.
+
+    return sum/ count ;
+
+}
+console.log(marksAverage(['n']));
+console.log(marksAverage([10]));
+console.log(marksAverage([2]));
+console.log(marksAverage([10,2,8,4,6]));
+console.log(marksAverage([8,4,7,'n']));
+console.log(marksAverage([8,4,7]));
+console.log(marksAverage(['labas']));
+console.log(marksAverage([true]));
+console.log(marksAverage(['n',2,8,4,6]));
+
+
+
+
+
+
+
+
+
+
+
 
 
 

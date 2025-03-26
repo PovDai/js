@@ -18,6 +18,12 @@ Aritmetiniai priskyrimo operatoriai:
 +=, -=, *=, /=, **= (kelimas laipsniu), %= (dalybos liekana)
 
 ++ - pridedama vienas. 
+-0 ir 0 yra lygus. 
+-infinity.
+
+
+ /// jeigu ieskome a ar nera NaN kuriame isNaN
+ /// isFinite, tikrina ar ta reiksme normalus skaicius. 
 
 */
 
