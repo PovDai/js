@@ -25,10 +25,6 @@ const b= (8+16);
 console.log(b);
 
 
-
-
-
-
 // Zinomas vardas, man reikes, kad funkcija sugeneruotu pasisveikinima" Labas, "Jonas".
 
 function hiPerson(name ){
@@ -48,7 +44,6 @@ console.log(hiPerson()); // funkcijai kad ji suveiktu teisingai jai reikia duoti
 function sum (num1,num2 ){
     return num1+num2;///// SUSIKURI CIA FUNKCIONALUMA, KURI PO } GALI VYKDYTI SKIRTINGAIS KINTAMAISIAIS. 
 }
-
 const e=sum (2,2);
 console.log(e);
 const f=sum(7,5);
@@ -73,7 +68,7 @@ console.log(p1);
 console.log(p2);
 console.log(p3);
 
-console.clear();
+
 
 // Jonas ->rezultatas: Zodis "Jonas" yra sudarytas is 5 raidziu. 
 // Maryte ->rezultatas: Zodis "Jonas" yra sudarytas is 6raidziu. 
@@ -112,7 +107,6 @@ console.log(gn3);
 //2,2->2+2=4.
 //7,5->7+5=12.
 //-7,15->-7+15=8.
-
 
 function sum (a,b){
     const result=a+b;

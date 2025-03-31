@@ -306,7 +306,13 @@ function apsukt(duomenys){
     return `
   }
 };
+ kaip apsukti zodi. const st1="Rytas";
+const st2= ` ${st1[4]}${st1[3]}${st1[2]}${st1[1]}${st1[0]}`;
+
 */
+
+
+
 
 /*7. Sukurkite funkciją, kuri apskaičiuotų stačiakampio plotą. 
 a. Padaryti su sąrašo (array) tipo kintamuoju 
@@ -678,76 +684,202 @@ function tikrinti(duomenys){
 
 console.log(tikrinti(z4));
 
-/*9. Raskite didžiausią skaičių sąraše ir patikrinkite, ar jis didesnis už 10. 
-a. Pavyzdys: Patikrinkite, ar didžiausias skaičius sąraše [2, 5, 12, 4] yra didesnis 
-nei 10. */
-
-const e9=[2, 5, 12, 4];
-function rasti(duomenys){
-  if (duomenys[0]&&duomenys[1]&&duomenys[2]&&duomenys[3]){
-    return `Pirmas skaicius didziausias`;
-  }if (duomenys[1]&&duomenys[2]&&duomenys[3]){
-    return `Antras skaicius didiziausias`;
-}if (duomenys[2]&&duomenys[3]){
-  return `Trecias skaicius didziausias`;
-}
-};
-console.log(rasti(e9));//// reikis issiaiskinti. 
-
-
-
-
 
 
 /*10. Patikrinkite, ar masyve yra daugiau nei 3 to paties skaičiaus elementai. 
 a. Pavyzdys: Patikrinkite, ar [2, 2, 2, 2, 2, 5, 6] turi daugiau nei 3 skaičiaus 2 
 elementus.*/
 
-.
+
+console.clear();
+
+
+/*Ciklo for panaudojimas
+Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
+0 … 0
+0 … 4
+0 … 100
+574 … 815
+-50 … 50
+-70 … 30
+panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
+pvz.: “abcdef” -> “fedcba”
+Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
+0 - 11
+8 - 31
+-18 - 18
+rezultatą pateikti tokiu formatu:
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 5 yra 3 vienetai.
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 vienetai.*/
+
+function suma(pradzia,pabaiga){
+  let sum=0;
+for (let i=pradzia;i<=pabaiga;i++){
+  sum+=i;}
+return sum;
+};
+
+console.log(suma(0,0));
+console.log(suma(0,4));
+console.log(suma(0,100));
+console.log(suma(574,815));
+console.log(suma(-50,50));
+console.log(suma(-70,30));
+console.log(suma(0,2));
+console.log(atvirksciai(0,6));
 
 
 
+// jeigu skaiciuotum atvirksciai. 
+
+function atvirksciai(pradzia,pabaiga){
+  let sum=0; 
+  for( let i=pabaiga;i>=pradzia;i--){
+    sum+=i;}
+    return sum;
+  };
+  console.log(atvirksciai(0,6));
+  console.clear();
+/*panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
+pvz.: “abcdef” -> “fedcba” */
+
+/*Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
+0 - 11
+8 - 31
+-18 - 18
+rezultatą pateikti tokiu formatu:
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 5 yra 3 vienetai.
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 vienetai.*/
+
+/*panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
+pvz.: “abcdef” -> “fedcba” */
 
 
+function atvirksciai2(duomenys){
+  let atvirkscias=""
+  for (let i=duomenys.length-1;i>=0;i--){
+  atvirkscias+=duomenys[i];}
+   return atvirkscias;
+}
+const c7='abcdef';
+console.log(atvirksciai2(c7));
 
 
+function atvirkscias5(duomenys){
+  let atvirkscias1='';
+  for (let i=duomenys.length-1;i>=0;i--){
+    atvirkscias1+=duomenys[i];}
+    return atvirkscias1
+
+};
+
+const z10='Jonas'
+console.log(atvirkscias5(z10));
+
+/*
+Operatorius	Pavadinimas	Pavyzdys	Ekvivalentas
++=	Pridėjimas	x += 2	x = x + 2
+-=	Atimtis	x -= 1	x = x - 1
+*=	Daugyba	x *= 3	x = x * 3
+/=	Dalyba	x /= 2	x = x / 2
+*/
 
 
+function atvirkscias5(duomenys){
+  atvirkscias=''; // reikia deklaryoti, nes kolkas teksto jokio nera tik tuscias. 
+  for (let i=duomenys.length-1;i>=0;i--){
+    atvirkscias+=duomenys[i];
+  }
+  return `Zodzio ${duomenys} atvirkstinis variantas yra ${atvirkscias} zodis`;
+};
+const w6="bronius"
+console.log(atvirkscias5(w6));
+
+/*/*Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
+0 - 11
+8 - 31
+-18 - 18
+rezultatą pateikti tokiu formatu:
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.*/
+
+console.clear();
+
+function intervalas(pradzia,pabaiga){
+  let daliklis3=0 /// reikia deklaruoti dalikli, kad galetume pradeti sudedineti nuo 0 kiek bus reiksme padalintu is 3. 
 
 
+  for (let i=pradzia;i<=pabaiga;i++){
+    if(i%3===0) daliklis3++; // reiskia jeigu dalinasi is 3 be liekanos reiksme padidink 1. reiskia daliklis kolkas 0, bet kai suras +1.
+
+  }
+  return `skaiciu intervale tarp ${pradzia} ir ${pabaiga}, besidalijanciu be liekanos is 3 yra ${daliklis3} `
 
 
+}
+console.log(intervalas(0,11));
+console.log(intervalas(8,31));
+
+function naujas(start,end){
+  let daliklis5=0;
+  for (let i=start;i<=end;i++){
+    if (i%5===0) daliklis5++;   }
+
+ return `skaiciu intervale tarp ${start} ir ${end}, besidalijanciu be liekanos is 5 yra ${daliklis5}`; };
+
+ console.log(naujas(-18,-18));
+
+ function daliklis(pradzia,pabaiga){
+  daliklis7=0;
+  for(let i=pradzia;i<=pabaiga;i++){
+if (i%7===0)daliklis7++; }
+return  `skaiciu intervale tarp ${pradzia} ir ${pabaiga}, besidalijanciu be liekanos is 7 yra ${daliklis7} `};
+console.log(intervalas(0,11));
+console.log(intervalas(8,31));
+console.log(naujas(-18,-18));
+
+ /*10. Patikrinkite, ar masyve yra daugiau nei 3 to paties skaičiaus elementai. 
+a. Pavyzdys: Patikrinkite, ar [2, 2, 2, 2, 2, 5, 6] turi daugiau nei 3 skaičiaus 2 
+elementus. */
+console.clear();
+
+function elementai(duomenys){
+ let elementas=0;
+  for (let i=0;i<duomenys.length;i++){
+    if (duomenys[i]===2){elementas=elementas++;
+
+    } if (elementas++>3){
+      return `SKaiciaus 2 kiekis elemente yra ${elementas} ir jis didesnis negu 3 `;
+    } else {
+  return `Skaiciaus 2 kiekis nera didesnis negu 3 elemente.`
+  }}}
+
+const f4=[2, 2, 2, 2, 2, 5, 6];
+console.log(elementai(f4));
 
 
+/* Raskite didžiausią skaičių sąraše ir patikrinkite, ar jis didesnis už 10. 
+a. Pavyzdys: Patikrinkite, ar didžiausias skaičius sąraše [2, 5, 12, 4] yra didesnis 
+nei 10. */
 
+function didesnisUz10(skaiciai) {
+  let didziausias = skaiciai[0];
+ for (let i = 0; i < skaiciai.length; i++) {
+      if (skaiciai[i] > didziausias) {
+          didziausias = skaiciai[i];
+      }
+  }
+  console.log("Didžiausias skaičius sąraše yra:", didziausias);
+  if (didziausias > 10) {
+      console.log("Didžiausias skaičius yra didesnis už 10.");
+  } else {
+      console.log("Didžiausias skaičius nėra didesnis už 10.");
+  }
+}
+didesnisUz10([2, 5, 12, 4]);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.clear();
 
 
 

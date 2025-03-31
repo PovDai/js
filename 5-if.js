@@ -21,30 +21,22 @@ if (a!=='number'||isNAN(a)); tinkamas jeigu atsakymas vienodas ar NaN ar infinit
 */
 
 if (4>2){
-
-    console.log('taip, 4 daugiau uz 2');
+console.log('taip, 4 daugiau uz 2');
 }
-
 if (4>=2){
-
-    console.log('taip, 4 daugiau uz 2');
+console.log('taip, 4 daugiau uz 2');
 }
-
 if (4===2){
-
-    console.log('taip, 4 daugiau uz 2');
+console.log('taip, 4 daugiau uz 2');
 }
-
 if (4===4){
-
-    console.log('taip, 4 lygu 4');
+console.log('taip, 4 lygu 4');
 }
 
 
 
 if (4>2){
-
-    console.log('----------- taip');
+console.log('----------- taip');
 
 } else {
     console.log ("----- ne");
@@ -52,8 +44,7 @@ if (4>2){
 console.log("end");
 
 if (4<2){
-
-    console.log('----------- taip');
+ console.log('----------- taip');
 
 } else {
     console.log ("----- ne");
@@ -86,11 +77,8 @@ if(temp2<0){
     console.log("karsta");
 }
 
-console.clear();
-
 if (4==='4'){
     console.log("Tenkina");
 }else {
     console.log("ne-tenkina");
 }
-///

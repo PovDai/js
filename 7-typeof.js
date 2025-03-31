@@ -18,12 +18,16 @@ if (a===null){
 }
 const c=[];
 if (Array.isArray(c)){ // ar yra arejus lentele. komanda (Array.isArray(imetam kintamaji))
-    console.log("Array");
-    
+    console.log("Array"); 
 } else {console.log('ne arejus');
  }
- if const c=5;
- 
+
+const b=['jonas',1,2,2,5];
+const f=123456
+if(Array.isArray(f)){
+    console.log('Array');
+    
+}else (console.log("ne- Array"));
 
 
 

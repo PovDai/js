@@ -36,7 +36,6 @@ console.log(empty.length);
 console.log(luckyNumbers.length);
 console.log(students.length);
 
-console.clear();
 
 const numbers = [10, 2, 8, 4, 6];
 
@@ -75,7 +74,7 @@ sentence2 += dictionary[5] + ', ';
 sentence2 += dictionary[6] + '.';
 console.log(sentence2);
 
-console.clear();
+
 
 let index = 0;// cia kai naudojama k++ reiksme. Butinai reikia deklaruoti 0 reiksme.
 let sentence3 = 'Patiekalui reikes: ';
@@ -128,6 +127,15 @@ sentence5 += dictionary[++j] + ', ';
 sentence5 += dictionary[++j] + ', ';
 sentence5 += dictionary[++j] + '.';
 console.log(sentence5);
+
+const b=['jonas',1,2,2,5];
+const f=123456
+if(Array.isArray(f)){
+    console.log('Array');
+    
+}else (console.log("ne- Array"));
+
+
 
 
 

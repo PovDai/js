@@ -35,7 +35,6 @@ const arTurtinga = false;
 
 console.log(arGrazi || arTurtinga);
 
-console.clear();
 
 // skaiciuoja is eiles????
 console.log(1, true && true || true);
@@ -62,18 +61,17 @@ console.log(8, false || false && false);
 
 
 
-console.clear();
 
 console.log(4**4);// Atrodo tiek kombinaciju bus loginiu operatoriu.256
 
-console.log(true && true && true && true);
+console.log(true && true && true && false);
 console.log(true && true && true && false);
 console.log(true && true && false&&true);
 console.log(true && true && false&& false);
 
 console.log(true && true && true|| true);
 console.log(true && true && true||false);
-console.log(true && true && false|| true);
+console.log(true || false && false|| true);
 console.log(true && true && false||false);
 
 
@@ -89,48 +87,3 @@ const d1='false || false';
 
 // Kombinacijos a/a1
 
-const variables = [
-    'true && true',
-    'true && false',
-    'false && true',
-    'false && false',
-    'true || true',
-    'true || false',
-    'false || true',
-    'false || false',
-  ];
-  
-  // Funkcija, kuri įvertina eilutę kaip loginę išraišką
-  function evaluateExpression(expression) {
-    return eval(expression); // eval įvertina eilutę kaip JavaScript kodą
-  }
-  
-  // Generuoti visas kombinacijas
-  function generateCombinations(variables) {
-    const results = [];
-  
-    // Kiekvienam kintamajam generuoti true/false reikšmes
-    for (let i = 0; i < Math.pow(2, variables.length); i++) {
-      const combination = {};
-      for (let j = 0; j < variables.length; j++) {
-        // Nustatyti kintamojo reikšmę (true arba false) pagal bitą
-        const value = Boolean((i >> j) & 1);
-        combination[variables[j]] = value;
-      }
-      results.push(combination);
-    }
-  
-    return results;
-  }
-  
-  // Gauti visas kombinacijas
-  const combinations = generateCombinations(variables);
-  
-  // Spausdinti kiekvieną kombinaciją
-  combinations.forEach((combination, index) => {
-    console.log(`Kombinacija ${index + 1}:`);
-    Object.entries(combination).forEach(([expression, value]) => {
-      console.log(`${expression} => ${value}`);
-    });
-    console.log('-------------------');
-  });

@@ -60,7 +60,6 @@ console.log(k4);
  console.log(backSlash);
  console.log(backSlash2);
 
-console.clear();
 
 /*
 <header>
@@ -105,7 +104,7 @@ console.log(html);
 */
 
 
-console.clear();
+
 
 const studentName="Maryte";
 const amount=4;
@@ -117,7 +116,6 @@ const student=studentName+' yra viena is '+amount+' legendiniu studentu';
 
 console.log(student);
 
-console.clear();
 
 const b1=`Vienguba  (') ir dviguba (") kabutes`
 console.log(b1);
@@ -147,14 +145,14 @@ const wmount=4;
 console.log(student);
 const student2=`${wtudentName}yra viena is ${wmount} legendiniu studentu`;
 console.log(student2);
-console.clear();
+
 
 
 const we='Mano tekstas';
 const se="antras tekstas";
 const ats=`${we}yra labai geras, bet yra ${se}, kuris yra dar  geresnis`;
 console.log(ats);
-console.clear();
+
 
 const word='pomidoras';
 const wordSymbolsCount=word.length;
@@ -171,7 +169,9 @@ console.log(space.length);
 
 const pi='3.14';
 console.log(pi.length);
-console.clear();
+
+console.log('---------------------');
+
 
 const age=99;
 const ageDigitscount=(''+age).length;
@@ -179,11 +179,12 @@ console.log(ageDigitscount);
 const ageDigitscount2=age.toString().length;
 console.log(ageDigitscount2);
 
-
+console.log('---------------------');
 const amzius=15000;
-const kiekis=amzius.toString().length;
+const kiekis=amzius.toString();
 console.log(kiekis);
 
+console.log('---------------------');
 const text="kebabas"
 const firstSymbol=text[0];
 console.log(firstSymbol);
@@ -202,9 +203,6 @@ console.log(gameSentence);
 const apversti=`${game[8]}${game[7]}${game[6]}${game[5]}${game[4]}${game[3]}${game[2]}${game[1]}${game[0]}`;
 
 console.log(apversti);
-
-
-
 
 let s="tesktas";
 let s1=s.split("");
