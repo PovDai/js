@@ -185,7 +185,6 @@ for (let i=0;i<100;i++){
 console.log(suma);
 /* 7. Sukurkite for ciklą, kad patikrintumėte, ar skaičius yra pirminis, ir išspausdintumėte 
 pranešimą. 2, 3, 5, 7, 11, 13, 17, 19, 23,29, 31, 37, 41, 43 seka eina 1/2/2/4/2/4/2/4/6/2/6/4/2  */
-console.clear();
 
 /// apsuksti eilute. 
 
@@ -353,11 +352,18 @@ console.log( didziausiasSkaiciusSarase( [] ) );
 rezultatas: “Pateiktas sąrašas negali būti tuščias.”
 */
 
+console.log('--------------------cia-------------')
+
 function bigest(duomenys){
+    if(typeof duomenys==='string'){
+        return `Pateikta netinkamo tipo reikšmė`
+    } if(duomenys.lenght===0){
+        return `Pateiktas sąrašas negali būti tuščias.`
+    }
   let  didziausias=duomenys[0];
-    for(let i=0;i<=duomenys.length;i++){
+    for(let i=0;i<duomenys.length;i++){ // nes gi nuo 0 pradeda ejimus. 
         if(duomenys[i]>didziausias){
-            didziausias+=duomenys[i];
+            didziausias=duomenys[i];
         }
     }return (`Didziausias skaicius sarase ${didziausias}`);
 };
@@ -366,8 +372,60 @@ console.log(bigest([1,2,3]));
 console.log(bigest([-5,78,14,0,18]));
 console.log(bigest([69,69,69,69,66]));
 console.log(bigest([-1,-2,-3,-4,-5,-6,-7,-8]));
+console.log(bigest([3,3,3])); //// jeigu duomenys[i]>=didziausias overwritins pozicija. 
+
 console.log(bigest("Pomidoras"));
 console.log(bigest([]));
+
+console.log('-----ciadestytojo--zemiau----');
+
+
+function biggestNumber(list){
+    if(!Array.isArray(list) ){ //// su sauktuku darant tikrina ar ne Array.
+        return'Duomenys turi buti sarase';
+    } if(list.length===0 ){ /// kai pateikiama[] geriausias budas ji pagaugti list.length===0.
+        return`Pateiktas sąrašas negali būti tuščias.`
+    } 
+    let biggest=-Infinity;  // kai yra minusiniu skaiciu -Infinity daryti.
+    for(let i=0;i<list.length;i++){
+        if(typeof list[i]!=='number'||!isFinite(list[i])){
+            continue;}///// patikrinus ar ne skaicius, testi toliau cikla nereipti demesio.
+        if(list[i]>biggest){
+            biggest=list[i];
+        }
+    } return biggest
+};
+console.log(biggestNumber('labas'));
+console.log(biggestNumber('KEBAlabas'));
+
+console.log(biggestNumber(1)); // cia eleminuoja if(!Array.isArray(list) ) eilute.
+console.log(biggestNumber([1]));
+console.log(biggestNumber([1,2,3]));
+console.log(biggestNumber([-5,78,14,0,18]));
+console.log(biggestNumber([69,69,69,69,66]));
+console.log(biggestNumber([-1,-2,-3,-4,-5,-6,-7,-8]));
+console.log(biggestNumber([-1,-2,-3]));
+console.log(biggestNumber([]));// cia eleminuoja if(list.length===0 ) eilute.
+console.log(biggestNumber([1,2,'asd']));
+console.log(biggestNumber([1,'asd',2]));
+console.log(biggestNumber(['asd',1,2]));
+console.log(biggestNumber([Infinity,1,2]))
+console.log(biggestNumber([-Infinity,1,2])) // cia eleminuoja if(typeof list[i]!=='number'||!isFinite(list[i])) eilute. 
+console.log(biggestNumber([-1,-2,true])); /// true interpretuoja kaip vienta. false interpretuoja kaip 0.
+console.log(biggestNumber([-1,true,-2]));
+console.log(biggestNumber([-1,-2,-Infinity]));
+console.log(biggestNumber([-1,Infinity,-2]));
+console.log(biggestNumber([Infinity,1,2]));
+
+console.log(biggestNumber([-1,-2,NaN]));
+console.log(biggestNumber([-1,NaN,-2]));
+console.log(biggestNumber([NaN,1,2]));
+
+
+
+
+console.log('-----------cia pabaiga------');
+
 
 /*Funkcija pavadinimu “isrinktiRaides”:
 priima du kintamuosius:
@@ -403,7 +461,6 @@ rezultatas: “Antrasis kintamasis turi būti ne didesnis už pateikto teksto il
 console.log( isrinktiRaides( 1561, 2 ) );
 rezultatas: “Pirmasis kintamasis yra netinkamo tipo.”
 */
-console.clear();
 
 function findText(text,n){
     let zodis="";
@@ -430,8 +487,6 @@ console.log(findText('abc',4));
 console.log(findText('1561',2));
 
 
-
-console.clear();
 
 function findNeedle(haystack) {
     for(let i=0;i<=haystack.length;i++){
@@ -526,8 +581,77 @@ function basicOp(operation, value1, value2){
     }
     }
     console.log(fakeBin('45385593107843568'));
+    console.clear();
 
+    function testEven(n) {
+        if(n%2===0){
+          return true;
+        }if (n%2===1){
+          return false;
+        } if(n%1!==0){
+          return false;
+        }
+          //Your awesome code here!
+      };
+      console.log(testEven(0.1));
+      console.log(testEven(0));
+      console.log(testEven(0.5));
+      console.log(testEven(1))
+      console.log(testEven(2))
+      console.log(testEven(-4))
 
+      function simpleMultiplication(number) {
+        let multi=8;
+        let multi1=9;
+          if(number%2===0){
+            return number*multi
+          } if (number%2===1){
+            return number*multi1
+          }
+      };
+      console.log(simpleMultiplication(2))
+      console.log(simpleMultiplication(1))
+      console.log(simpleMultiplication(8))
+/// pakeisti is pliuso i minusa. 
 
+      function invert(array) {
+        for (let i = 0; i < array.length; i++) {
+          array[i] = -array[i]; 
+        }
+        return array; 
+      }
+      const z3=[1,2,3,4,5];
+      const a=[1,-2,3,-4,5];
+      const c8=[];
+      console.log(invert(z3));
+      console.log(invert(a));
+      console.log(invert(c8));
 
+    
+        function lovefunc(flower1, flower2) {
+            return (flower1 % 2 !== flower2 % 2); // turi vienas buti 1 kitas 0, tada gausime taip. jeigu pirmas nelygus antram tada taip. 
+        }
+    
+      console.log(lovefunc(1,4));
+      console.log(lovefunc(2,2));
+      console.log(lovefunc(0,1));
+      console.log(lovefunc(0,0));
 
+      function findAverage(array) {
+        let sum=0;
+        let count=0;
+        let result=0;
+        
+        
+        for(let i=0;i<array.length;i++){
+          sum+=array[i]
+          count++;
+          result=sum/count;
+    
+      }
+        return result
+      };
+      console.log(findAverage ([1,1,1]));
+      console.log(findAverage ([1,2,3]));
+      console.log(findAverage ([1,2,3]));
+      console.log(findAverage ([1,2,3,4]));
