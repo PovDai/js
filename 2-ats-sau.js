@@ -655,3 +655,17 @@ function basicOp(operation, value1, value2){
       console.log(findAverage ([1,2,3]));
       console.log(findAverage ([1,2,3]));
       console.log(findAverage ([1,2,3,4]));
+
+      function daubleChar(str) {
+        let zodis="";
+        for(let i=0;i<str.length;i++){
+            zodis+=str[i]+str[i];// a+a/b+b/c+c/d+d
+        }
+        return zodis;
+    }
+    console.log(daubleChar('abcd'));
+    console.log(daubleChar('Adidas'));
+    console.log(daubleChar('1337'));
+    console.log(daubleChar('illuminati'));
+    console.log(daubleChar("123456"));
+    console.log(daubleChar("%^&*("));
