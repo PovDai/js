@@ -58,7 +58,18 @@ console.log(64**(1/3));
 //numberAsString.length; // numberAsString sutekstinam reiksme. const numberAsString=''+n; tu parduoti skaiciu o jis tampa'skaicius';
 //    (!isFinite(n)) ir i laukeli tuscia irasom kintamaji. Patikrina ar skaicius yra baigitinis. Turi skaitmenu savyje. 
 
+/*
+const stringas = "9";
+const skaicius = Number(stringas); /// kaip paversti number tipu jeigu imanoma 
 
+console.log(skaicius); // 9 (number tipas)
+console.log(typeof skaicius); // "number"
+
+const skaicius = 9;
+const stringas = String(skaicius);
+
+console.log(stringas); // "9" (string tipas) kaip paversti string tipu jeigu imanoma.,
+console.log(typeof stringas); // "string"*/
 
 
 

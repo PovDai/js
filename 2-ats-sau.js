@@ -669,3 +669,36 @@ function basicOp(operation, value1, value2){
     console.log(daubleChar('illuminati'));
     console.log(daubleChar("123456"));
     console.log(daubleChar("%^&*("));
+
+    /*
+ "4",  "5" --> "9"
+"34", "5" --> "39"
+"", "" --> "0"
+"2", "" --> "2"
+"-5", "3" --> "-2"*/
+
+//Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+/*
+const stringas = "9";
+const skaicius = Number(stringas); /// kaip paversti number tipu jeigu imanoma 
+
+console.log(skaicius); // 9 (number tipas)
+console.log(typeof skaicius); // "number"
+
+const skaicius = 9;
+const stringas = String(skaicius);
+
+console.log(stringas); // "9" (string tipas) kaip paversti string tipu jeigu imanoma.,
+console.log(typeof stringas); // "string"*/
+
+function sumStr(a,b){
+    let skaicius1=Number(a);
+    let skaicius2=Number(b);
+    let suma=skaicius1+skaicius2;
+    let suma1=String(suma);
+
+   return  `"${a}","${b}" --> "${suma1}"`
+}
+console.log(sumStr('4','5'));
+console.log(sumStr('34','5'));
+console.log(sumStr('0','0'));

@@ -213,3 +213,15 @@ let s3=s2.join("");
 console.log(s1);
 console.log(s2);
 console.log(s3);
+/*
+const stringas = "9";
+const skaicius = Number(stringas); /// kaip paversti number tipu jeigu imanoma 
+
+console.log(skaicius); // 9 (number tipas)
+console.log(typeof skaicius); // "number"
+
+const skaicius = 9;
+const stringas = String(skaicius);
+
+console.log(stringas); // "9" (string tipas) kaip paversti string tipu jeigu imanoma.,
+console.log(typeof stringas); // "string"*/
