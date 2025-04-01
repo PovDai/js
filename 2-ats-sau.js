@@ -626,7 +626,7 @@ function basicOp(operation, value1, value2){
       console.log(invert(z3));
       console.log(invert(a));
       console.log(invert(c8));
-
+//// kai vienam reikia lyginio kitam nelyginio kad gautusi true. 
     
         function lovefunc(flower1, flower2) {
             return (flower1 % 2 !== flower2 % 2); // turi vienas buti 1 kitas 0, tada gausime taip. jeigu pirmas nelygus antram tada taip. 
@@ -636,7 +636,7 @@ function basicOp(operation, value1, value2){
       console.log(lovefunc(2,2));
       console.log(lovefunc(0,1));
       console.log(lovefunc(0,0));
-
+/// suskaicius vidurki. 
       function findAverage(array) {
         let sum=0;
         let count=0;
@@ -655,7 +655,7 @@ function basicOp(operation, value1, value2){
       console.log(findAverage ([1,2,3]));
       console.log(findAverage ([1,2,3]));
       console.log(findAverage ([1,2,3,4]));
-
+/// raides dvigubint arba skaicius. 
       function daubleChar(str) {
         let zodis="";
         for(let i=0;i<str.length;i++){
@@ -702,3 +702,209 @@ function sumStr(a,b){
 console.log(sumStr('4','5'));
 console.log(sumStr('34','5'));
 console.log(sumStr('0','0'));
+
+function hoopCount (n) {
+    if(n>=10){
+      return 'Great, now move on to tricks'
+    }if (n<10){
+      return 'Keep at it until get it'
+    }
+ }
+ console.log(hoopCount(3));
+ console.log(hoopCount(11));
+    function setAlarm(employed, vacation) {
+        return employed && !vacation;
+    };
+
+
+console.clear();
+
+function setAlarm(employed, vacation){
+    if(employed===true&&vacation===true){
+      return false;
+    }if(employed===false&&vacation===true){
+      return true;
+    }if(employed!==false&&vacation!==true){
+        return false;
+    }if(employed!==true&&vacation!==true){
+        return false;
+    }
+    };
+    console.log(setAlarm(true,true));
+    console.log(setAlarm(false,true));
+    console.log(setAlarm(true,false));
+    console.log(setAlarm(false,false));
+
+    /*
+    employed | vacation 
+    true     | true     => false
+    true     | false    => true
+    false    | true     => false
+    false    | false    => false*/
+    function setAlarm(employed, vacation) {
+        if (employed && !vacation) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    console.log(setAlarm(true, true));   // false
+    console.log(setAlarm(false, true));  // false
+    console.log(setAlarm(true, false)); // true
+    console.log(setAlarm(false, false)); // false
+console.clear();
+
+    function nbYear(p0, percent, aug, p) {
+        const metai=p0+p0*percent+aug
+        return metai;
+    }
+    console.log(nbYear(1000,0.02,50,1200))
+
+
+    function findNeedle(haystack) {
+        let pozition=0;
+        for(let i=0;i<haystack.length;i++){
+          if(haystack[i]==='needle'){
+            pozition+=i;
+            
+          }
+        }return `found the needle ant pozition ${pozition}`
+      };
+
+      console.log(findNeedle([1,2,3,4,5,6,7,8,8,7,5,4,3,4,5,6,67,5,5,3,3,4,2,34,234,23,4,234,324,324,'needle',1,2,3,4,5,5,6,5,4,32,3,45,54 ]));
+
+      function evenOrOdd(number) {
+        if(number%2==0){
+          return 'Even'
+        } else{
+          return "Odd"
+        }
+      }
+      console.log(evenOrOdd(2));
+      console.log(evenOrOdd(7));
+      console.log(evenOrOdd(0));
+////// jeigu reikia pakeisti zodyje viena raide kita raide. 
+      function DNAtoRNA(dna) {
+        let sd='';
+        for(let i=0;i<dna.length;i++){
+          if(dna[i]==='T'){
+            sd+='U'
+          } else {
+            sd+=dna[i]
+          }
+        } return sd;
+      }
+      console.log(DNAtoRNA('GCAT'));
+/// pakartoju isiminimui 
+function ieskokPakeisk(duomenys){
+    let naujas='';
+    for(let i=0;i<duomenys.length;i++){
+        if(duomenys[i]==='T' ){
+            naujas+='U'
+        } else{
+            naujas+=duomenys[i]
+        }
+    }
+}
+// pakartoju/ 
+function uzkeisk(duomenys){
+    let naujas5='';
+    for(let i=0;i<duomenys.length;i++){
+        if(duomenys[i]==='T'){
+            naujas5+='U'
+        }else{
+            naujas5+=duomenys[i]
+        }
+    }
+}
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    const sum=laLigaGoals+copaDelReyGoals+championsLeagueGoals
+    return sum;
+  }
+  console.log(goals(0,2,5));
+/// Surasti trikampio 3 kampo dydi, ju suma lygi 180 laipsniu. 
+  function otherAngle(a, b) {
+    const suma=180;
+    const c=suma-a-b
+    return c;
+  }
+  console.log(otherAngle(30,60));
+
+  /// pajude per koordinates 
+
+  function move (position, roll) {
+    const naujosKoordinates=position+(roll*2);
+    return naujosKoordinates
+  };
+  console.log(move(0,4))
+console.clear()
+
+/// kai reikia tam tikrus dalykus pakeist kitais dalykais/ labai svarbu kur sedi return. 
+  function correct(string){
+    let zodis = '';
+    for(let i = 0; i < string.length; i++){
+        if(string[i] === '5'){
+            zodis += 'S';
+        } else if(string[i] === '0'){
+            zodis += 'O';
+        } else if(string[i] === '1'){
+            zodis += 'I';
+        } else {
+            zodis += string[i];
+        }
+    } 
+    return zodis;
+}
+console.log(correct('L0ND0N')); 
+console.log(correct("DUBL1N"));
+
+function positiveSum(arr) {
+    let sum=0;
+    if(arr.length===0){/// pradzioje saunam kad patikrinu ar ne [] skliaustai sedi uzklausoj. 
+        return 0;
+    }for(let i=0;i<arr.length;i++){
+        if(arr[i]>0){
+            sum+=arr[i];//// jeigu pliusas sudedam jeigu minusas skaiciuojam kaip 0. 
+        }
+        }return sum;
+    };
+
+  console.log(positiveSum([1,2,3,4,5]));
+  console.log(positiveSum([-1,-2,-3,-5]));
+  console.log(positiveSum([]));
+  console.log(positiveSum([1,-2,3,4,5]));
+
+  function updateLight(current) {
+    if(current==='green'){
+      return 'yellow'
+    } if(current==="yellow"){
+      return 'red'
+    } if(current==="red"){
+      return "green"
+    }
+    
+  };
+  console.log(updateLight('green'));
+  console.log(updateLight('yellow'));
+  console.log(updateLight('red'));
+
+
+
+
+
+function highAndLow(numbers){
+    const skaicius=Number(numbers);
+    let min=skaicius[0];
+    let max=skaicius[0];
+  } for(let i=0;i<skaicius.length;i++){
+   if( skaicius[i]>max){
+      max+=skaicius[i];
+    } if(skaicius[i]<min){
+      min+=skaicius[i]
+    } return `${max} ${min}`
+  }
+  console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+
