@@ -895,6 +895,7 @@ function positiveSum(arr) {
 
 
 function highAndLow(numbers){
+    
     const skaicius=Number(numbers);
     let min=skaicius[0];
     let max=skaicius[0];

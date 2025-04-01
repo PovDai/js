@@ -69,7 +69,19 @@ const skaicius = 9;
 const stringas = String(skaicius);
 
 console.log(stringas); // "9" (string tipas) kaip paversti string tipu jeigu imanoma.,
-console.log(typeof stringas); // "string"*/
+console.log(typeof stringas); // "string"*/\
+
+// null(reiksme neegzistuoja. bet mes ketiname ja gauti/paskaiciuota.
+// undefined reiksme neegzistuoja kai kreipiesi i atminti ir joje nera duomens. 
+
+let sum=0;
+sum+=10;
+sum+=2;
+
+let text='';
+text+='labas'
+text+='ratas'
+
 
 
 
