@@ -45,6 +45,9 @@ function rastiToliausiaMiesta(greitis, valandos) {
     for (let i = 0; i < miestai.length; i += 2) {
         const miestoPavadinimas = miestai[i];
         const atstumas = miestai[i + 1];
+        //kai i=0, c=a,d=10 
+        //kai i=2, c=B, d=20
+        // kai i=4 c=c, d=30
         
         // Tikriname ar miestas pasiekiamas ir ar toliau nei ankstesnis rekordininkas
         if (atstumas <= galimasAtstumas && atstumas > tolimiausiasAtstumas) {
@@ -265,7 +268,7 @@ function zemiau(duomenys){
 
 /*Parašykite funkciją, kuriai davus visas savaitės dienas, ji suranda kurią dieną 
 buvo žemiausia temperatūra, ir kurią dieną buvo aukščiausia temperatūra */
-console.clear();
+
 
 console.log('------------------------')
 
@@ -296,7 +299,6 @@ console.log(kuriaDiena(h));
 
 //e. Parašykite funkciją, kuri apskaičiuotų visos savaitės vidutinę temperatūrą.
 
-console.clear();
 
 function vid(duomenys){
     let tempVid=0;

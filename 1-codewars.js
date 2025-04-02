@@ -491,6 +491,22 @@ for(let i=0;i<s.length;i++){
   };
    console.log(removeExclamationMarks("Hello World!"));
 
+   function toCamelCase(str){
+    let naujas='';
+
+    for(let i=0;i<str.length;i++){
+      if(str[i]!=='_'&&str[i]!=='-') {
+         naujas+= str[i]
+    
+      }
+    } return naujas;
+  }
+  console.log(toCamelCase("the_stealth_warrior"));
+  console.log(toCamelCase("The_Stealth-Warrior"));
+  
+
+
+
 
 
 
