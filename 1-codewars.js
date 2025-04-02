@@ -403,4 +403,94 @@ function positiveSum(arr) {
   console.log(updateLight('yellow'));
   console.log(updateLight('red'));
 
+console.log('----------')
+
+let atvirukoTekstas = '"abracadabra'
+const atvirukoBalses = ['a', 'e', 'i','o','u']
+///  kai reikia surasti zodyje, balsiu ne viena kieki. naudojami includes()
+
+function getCount(str) {
+    let atvirukoSuma = 0;
+    const raides= ['a', 'e', 'i','o','u']
+
+    for(i=0;i<str.length;i++){
+     if(raides.includes(str[i])){
+        atvirukoSuma++}
+    }
+    return atvirukoSuma
+};
+console.log(getCount('abracadabra'));
+console.log(getCount('pear tree'));
+
+/// reikia surasti ar eiluteje yra norima reiksme.Labai svarbu kur sedi paskutinis return, nes kitaip reiksme duos bloga.
+function check(a, x) {
+    for(let i=0;i<a.length;i++){
+      if(a[i]===x){
+        return true
+      }
+      }return false 
+    };
+  console.log(check[66,101],66)
+  console.log(check(['t', 'e', 's', 't'], 'e'));
+  console.log(check(['what', 'a', 'great', 'kata'], 'kat'));
+/// Math.floor suapvalina i mazesne puse pagal uzduoti. 
+  function litres(time) {
+    const kiekis=0.5
+    const suma=time*kiekis
+    const galutine=Math.floor(suma);
+    
+    return galutine
+  };
+  console.log(litres(0));
+  console.log(litres(1));
+  console.log(litres(2));
+  console.log(litres(3));
+console.log('-------------')
+  function arithmetic(a, b, operator){
+    
+    if(operator==='add'){
+      return a+b
+    }if (operator==='subtract'){
+      return a-b
+    }if(operator==='multiply'){
+      return a*b
+    }if(operator==='divide'){
+      return a/b
+    }
+  }
+  console.log(arithmetic(1,2,'add'));
+// kai reikia paimti array eilute ir istumti zodi. 
+  function removeEveryOther(arr){
+    let naujas=[];
+    for(let i=0;i<arr.length;i+=2){
+         naujas.push(arr[i]);// naujas array gausis prasukti zodziai gausis. 
+    }
+    return naujas;
+  }
+  console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
+
+  function greet (name, owner) {
+    if(name===owner){
+      return 'Hello boss'
+    }if(name!==owner){
+      return 'Hello guest'
+    }
+  };
+  console.log(greet('Daniel','Daniel'));
+  console.log(greet('Greg','Daniel'));
+
+// kai reikia isimti kazkoki elementa is zodio. siuo atveju sauktuka. 
+  function removeExclamationMarks(s) {
+let naujas='';
+for(let i=0;i<s.length;i++){
+    if(s[i]!=='!'){
+        naujas+=s[i]
+    }
+}
+    return naujas
+  };
+   console.log(removeExclamationMarks("Hello World!"));
+
+
+
 

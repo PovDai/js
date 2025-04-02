@@ -135,7 +135,7 @@ console.log(randomNumber(1,10));
 // pvz kauliuko ismetimas. 
 
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);// suapvalina iki sveiko mazesnio skaiciaus(generuoja random skaiciu 0-1 intervale)
 }
 
 const counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
