@@ -491,21 +491,280 @@ for(let i=0;i<s.length;i++){
   };
    console.log(removeExclamationMarks("Hello World!"));
 
-   function toCamelCase(str){
-    let naujas='';
+   function reverseList(duomenys){
+    let list='';
+    for(let i=duomenys.length;i>0;i--){
+        list+=[i];
+    } return `[${list}]`;
+};
+const b=[1, 2, 3, 4] ;
+const c=[9, 2, 0, 7];
+console.log(reverseList(b));
+console.log(reverseList(c));
 
-    for(let i=0;i<str.length;i++){
-      if(str[i]!=='_'&&str[i]!=='-') {
-         naujas+= str[i]
-    
-      }
-    } return naujas;
-  }
-  console.log(toCamelCase("the_stealth_warrior"));
-  console.log(toCamelCase("The_Stealth-Warrior"));
+function greet(name){
+  return `Hello,${name} how are you doing today`
+}
+console.log(greet("Ryan"));
+
+// kai reikia patikrinti ar antras zodis tinka pirmo pabaigai. 
+function solution(str, ending){
   
+  return str.endsWith(ending)
+}
+console.log(solution('abcde', 'cde'));
 
 
+// jeigu reikia sujungti array tipo zodzius i string tipa. 
+function smash (words) {
+ 
+  return words.join(' ');
+};
+console.log(smash(["hello", "world"]));
+/// reikia is zodziu sakinio surasti trumpiausia zodi. 
+function findShort(s){
+  const nauj=s.split(' ') // susplitinam i [zodis,zodis,zodis] eilute 
+  let zod=nauj[0].length; /// prisilyginam 0 kad tikrintu nuo 0 
+  for(let i=0;i<nauj.length;i++){
+    if(nauj[i].length<zod){ /// darome < maziau nes maziausia > jeigu didziausio ieskotume. 
+      zod=nauj[i].length;// length prierasas nes ieskome ilgio automatiskai rodys ilgiuus visur. 
+    }
+  }
+  return zod;
+}
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));//3
+console.log(findShort("Let's travel abroad shall we"));//2
+
+function bmi(weight, height) {
+  let bmi=weight/(height*height)
+  if(bmi<=18.5){
+    return "Underweight"
+  }if(bmi<=25.0){
+    return "Normal"
+  } if(bmi<=30.0){
+    return "Overweight"
+  } if(bmi>30){
+    return "Obese"
+  }
+}
+console.log(bmi(50,1.80));
+
+
+///////////
+/// patikrinti ar pateiktas a turi savyje x 
+function check(a, x) {
+  for(let i=0;i<a.length;i++){
+    if(a[i]===x){
+      return true;
+    }
+  }
+  return false;
+}
+console.log(check([66, 101], 66));
+console.log(check([101, 45, 75, 105, 99, 107], 107));
+console.log(check(['t', 'e', 's', 't'], 'e'));
+
+
+////// nauja funkcija array.map()  pakeiciam mapu ir padarom per parseint numeriu, tada galim su ciklu suskaiciut. 
+function sumMix(x){
+  const numbers=x.map(item=>Number.parseInt(item));
+  let sum=0;
+  for(let i=0;i<numbers.length;i++){
+    sum+=numbers[i]
+  }
+return sum;
+}
+console.log(sumMix([9, 3, '7', '3']));
+/// reikia paskaiciuoti avis kas yra lengva, 1 avis true, bet kad maiso null ir undefined. Taciau juos atradus imetus continue toliau eis
+function countSheeps(sheep) {
+  let count=0;
+  for(let i=0; i<sheep.length;i++){
+    if(sheep[i]===undefined||sheep[i]===null||sheep.length===0){
+      continue; 
+    }
+    if(sheep[i]===true){
+      count++
+    }
+  }
+ return count;
+}
+console.log(countSheeps([]));
+console.log(countSheeps([undefined]));
+
+console.log(countSheeps([undefined,null,false,true]));
+
+console.log(countSheeps([undefined,null,false,true,true,false,null,undefined]));
+
+//// paprasta funkcija su likusiu kiekiu kuro ir atstumu. 
+function zeroFuel(distanceToPump, mpg, fuelLeft) {
+  const mid=distanceToPump/mpg
+  if(mid<=fuelLeft){
+    return true;
+  } else{
+  return false;
+}
+};
+  console.log(zeroFuel(50,25,2));
+//// easy kaip pakeist number to string reiksme. 
+  function numberToString(num) {
+    return ''+num;
+  }
+  console.log(numberToString(67));
+
+  /// arba 
+
+  function numberToString(num) {
+    return num.toString();
+  };
+  console.log(numberToString(67));
+//// pakeisti stringa i array eilute prase splitint pagal ' ' tarpa. 
+  function stringToArray(string){
+    return string.split(" "); // splitinam pagal tarpa. ir padarom [ eilute. ]
+      // code code code
+    
+    }
+    console.log(stringToArray('Robin Singh'));
+
+    function persistence(num) {
+      let string=num+'';
+     let array=string.split();
+     console.log(array);
+     }
+//// lengvas suprantamas visiem
+
+function switchItUp(number){
+  if(number===0){
+    return "Zero"
+}if(number===1){
+  return 'One'
+} if(number===2){
+  return'Two'
+}if(number===3){
+  return 'Three'
+}if (number===4){
+  return 'Four'
+}if(number===5){
+  return 'Five'
+}if (number===6){
+  return 'Six'
+}if (number===7){
+  return 'Seven'
+}if(number===8){
+  return'Eight'
+}if(number===9){
+  return "Nine"
+}
+}
+console.log(switchItUp(2));
+
+///// kai reikia suskaiciuoti ar sakinys turi tiek pat x ir o reiksmiu. 
+
+function XO(str) {
+  let xCount = 0;
+  let oCount = 0;
+  if (str.length === 0) { //// reikia si tikrinima daryti pries cikla, nes kitaip neveiks. 
+    return true; 
+  }
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'X' || str[i] === 'x') {
+      xCount++;
+    } else if (str[i] === 'O' || str[i] === 'o') {
+      oCount++;
+    }
+  }
+  return xCount === oCount; 
+}
+
+console.log(XO(''));      // true
+console.log(XO('xo'));    // true
+console.log(XO('xxxoo')); // false
+console.log(XO('xXoO'));  // true
+console.log(XO('xxOOx')); // false
+
+//// nupjauna pirma ir paskutine raides. 
+
+function removeChar(str){
+  return str.slice(1,-1)
+ 
+ };
+ console.log(removeChar('eloquent'));
+// patikrinti ar is duotu krastiniu galima suskaiciuoti ar gali gautis trikmapis. 
+ function isTriangle(a,b,c)
+{ if(a+b>c&&a+c>b&&b+c>a){
+     return true
+     }
+   return false;
+}
+console.log(isTriangle(1,2,2));
+
+function abbrevName(name) {
+  const skirti = name.split(' ');// gaunasi du zodziai 
+  const pirmos=skirti[0][0].toUpperCase() // taip paimam pirmo zodzio pirma raide.Padarom didziaja 
+  const antra=skirti[1][0].toUpperCase() // taip paimam antra zodzio pirma raide. 
+
+  return `${pirmos}.${antra}`
+};
+console.log(abbrevName("Sam Harris"));
+// reikia surasti visu kintamuju kvadratu suma. 
+function squareSum(numbers){
+  let sum=0;
+    for( let i=0; i<numbers.length;i++){
+      sum+=numbers[i]**2
+    }
+    return sum;
+  }
+  console.log(squareSum([0, 3, 4, 5]));
+  //// pakeisti stringa i numberi 
+  const stringToNumber = function(str){
+  
+    return Number(str)
+  }
+  console.log(stringToNumber('1234'));
+/// neisprestas sitas nes kai pirmoje pozicijoe nesigauna 
+  function findUniq(arr) {
+    let naujas=arr[0]
+    let antras=arr[1];
+
+    for(let i=0;i<arr.length;i++){
+      if(naujas===antras){
+      }
+      if(arr[i]!==arr[0]){
+        naujas=arr[i]
+      }
+    }
+    return naujas;
+  }
+  console.log(findUniq([1,0,0]));
+  console.log(findUniq([0,1,0]));
+  console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+  console.log(findUniq([ 3, 10, 3, 3, 3 ]));
+
+ 
+console.log('-------------------')
+
+
+// kaip is skaiciaus padaryti eilute ir ideti i array skliaustus su push.metodu. 
+function reverseSeg(n){
+  let n1=[];
+  for(let i=n;i>0;i--){
+   n1.push(i)
+  }
+  return n1;
+}
+console.log(reverseSeg(5));
+
+
+ /// kaip is string eilutes rasti diziausia ir maziausia pasiverciant masyvu 
+function highAndLow(numbers){
+  let n0=numbers.split(' '); // pasiverciam i object po 1 skaiciu. 
+
+ const max = Math.max(...n0); // Didžiausia reikšmė BUTINA DETI ... nes neiskos masyve skaiciu. 
+ const min1=Math.min(...n0);
+
+return ''+`${max} ${min1}`
+};
+
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
 
 
 
