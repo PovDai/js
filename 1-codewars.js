@@ -767,5 +767,99 @@ return ''+`${max} ${min1}`
 console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
 
 
+/// kai skaiciai dauginasi is x darosi eilute ir padarom masyva. 
+function countBy(x, n) {
+  let z = [];
+  for(let i=1; i<=n;i++){
+    z.push([i]*x) // istumiam i [] skliaustus su , tarpuose. 
+  }
+  return z
+}
+console.log(countBy(1,10));
+console.log(countBy(2,5));
+
+
+
+function highAndLow(numbers){
+  let n0=numbers.split(' '); // pasiverciam i object po 1 skaiciu. 
+
+ const max = Math.max(...n0); // Didžiausia reikšmė BUTINA DETI ... nes neiskos masyve skaiciu. 
+ const min1=Math.min(...n0);
+
+return ''+`${max} ${min1}`
+};
+
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+//// kai reikia skaiciu pakeisti 0 arba 1 iki 5 ir virs 5 ribose. 
+function fakeBin(x){
+  let naujas=''; // nulinis lygis stringo reiksme 
+  let masyvas=x.split([])// isskirstom string eilute po 1 skaiciu [] reiksmeje 
+  for(let i=0; i<masyvas.length;i++){
+    if(masyvas[i]<5){
+      naujas+=0
+    }if (masyvas[i]>=5){
+      naujas+=1
+    }
+  } 
+  return naujas+''
+
+}
+console.log(fakeBin('45385593107843568'));
+/// kai reikia eiluteje surasti maziausia skaiciu. 
+function findSmallestInt(arr) {
+  let maziukas=arr[0]
+  
+  for( let i=0; i<arr.length;i++){
+    if(arr[i]<maziukas){
+      maziukas=arr[i]
+    }
+  }
+  return maziukas;
+}
+console.log(findSmallestInt([78,56,232,12,8]));
+
+function sayHello(name) {
+  return 'Hello '+name
+}
+console.log(sayHello('Mr. Spock'));
+
+///// kai reikia is string zodzio ispjauti pirma nari kuris skaicius, bet skaicius bus string eilute kuria reiks pasivers number. 
+function getAge(inputString){
+
+let number=inputString.slice(0,1)
+let change=Number.parseInt(number)
+return change;
+}
+console.log(getAge("4 years old"));
+/// apsukt eilute ir ispauzdinti [] per pusha. 
+function sortArray(array) {
+  let nauja=[];
+    for( let i=array.length-1;i>=0;i--){/// kai paskutini dedam ir nuo jo skaiciuojam nepamirstam length-1. 
+      nauja.push(array[i])
+    }
+    return nauja;
+  };
+  console.log(sortArray([0, 1, 2, 3, 5 ]));
+/// paprasta funkcija su pervirsiu grazint viena ats be pervirsio 0 
+  function enough(cap, on, wait) {
+    if(on+wait<=cap){
+      return 0;
+    } if(on+wait>cap){
+      return (on+wait)-cap
+    }
+  }
+  console.log(enough(10,5,5));
+  console.log(enough(10,25,5));
+  ///// pakeist sakinyje balses tustuma. dauga pildymo. 
+  function disemvowel(str) {
+    return str.replaceAll('a','').replaceAll('e','').replaceAll('i','').replaceAll('o','').replaceAll('u','').replaceAll('O','').replaceAll('U','').replaceAll('I','').replaceAll('A','').replaceAll('E','')
+  }
+  console.log(disemvowel("This website is for losers LOL!"));
+
+
+
+
+
 
 
