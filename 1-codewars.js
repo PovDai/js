@@ -856,7 +856,20 @@ function sortArray(array) {
     return str.replaceAll('a','').replaceAll('e','').replaceAll('i','').replaceAll('o','').replaceAll('u','').replaceAll('O','').replaceAll('U','').replaceAll('I','').replaceAll('A','').replaceAll('E','')
   }
   console.log(disemvowel("This website is for losers LOL!"));
+console.clear()
+///////// is number eilutes pasidaryti i stringa veliau i object po 1 skaiciu atsakyma pateikti vel number budu. 
+function squareDigits(num){
+  let stringu=num.toString().split('')
+  let nauja=[];
 
+  for( let i=0;i<stringu.length;i++){
+    nauja+=stringu[i]**2
+
+  }
+  
+  return parseInt(nauja)
+}
+console.log(squareDigits(3212));
 
 
 
