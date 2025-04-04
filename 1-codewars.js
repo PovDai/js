@@ -870,9 +870,106 @@ function squareDigits(num){
   return parseInt(nauja)
 }
 console.log(squareDigits(3212));
+/// padaryti eilute is dvieju skaiciu. turi grizti array eilute. 
+console.log('-----------')
+function between(a, b) {
+  let final=[];
+  for (let i=a;i<=b;i++){
+    final.push(i)
+}
+   return final;
+}
+console.log(between(1,4));
+/// KAI REIKIA SURASTI MASYVE MIN IR MAX NAUDOJAM MATH 
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)]; // reikia deti ... kad paimtu skauciavimui masyva. 
+};
+console.log(minMax([1,2,3,4,5]));
+// arba for ciklu 
 
+function minMax(arr) {
+  if (arr.length === 0) return []; // jei masyvas tuščias
+  
+  let mini = arr[0];
+  let maxi = arr[0];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < mini) {
+      mini = arr[i];
+    }
+    if (arr[i] > maxi) {
+      maxi = arr[i];
+    }
+  }
+  
+  return [mini, maxi];
+}
 
+console.log(minMax([1, 2, 3, 4, 5]))
 
+/// Ar Zaidzia banjo su string metodais; 
 
+function areYouPlayingBanjo(name) {
+  if(name.at(0)==='R'||name.at(0)==='r'){
+  return name + " plays banjo" 
+} else{
+  return name + " does not play banjo"
+}
+  }
+console.log(areYouPlayingBanjo('Adam'));
+//// kai reikia surasti kiek metu uztruks kol pasieks kazkoki skaiciu :) 
+function calculateYears(principal, interest, tax, desired) {
+  let count=0;
+for(let i=principal; i<desired;i+=(principal*interest)-((principal*interest)*tax)){
+  count++
+}
+return count;
+}
+
+console.log(calculateYears(1000,0.05,0.18,1100));
+console.log(calculateYears(1000,0.01625,0.18,1200));
+// kai reikia paimti masyva kuris nebaigtas ir reikia istaisyti seka nes cia truko 7
+function pipeFix(numbers){
+  let nauja=[];
+  for(let i=numbers[0];i<=numbers[numbers.length-1];i++){
+    nauja.push(i)
+  }
+ return nauja;
+}
+console.log(pipeFix([1,2,3,5,6,8,9]));
+
+function howMuchILoveYou(nbPetals) {
+  nbPetals = nbPetals % 6; /// reikia pasidaryti kad betkokia reiksme paimtu 
+  if (nbPetals === 0) nbPetals = 6;
+{if(nbPetals===1||nbPetals===7){
+  return "I love you" }
+} if(nbPetals===2||nbPetals===8){
+  return "a little"
+}if (nbPetals===3|nbPetals===9){
+  return "a lot"
+}if(nbPetals===4||nbPetals===10){
+  return "passionately"
+}if(nbPetals===5||nbPetals===11){
+  return "madly"
+}if(nbPetals===6||nbPetals===12){
+  return "not at all"
+};
+}
+console.log(howMuchILoveYou(10));
+
+// kai reikia isimti is eilutes # sugrazinti eiluten nukirpta be jo jeigu jo nera ta pacia grazina, 
+function removeUrlAnchor(url){
+  if(url.includes('#')===false){
+    return url;
+  };
+let skaicius=url.indexOf('#');
+let naujas=url.slice(0,skaicius)
+
+return `${naujas}`
+    
+  };
+
+  console.log(removeUrlAnchor('www.codewars.com#about'))
+  console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'));
 
 
