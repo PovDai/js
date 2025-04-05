@@ -971,5 +971,110 @@ return `${naujas}`
 
   console.log(removeUrlAnchor('www.codewars.com#about'))
   console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'));
+/// pazymiu vidurkis tarp ir duoda raide ats. 
+  function getGrade (s1, s2, s3) {
+    let sum=(s1+s2+s3)/3
 
+  if(90<=sum&&sum<=100){
+    return 'A'
+  }else if(80<=sum&&sum<90){
+    return 'B'
+  }else if(70<=sum&&sum<80){
+    return 'C'
+  }else if(60<=sum&&sum<70){
+    return 'D'
+  }else if (0<=sum&&sum<60){
+    return 'F'
+  }
+};
+  console.log(getGrade(95,90,93));
+  /// reikia iki tam tikro dydzio padaryti masyva su tam tikru zingsniu. 
+  function findMultiples(integer, limit) {
+    let nauja=[];
+    for( let i=integer;i<=limit;i+=integer){
+      nauja.push(i)
+      
+    }
+    return nauja;
+  };
+  console.log(findMultiples(5, 25));
+  console.log(findMultiples(1, 2));
+  console.log(findMultiples(5, 7));
+/// kas ka geria pagal amziu. 
+function peopleWithAgeDrink(old) {
+  if (old>=21){
+    return 'drink whisky'
+  } if(old<21&&old>=18){
+    return 'drink beer'
+  } if(old<18&&old>=14){
+    return 'drink coke'
+  } 
+  return 'drink toddy'
+};
+console.log(peopleWithAgeDrink(13));
+console.log(peopleWithAgeDrink(14));
+console.log(peopleWithAgeDrink(18));
+console.log(peopleWithAgeDrink(17));
+// parasyk funkcija kuri be skaiciu grazintu visada 5 skaiciu.
+function unusualFive() {
+  return 'jonas'.length
+}
+console.log(unusualFive());
+/// o surinkimas i gala. 
+function moveZeros(arr) {
+  let ats=[];/// nuliai cia eis. 
+  let ats2=[];/// kiti skaiciai 
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]===0){
+   ats.push(arr[i]) 
+  } else {
+    ats2.push(arr[i]);
+  }
+  }
+  return [...ats2,...ats];
+  };
+  
+console.log(moveZeros([1,2,0,1,0,1,0,3,0,1]));
+/// pakeisti skaicius x2 ats 
+function maps(x){
+  let nes=[];
+  for(let i=0;i<x.length;i++){
+    nes.push(x[i]*2)
+  } 
+  return nes;
+}
+console.log(maps([1,2,3]))
+console.log('----------')
+//// is array atimti maziausia ir ispauzdinti eilute be jo. 
+function filter_list(l) {
+  const result = [];
+  for (let i = 0; i < l.length; i++) {
+    if (typeof l[i] === 'number' && !isNaN(l[i])) {
+      result.push(l[i]);
+    }
+  }
+  return result;
+}
+  console.log(filter_list([1,2,'a','b']));
+  console.log(filter_list([1,2,'aasf','1','123',123]));
+// reikia paimti skaiciu vidurki ir palyginti ji su klases vidurkiu 
+    function betterThanAverage(classPoints, yourPoints) {
+      let sum=0;
+      for (let i=0;i<classPoints.length;i++){
+        sum+=classPoints[i];
+      }
+      const average=sum/classPoints.length // visus papildomus skaiciavimus daryti po loop uzdarymo. 
 
+      return average<yourPoints; // galima daryt true folse paciam returne greitesnis variantas 
+    };
+    console.log(betterThanAverage([2,3],5));
+    console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+/// kai reikia kintamuosius sudaugint ir duoti rezultata 
+    function grow(x){
+      let sum1=1;/// 0 negali but nesidaugins eilute. 
+      for (let i=0; i<x.length;i++){
+       sum1*=x[i] // cia gaunasi eilute 1*1*2*3=6
+      }
+     return sum1;
+    }
+    console.log(grow([1,2,3]));
