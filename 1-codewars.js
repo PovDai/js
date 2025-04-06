@@ -1078,3 +1078,25 @@ function filter_list(l) {
      return sum1;
     }
     console.log(grow([1,2,3]));
+/// paprastas 
+    function problem(x){
+      if(typeof x==='string'){
+        return 'Error'
+      };
+    
+      return x*50+6;
+      //your code here
+    };
+    console.log(problem('hello'));
+    console.log(problem(1));
+    console.log(problem(5));
+/// irgi easy su if 
+    function paperwork(n, m) {
+      if (n<0||m<0){
+        return 0;
+      }
+      return n*m;
+      
+    };
+    console.log(paperwork(5,5));
+    console.log(paperwork(-5,5));
