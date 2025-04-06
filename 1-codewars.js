@@ -1100,3 +1100,47 @@ function filter_list(l) {
     };
     console.log(paperwork(5,5));
     console.log(paperwork(-5,5));
+/// easy vel funkcija 
+    function combat(health, damage) {
+      if(damage>health){
+        return 0;
+      }
+      return health-damage
+    };
+    console.log(combat(20,30));
+    console.log(combat(92,8));
+/// surasti raides viete abelecele 
+    function position(letter){
+      const letters='abcdefghijklmnopqrstuvwxyz'
+      return `Position of alphabet: ${letters.indexOf(letter)+1}`
+    };
+    console.log(position('a'));
+    console.log(position('c'));
+/// suzinot charcode numeriuka. 
+    function getChar(c){
+      return c.toString().charCodeAt();
+    };
+    console.log(getChar(55));
+
+///Sulygint ar zodis parasius is galo gaunasi toks pats 
+function isPalindrome(x) {
+  let naujas=x.toLowerCase();
+  let ats='';
+  for(let i=naujas.length-1;i>=0;i--){
+    ats+=naujas[i];
+
+  }
+  return ats===naujas
+};
+console.log(isPalindrome('Abba'));
+///// reikia patikrinti ar duota reiksme virsina limita ar ne. 
+function smallEnough(a, limit){
+  for(let i=0;i<a.length;i++){
+    if(a[i]>limit){
+      return false
+    } 
+    
+    }
+  return true
+};
+console.log(smallEnough([66,101],200));
