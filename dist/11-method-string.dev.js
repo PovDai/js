@@ -2,7 +2,6 @@
 
 /*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 */
-// su siuksliu deze nekreipiam demesio. 
 console.log('Labas');
 console.log('Labas'[0]);
 console.log('Labas'[1]);
@@ -12,7 +11,7 @@ var text = 'pomidoras';
 console.log(text[0]);
 console.log(text[text.length - 1]); // gaunam paskutine raide. 
 
-console.log('-----at()-----'); // at pvz duomenys.at(0) paima pirma raide. text.at() arba duomenys.at()
+console.log('-----at()-----'); // at() pvz duomenys.at(0) paima pirma raide. text.at() arba duomenys.at()
 
 console.log('--', text.at(0));
 console.log('--', text.at(-1)); // pirmas nuo galo.paskutine pozicija. 

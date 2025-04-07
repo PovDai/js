@@ -117,7 +117,35 @@ const text=['agurkas','pomidoras','svogunas','paprika'];
 const products=`Reikalingi produktai:${text.join(',')}`
 
 console.log(products)
+// reverse() - apsuka rezultatus is kito galo. // jeigu du kartus apsuksim grisim prie pirmnos reiksmes. 
 
+const b=[1,2,3,4,5];
+console.log(b.reverse().reverse());
+/// concat() - prijungia prie vieno masyvo antra masyva, galima concat() kelis kartus sujungiant kelis. 
+
+const c14=[1,11];
+const c2=[2,22];
+const c3=[3,33];
+const c4=[4,44];
+
+const c12=c14.concat(c2).concat(c4).concat(c3);
+console.log(c12);
+
+const c15=c3.concat(c4);
+console.log(c15)
+
+const c1234=c12.concat(c14,c3,c4); // galima irasyt i eilute ne viena duomeni, apjungiami skirtingi masyvai. 
+
+const c1111=c12.concat(c14,c14);/// galima ir tuos pacius masyvus panaudoti kelis kartus nera skirtumo. 
+
+// splice()jis paima ir pasalina nurodytas reiksmes is saraso. Grazina sarasa be ju. 
+
+const h=[11,22,33,44,55];
+
+console.log(h.splice(0)); // viska istrina lieka tuscia. 
+console.log(h.splice(1,2));// isima 22 ir 33 lieka 11 44 55 
+console.log(h.splice(2)); // lieka 11 22  44 55 
+console.log(h.splice(0,2))// 
 
 
 
