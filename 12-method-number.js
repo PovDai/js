@@ -9,11 +9,13 @@ console.log(isFinite(Infinity));
 console.log(isFinite(NaN));
 
 /// Number.isInteger() ar sveikasi skaicius. butinai darom su Number.
-
+console.log('---------')
+console.log(Number.isInteger('-1.254'))
 console.log(Number.isInteger(5));
 console.log(Number.isInteger(0));
 console.log(Number.isInteger(NaN));
-console.log(Number.isInteger('asd'));
+console.log(Number.isInteger('asd125'));
+console.log(Number.isInteger('-1.254'))
 // Number.IsNaN();
 
 console.log(Number.isNaN(5));

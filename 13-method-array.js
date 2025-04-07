@@ -66,6 +66,61 @@ for(let i=0;i<n2.length;i++){ ///kitas kitoje dalyje
 
 console.log(n12);
 
+function wave(str){
+    let zodziai=[];
+  for(let i=0;i<str.length;i++){
+    const zodis=str[i];
+  }
+    return zodziai;
+  }
+  console.log(wave('hello'));
+  
+
+  const numbers2=[10,2,8,4,6];
+  console.log(numbers2)
+
+  numbers2.push(9)
+  console.log(numbers2);
+//// .pop() PASALINA PASKUTINI ELEMENTA, IR JI GRAZINA JEIGU REIKIA. 
+  numbers2.pop()
+  const g1=numbers2.pop()/// jeigu pavadinam ji per let arba const gale po masyvo ji parodo ka pasalino. 
+  console.log(numbers2,g1);
+
+
+/// unshift() itraukia i prieki elemento 
+
+numbers2.unshift(1);
+console.log(numbers2)
+
+/// shift() is prieko pasalina nari. 
+
+
+numbers2.shift();
+const g2=numbers2.shift()
+console.log(numbers2,g2) /// irgi grazina ka pasalina is priekio 
+
+/// includes() patikrina ar egzistuoja siame sarase reiksme arba ne ir grazina true arba false reiksme. 
+
+const magic=[11,22,33,44,55,66];
+console.log(magic.includes(55));
+console.log(magic.indexOf(44));
+
+// ondexOf() grazina skaiciaus arba zodzio reiksme. 
+
+console.log(magic.indexOf(44));
+
+/// join() sujungs norimus saraso elementus. Jeigu jokio tekso neidesim, per kalbeli sujungs. 
+
+const text=['agurkas','pomidoras','svogunas','paprika'];
+// reikalingi produktai:a,b,c,d.
+
+const products=`Reikalingi produktai:${text.join(',')}`
+
+console.log(products)
+
+
+
+
 
 
 
