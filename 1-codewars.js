@@ -1144,3 +1144,250 @@ function smallEnough(a, limit){
   return true
 };
 console.log(smallEnough([66,101],200));
+
+function reverseSeg(n){
+  let nauja=[];
+
+  for(let i=5;i>0;i--){
+    nauja.push([i])
+  }
+  return [nauja.join('')]
+};
+console.log(reverseSeg(5));
+
+
+
+function fancyMath(n1,zenklas,n2){
+  const func={
+      '+':(a,b)=>a+b,
+      '-':(a,b)=>a-b,
+      '*':(a,b)=>a*b,
+      '/':(a,b)=>a/b,
+  };
+  const funcToUse=func[zenklas];
+  if(funcToUse===undefined){
+      return ':(';
+  }
+  return funcToUse(n1,n2);
+  }
+  console.log(fancyMath(7,'+',5));
+  console.log(fancyMath(7,'-',5));
+  console.log(fancyMath(7,'*',5));
+  console.log(fancyMath(7,'/',5));
+  console.log(fancyMath(7,'**',5));
+
+
+//// nelengvas su ifais, kur pagal ideja nesunku bet ifa sunkiai suderina. 
+  function warnTheSheep(queue) {
+    let naujasDarinys=queue.reverse();
+    for(let i=0;i<naujasDarinys.length;i++){
+      if(naujasDarinys[i]==='wolf'){
+        if(i===0){
+          return `Pls go away and stop eating my sheep`
+        } else {
+          return `Oi! Sheep ${i}! You are about to be eaten by a wolf!`
+      }
+      }
+      }
+      return "Pls go away and stop eating my sheep"
+    };
+
+  console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
+  console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "sheep", "wolf"]));
+//// suskaiciuoti skaiciu suma, kai tie skaiciai kaip vienas. 
+
+  function sumDigits(number) {
+    let naujas=Math.abs(number).toString();
+
+    let sum=0;
+    for(let i=0;i<naujas.length;i++){
+      sum+=parseInt(naujas[i]); /// parseIntas pakeicia atgal i number reiksme ats sumos. 
+
+    }
+    return sum;
+  }
+  console.log(sumDigits(10));
+  console.log(sumDigits(99));
+/// paprastas parasyt funkcija sudet ciklo skaicius. 
+  function summation(num) {
+    let sum=0;
+    for(let i=1;i<=num;i++){
+      sum+=i
+    }
+    return sum;
+    // Code here
+  }
+  console.log(summation(2));
+//// pakeist visas balses i !!! 
+  function replace(s) {
+    return s.replaceAll('a','!').replaceAll('e','!').replaceAll('i','!').replaceAll('o','!').replaceAll('u','!').replaceAll('A','!').replaceAll('E','!').replaceAll('I','!').replaceAll('O','!').replaceAll('U','!')
+    };
+    console.log(replace('aeiou'))
+    console.log(replace('"!Hi! Hi!"'))
+/////// paprastas su lairkdoziu ir milisekundem. 
+function past(h, m, s){
+  return (h*3600000)+(m*60000)+(s*1000)
+}
+console.log(past(0,1,1));
+
+/// su masinos nuoma ir ifu. 
+function rentalCarCost(d) {
+  if(d<=2){
+    return d*40
+  } if (d>=3&&d<=6){
+    return d*40-20
+  } if( d>=7){
+  }
+  return d*40-50
+};
+console.log(rentalCarCost(2));
+console.log(rentalCarCost(1));
+
+// super lengvas su if
+
+function chromosomeCheck(sperm) {
+  if(sperm==='XY'){
+    return "Congratulations! You're going to have a son."
+  }if (sperm==="XX"){
+  
+  }
+    return "Congratulations! You're going to have a daughter."
+    
+  }
+  console.log(chromosomeCheck('XY'));
+  console.log(chromosomeCheck('XX'));
+/// lengvas 
+function hero(bullets, dragons){
+  const kiekis=bullets/dragons;
+  if(kiekis>=2){
+    return true;
+  } else{
+    
+  }
+   return false;
+}
+console.log(hero(10,5));
+// easy su if ir tekstu ir mazinimu. 
+function mouthSize(animal) {
+  const mazintos=animal.toLowerCase();
+  
+  if(mazintos==='alligator'){
+    return 'small'
+  }else{
+    
+  }
+  return 'wide'
+}
+console.log(mouthSize('toucan'));
+// bisk sudetingesnis su sqrt trunc ir if 
+function isSquare(n){
+
+  const saknis=Math.sqrt(n)
+  const liekana=saknis-Math.trunc(saknis)
+
+  if(n<0){
+    return false;
+  }if(liekana>0){
+    return false;
+  }
+    return true;
+  };
+console.log(isSquare(-1));
+console.log(isSquare(0));
+console.log(isSquare(26)); 
+console.log(isSquare(25)); 
+/// easy to repeat 
+function repeatStr (n, s) {
+  return ''+ s.repeat(n)
+};
+
+console.log(repeatStr(3, "*"));
+/// easy replace 
+
+function correctPolishLetters (string) {
+  return string.replaceAll('ą','a').replaceAll('ć','c').replaceAll('ę','e').replaceAll('ł','l').replaceAll('ń','n').replaceAll('ó','o').replaceAll('ś','s').replaceAll('ź','z').replaceAll('ż','z')
+}
+console.log(correctPolishLetters('Jędrzej Błądziński'));
+
+
+function opposite(number) {
+  return -number;
+};
+console.log(opposite(1));
+console.log(opposite(-12525220.3325));
+console.log(opposite(3.3333));
+
+///
+function main (verb, noun){
+  return `${verb} ${noun}`
+};
+console.log(main('take','item'));
+/// apsuksti zodzius vietom 
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ');// padalinam per tarpa, apsukam ir sujungiam per tarpa. 
+}
+console.log(reverseWords('hello world!'));
+
+function whatday(num) { 
+  if(num===1){
+    return 'Sunday'
+  }if(num===2){
+    return 'Monday'
+  }if(num===3){
+    return 'Tuesday'
+  }if(num===4){
+    return 'Wednesday'
+  }if(num===5){
+    return 'Thursday'
+  }if(num===6){
+    return 'Friday'
+  }if(num===7){
+    return 'Saturday'
+  }if(num>7){
+    
+  }
+return 'Wrong, please enter a number between 1 and 7'
+
+};
+console.log(whatday(78));
+
+function validateHello(greetings) {
+  let greet=greetings.toLowerCase();
+  if(greet==='hello'||greet==='ciao'||greet==='salut'||greet==='hallo'||greet==='hola'||greet==='ahoj'||greet==='czesc'){
+    return true;
+  }
+  return false;
+}
+console.log(validateHello('meh'));
+
+function greet(name){
+  if(name==="Johnny"){
+    return `Hello my love!`
+  }else {
+
+  }
+  return `Hello, ${name}!`
+ 
+};
+console.log(greet('Jim'));
+console.log(greet("Johnny"));
+
+// su rodykline pabandziau 
+
+const contamination=(text, char)=> char.repeat(text.length);
+console.log(contamination('abc','z'));
+
+function capitalizeWord(word){
+  const pirmaR=word[0].toUpperCase();
+  const liekana=word.slice(1);
+  return pirmaR+liekana;
+  
+} 
+console.log(capitalizeWord('word'));
+
+
+
+
+
+
+
