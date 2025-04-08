@@ -157,13 +157,13 @@ console.log(reverseString('alus'));
 console.clear();
 
 /// map() sudaro nauja objekta per rodykline funkcija. Padaro su veiksmais. 
-
+console.log('---cia MAPAS------')
 const f=s=>s[0];
 
 const k=[10,2,8,4,6];
 const k2=[];
 
-for(const n of k){ /// [ 20, 4, 16, 8, 12 ] 
+for(const n of k){ /// [ 20, 4, 16, 8, 12 ] // n yra tas pats kaip i vieta skaiciaus array eiluteje 
   k2.push(n*2)
 }
 console.log(k2)
@@ -181,7 +181,7 @@ const quadro =n=>n*4;/// [ 40, 8, 32, 16, 24 ]
 const k4=k.map(quadro);
 console.log(k4);
 
-const k5=k.map(n=>n*5);//  [ 50, 10, 40, 20, 30 ]
+const k5=k.map(n=>n*5);//  [ 50, 10, 40, 20, 30 ] // reiskia eilute nauja k5 ima k duomenis kuriuos (n nari => daro i n narys *5 pvz)
 console.log(k5);
 
 const k6=k.map(n=>n);
@@ -248,6 +248,10 @@ console.log(texts5Updated);
 
 const texts5Updated2=texts5.filter(t=>t);   /// irgi toks pats atsakymas. Tuscias tekstas negatyvi reiksme del to jis praleidziamas. 
 console.log(texts5Updated2);
+
+
+/// ${array1.at(index)} kai reikai ieskoti pirmos raides is 3 zodziu 
+//let perdarytas=patikslintas.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')+'';
 
 
 

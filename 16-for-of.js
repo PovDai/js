@@ -29,16 +29,16 @@ for (const name of nameses){
 }
 console.log(nameSizes)
 
-const namp=['Jonas','Maryte',"Petras"] ;
+const namo=['Jonas','Maryte',"Petras"] ;
 const op=[];
 
 for (const name of namo){
     const details={
-        name:namo
+        name:namo,
         firstLetter:namo[0],
         lastLetter:namo.length-1,
         size:namo.length,
-        reverse:namp.split('').reverse().join(''),
+     
     };
     op.push(details) /// pvz sumeta vardu ilgius. 
 }

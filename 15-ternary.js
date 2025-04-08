@@ -26,7 +26,7 @@ console.log(skaicius);
 const word=4>2? 'daugiau':'Maziau';
 console.log(word)
 
-const number= 7<=5 ? 7:5;
+const number= 7<=5 ? 7:5;// nes ne ir duos neigiama ats kuris yra 5 
 console.log(number);
 
 const years=22; // teiginys turi buti virsuje 

@@ -1385,6 +1385,177 @@ function capitalizeWord(word){
 } 
 console.log(capitalizeWord('word'));
 
+console.clear();
+///// sudetingas su vardu reiksmiu padidinimu kai yra ne vienas zodis padidinimu, 
+function getDrinkByProfession(param){
+  let patikslintas=param.toLowerCase()
+  let perdarytas=patikslintas.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')+'';
+
+  
+  if(patikslintas==='jabroni'){
+    return `${perdarytas} should map to 'Patron Tequila'`;
+  } else if(patikslintas==='school counselor'){
+    return `${perdarytas} should map to 'Anything with Alcohol'`;
+  } else if( patikslintas==="programmer"){
+    return `${perdarytas} should map to 'Hipster Craft Beer'`;
+  } else if (patikslintas==="bike gang member"){
+    return `${perdarytas} should map to 'Moonshine'`;
+  }else if(patikslintas==="politician"){
+    return `${perdarytas} should map to 'Your tax dollars'`
+  }else  if(patikslintas==='rapper'){
+    return `${perdarytas} should map to 'Cristal'`;
+  } else{ 
+    return `'${perdarytas} should map to 'Beer'`
+  
+  }
+};
+console.log(getDrinkByProfession("jabrOni"));
+console.log(getDrinkByProfession("bike ganG member"));
+console.clear();
+////////// prie zodzio jo ilgi prideti 
+
+function addLength(...str) {
+  return str.map(zodis=>`${zodis} ${zodis.length}`)
+
+  };
+  console.log(addLength('Apple','Ban'))
+/// kai reikia surasti sekanti kvadrata ir ar jis sveikasis skaicius ar ne. Jeigu ne -1 grazinam 
+
+  function findNextSquare(sq) {
+    let naujas=Math.sqrt(sq);
+    let next=(naujas+1)**2
+    let trupmena=naujas-Math.trunc(naujas) /// daugiau uz 0 grazinam -1
+if(trupmena>0){
+  return -1;
+}else if(trupmena===0){
+  return next;
+}
+
+  };
+  console.log(findNextSquare(114));
+  console.log(findNextSquare(121));
+  console.log(findNextSquare(625));
+  console.log(findNextSquare(319225));
+//////// kaip paskaiciuoti kiek metu truks kol pasieks norimas pinigu suma su procentais atemus mokescius. 
+console.log('------------')
+  function calculateYears(principal, interest, tax, desired) {
+    let count=0;
+
+    while(principal<desired){
+    let procentai=principal*interest;
+    console.log(procentai,'--------') /// procentai gaunami pirma karta. 
+    let mokesciai=procentai*tax;
+    console.log(mokesciai,'iiiiiii')// mokesciai mokami pirma karta 
+    principal+=procentai-mokesciai; // reiskai startine suma + procentai - mokesciai ir taip suka kol gauna 1100 arba daugiau
+    console.log(principal)
+    count++ // skaiciuoja kol surenka norima suma apsisukimo ratus 
+    }
+    return count;
+  };
+
+    console.log(calculateYears(1000,0.05,0.18,1100));
+  //// lengvas paskaiciuoti ar suma lyginis ar ne. 
+    function oddOrEven(array) {
+      let sum=0;
+      for(let i=0;i<array.length;i++){
+        sum+=array[i];
+      }
+      
+      if(sum%2===0){
+        return 'even';
+      }else{
+        return 'odd';
+      }
+    }
+ 
+    console.log(oddOrEven([0,1,5]));
+    console.log(oddOrEven([-1023, 1, -2]));
+/// lengvas su zodziu apsukimu eiluteje. 
+    function nameShuffler(str){
+      return str.split(' ').reverse().join(' ');
+    }
+    console.log(nameShuffler('john McClane'));
+
+    function validatePIN (pin) {
+      if(pin.length!==4&&pin.length!==6){
+        return false;
+      } else if(pin-Math.trunc(pin)>0){
+        return false;
+      } else{
+        return true;
+      }
+    
+    }
+    console.log(validatePIN('1'));
+    console.log(validatePIN('12245'));
+    console.log(validatePIN('-1.224'));
+    console.log(validatePIN('1234'));
+// while funkcija suskaiciupti kiek uztruks metu priaugui gauti. 
+    function nbYear(p0, percent, aug, p) {
+      let count=0;
+    while(p0<p){ // nuo kiek iki kiek salyga 
+      let prieaugis=Math.floor(p0*(percent/100)+aug)
+      p0+=prieaugis; // didejimas 
+      count++;// skaiciavimas ciklu kiek 
+    }
+    return count;
+  }
+  console.log(nbYear(1500,5,100,5000))
+/// daug ifu tikriausiai galima padaryti greiciau su objektais bet dar nlb iseina 
+  function greet(language) {
+    if(language==='english'||language==='IP_ADDRESS_INVALID'||language==='IP_ADDRESS_NOT_FOUND'||language==='IP_ADDRESS_REQUIRED'){
+      return 'Welcome';
+    }
+    if(language==='czech'){
+      return "Vitejte";
+    } if(language==='danish'){
+      return "Velkomst";
+    } if(language==="dutch"){
+      return "Welkom";
+    } if(language==="estonian"){
+      return "Tere tulemast";
+    }if(language==="finnish"){
+      return "Tervetuloa";
+    }
+    if(language==="flemish"){
+      return "Welgekomen";
+    }
+    if(language==="french"){
+      return "Bienvenue";
+    }
+    if(language==="german"){
+      return "Willkommen";
+    }
+    if(language==="irish"){
+      return "Failte";
+    }
+    if(language==="italian"){
+      return "Benvenuto";
+    }
+    if(language==="latvian"){
+      return "Gaidits";
+    }
+    if(language==="lithuanian"){
+      return "Laukiamas";
+    }
+    if(language==="polish"){
+      return "Witamy";
+    }
+    if(language==="spanish"){
+      return "Bienvenido";
+    }
+    if(language==="swedish"){
+      return "Valkommen";
+    }
+    if(language==="welsh"){
+      return "Croeso";
+    }
+    };
+  console.log(greet('english'));
+  console.log(greet('IP_ADDRESS_INVALID'));
+
+
+
 
 
 
