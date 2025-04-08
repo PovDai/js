@@ -147,6 +147,107 @@ console.log(h.splice(1,2));// isima 22 ir 33 lieka 11 44 55
 console.log(h.splice(2)); // lieka 11 22  44 55 
 console.log(h.splice(0,2))// 
 
+// reverse() funkcija grazina atbulini teksta 
+
+const reverseString=text=> text.split('').reverse().join('');
+
+console.log(reverseString('jonas'));
+console.log(reverseString('kedes'));
+console.log(reverseString('alus'));
+console.clear();
+
+/// map() sudaro nauja objekta per rodykline funkcija. Padaro su veiksmais. 
+
+const f=s=>s[0];
+
+const k=[10,2,8,4,6];
+const k2=[];
+
+for(const n of k){ /// [ 20, 4, 16, 8, 12 ] 
+  k2.push(n*2)
+}
+console.log(k2)
+//// jeigu patrigubinam. 
+
+function triple(n){
+  return n*3;
+}
+
+const k3=k.map(triple)///[ 30, 6, 24, 12, 18 ]
+console.log(k3)
+
+
+const quadro =n=>n*4;/// [ 40, 8, 32, 16, 24 ]
+const k4=k.map(quadro);
+console.log(k4);
+
+const k5=k.map(n=>n*5);//  [ 50, 10, 40, 20, 30 ]
+console.log(k5);
+
+const k6=k.map(n=>n);
+console.log(k6); // kopija gausis. 
+
+const k7=k.map(n=>n+1); /// naujas masyvas su +1 gaunamas. 
+console.log(k7);
+
+const dict=['pomidoras','agurkas','bulve','svogunas'];
+const dict2=dict.map(w=>w[0]);/// gavome pirmas raides zodziu. 
+console.log(dict2);
+const d3=dict.map(w=>w.length);
+console.log(d3) /// gauname zodziu ilgio reiksmes. 
+
+
+const people=[
+  {name:'Jonas', age:99},
+  {name:'Maryte',age:88},
+  {name:'Petras',age:77},
+  {name:'Ona',age:66},
+
+];
+/// p pavadintas sutrumpintas person. 
+const people100=people.map(p=>`${p.name} liko ${100-p.age} metai.`) /// 'Petras liko 23 metai.', kaip pvz 
+ 
+console.log(people100);
+
+const peopleNames=people.map(p=>p.name); /// ispauzdina tik vardus. 
+console.log(peopleNames)
+
+const peopleAges=people.map(p=>p.age);// isspauzdina tik amziu. 
+console.log(peopleAges);
+
+const peopleMarried=people.map(person=>{ /// kaip prideti papildoma rakta i objekta/ 
+  person.isMarried=true;
+  person.luckyNumber=13
+  return person;
+});
+console.log(peopleMarried);
+
+// filter();pasislepes ciklas, eina per masyva ir atlieka viduja gauta funcija. (n=>n>6);  pvz ar n daugiau negu 6
+const p=[10,2,8,4,6];
+const p5=[];
+
+for(const n of p){
+  if(n>5){
+    p5.push(n)
+  }
+}
+console.log(p5);
+
+
+const p6=p.filter(n=>n>6); // vietoje pasilieka jeigu didesni uz 6.n yra kiekvienas skaicius masyva kuri tikrina funkcija 
+console.log(p6);
+
+
+const p8=p.filter(n=>n>2&&n<8);
+console.log(p8);
+
+
+const texts5=['labas','','rytas','','Lietuva'];
+const texts5Updated=texts5.filter(t=>t.length>0); // pasileika teksta be tarpu masyva [ 'labas', 'rytas', 'Lietuva' ]  
+console.log(texts5Updated);
+
+const texts5Updated2=texts5.filter(t=>t);   /// irgi toks pats atsakymas. Tuscias tekstas negatyvi reiksme del to jis praleidziamas. 
+console.log(texts5Updated2);
 
 
 

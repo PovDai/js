@@ -1197,7 +1197,7 @@ function fancyMath(n1,zenklas,n2){
 //// suskaiciuoti skaiciu suma, kai tie skaiciai kaip vienas. 
 
   function sumDigits(number) {
-    let naujas=Math.abs(number).toString();
+    let naujas=Math.abs(number).toString();// pasikeicia i number pasikeicia i stringa. 
 
     let sum=0;
     for(let i=0;i<naujas.length;i++){
