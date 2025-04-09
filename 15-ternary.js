@@ -1,4 +1,4 @@
-// Ternary islikti paprasta i dalyku oeperacija, jeigu daugiau yra operaciju darom is else netinka. 
+// Ternary islikti paprasta 3 dalyku oeperacija, jeigu daugiau yra operaciju darom is else netinka. 
 
 let zodis ='';
 if( 4>2){

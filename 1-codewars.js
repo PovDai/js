@@ -1553,6 +1553,135 @@ console.log('------------')
     };
   console.log(greet('english'));
   console.log(greet('IP_ADDRESS_INVALID'));
+//// apsukti sarasa;
+  function reverseList(list) {
+    const naujas=list.reverse();
+  
+    return naujas;
+    }
+  console.log(reverseList([1,2,3,4]));
+  /// istaisyti ir pateikti pataisyta varianta 
+  function rainAmount(mm){
+    let needs=40-mm;
+
+
+      if (mm>=40){
+           return "Your plant has had more than enough water for today!";
+      } else if(mm<40) {
+           return "You need to give your plant"+' '+needs+"mm of water";
+      }
+  };
+  console.log(rainAmount(100));
+  console.log(rainAmount(39));
+ console.log(rainAmount(35));
+
+/// kaip surasti min ir max ir dif
+
+function differenceInAges(ages){
+  let naujas=Math.min(...ages);
+  let naujasMax=Math.max(...ages);
+  let dif=naujasMax-naujas;
+  return [naujas, naujasMax, dif];
+}
+console.log(differenceInAges([82,15,6,38,35]))
+
+function tripleTrouble(one, two, three){
+  let one1=one.split('');
+  let two2=two.split('');
+  let three3=three.split('');
+  let bendras=[...one1,...two2,...three3];// [ 'aaa', 'bbb', 'ccc' ]
+  let ats='';
+  for(const raides of bendras){
+    ats+=raides
+  }
+  return ats;
+ }
+console.log(tripleTrouble("aaa","bbb","ccc"));
+
+function checkAlive (health) {
+  if (health <=0){
+    return false
+  } else  {
+    return true
+  }
+};
+console.log(checkAlive(5));
+console.log(checkAlive(-1));
+console.log(checkAlive(0));
+//// is string reiksmes padaryti stringa reiksmes per tritaski ir sujungti atgal i stringa/. 
+function solution(a, b){
+  let a1=a.split('  '); [45]
+  let b1=b.split('  '); [1]
+
+  if(a.length>b.length){
+    return [...b1,...a1,...b1].join('');
+  } else{
+    return [...a1,...b1,...a1].join('');
+  }
+};
+console.log(solution('45', '1'));
+console.log(solution('13', '200'));
+/// suskaiciuoti atstuma tarp stulpu 
+function pillars(numPill, dist, width) {
+  if(numPill<=1){
+    return 0;
+  }if( numPill===2){
+    return dist*100;
+  } else{
+  let skaiciavimai=(numPill-1)*dist+(width/100)*( numPill-2)
+    return Math.round(skaiciavimai*100);
+  }
+}
+console.log(pillars(11,15,30));
+
+/// su rodykline funkcija ir ternary pvz
+  const areaOrPerimeter = (l , w)=>l===w? w*l:(w+l)*2
+  // Return your answer
+console.log(areaOrPerimeter(3,3));
+console.log(areaOrPerimeter(6,10));
+
+/// surasti per reduce array skirtuma cuboidu
+    function findDifference(a, b) {
+      const a1=a.reduce((suma,n)=>suma*n,1);
+      const b1=b.reduce((suma,n)=>suma*n,1);
+      
+      return Math.abs(a1-b1);
+    }
+console.log(findDifference([3, 2, 5], [1, 4, 4]));
+/// kai reikia grazinti skaicius kurie dalinasi is savo pozicijos arejusi be likuciu. 
+function multipleOfIndex(array) {
+  let naujas=[];
+  for(let i=0;i<array.length;i++){
+    if(i!==0 &&  array[i]%i===0){
+       naujas.push(array[i]);
+    }if(i===0&&array[i]===0){
+      naujas.push(array[i]);
+    }
+  }
+  return naujas;
+}
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+console.log(multipleOfIndex([0,2,3,6,9]));
+/// surasti kiek eiliu sumaises iseidamas is teatro 
+function seatsInTheater(nCols, nRows, col, row) {
+  return (nCols-(col-1))*(nRows-row);
+  
+  
+}
+console.log(seatsInTheater(16,11,5,3));
+
+function integrate(coefficient, exponent) {
+  let ats=coefficient/ (exponent+1)
+  return `${ats}x^${exponent+1}`
+  
+}
+console.log(integrate(3,2));
+
+
+
+
+
+
 
 
 
