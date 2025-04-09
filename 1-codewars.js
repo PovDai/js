@@ -1676,6 +1676,89 @@ function integrate(coefficient, exponent) {
   
 }
 console.log(integrate(3,2));
+/// pirmos eilutes kvadratai turi buti daugiau negu antros eilutes kubu suma 
+function arrayMadness(a, b) {
+  let a1=a.reduce((total,n)=>total+n**2,0);
+  let b1=b.reduce((total,n)=>total+n**3,0);
+  if (a1>b1){
+    return true;
+  } else{
+
+  }
+  return false; 
+}
+
+console.log(arrayMadness([1,2,3],[0,1,2]))
+console.log(arrayMadness([5,3,2,4,1],[15]))
+console.log(arrayMadness([2,5,3,4,1],[3,3,3,3,3]))
+console.log(arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]))
+console.log(arrayMadness([1,2,3,4,5],[2,2,2,2,2,2,1,1,1]))
+console.log(arrayMadness([2,4,6,8,10,12,14],[1,3,5,7,9,11,13]))
+/// is objecto padaryt zodzio reiksme ir jo ilgi. 
+
+function addLength(...str) {
+str.reduce(( total,n)=>total+n[i])
+let nauja=str.map(w=>w +' '+ w.length );
+return nauja;
+    };
+    console.log(addLength('Apple','Ban'))
+    console.log(addLength('you will win'));
+
+// surast kurioje quadranto puseje yra reiksme; 
+
+function quadrant(x,y) {
+  if(x>0&&y>0){
+    return 1;
+  }if(x<0&&y<0){
+    return 3;
+  } if(x<0&&y>0){
+    return 2;
+  }if(x>0&&y<0){
+    return 4;
+  }
+};
+console.log(quadrant([1,2,1]));
+// kitoks uzrasymas 
+
+function quadrant(x, y) {
+  return x > 0 ? y > 0 ? 1 : 4 : y > 0 ? 2 : 3;
+}
+
+/// padaryt rodykline kad atrodytu 56^7
+const derive=(coefficient,exponent)=>`${coefficient*exponent}x^${exponent-1}`
+
+console.log(derive(7,8));
+/// paskaiciuoti vidurki pazymiu. 
+function getAverage(marks){
+  let sum= marks.reduce((total,n)=>total+n,0);
+  let ilgis=marks.length;
+  let ats=sum/ilgis;
+  return  Math.floor(ats);
+  
+};
+console.log(getAverage([2,2,2,2]));
+
+// basic pakeist pagal reiksme veiksma;
+function basicOp(operation, value1, value2){
+  if(operation==='+'){
+    return value1+value2;
+  }if(operation==='-'){
+    return value1-value2;
+  } if(operation==='*'){
+    return value1*value2;
+  }if(operation==='/'){
+    return value1/value2;
+    }
+};
+console.log(basicOp('+', 4, 7));
+console.log(basicOp('-', 15, 18));
+console.log(basicOp('*', 5, 5));
+console.log(basicOp('/', 49, 7));
+// paskaiciuoti butelius :D
+function dutyFree(normPrice, discount, hol){
+  return Math.floor(  hol/(normPrice/(100/discount)));
+  };
+  console.log(dutyFree(12,50,1000));
 
 
 
