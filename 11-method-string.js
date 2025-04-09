@@ -206,7 +206,7 @@ console.log('------split-------')
 // split(); perskiria zodzius pagal norima skirtuka, pvz -_ skirtukas.Grazina zodi kaip stringa array tipe. 
 
 const t1='zodis';
-const t1Parts=t1.split(); // grazina stringu['zodis'];
+const t1Parts=t1.split(' '); // grazina stringu['zodis'];
 const t1Parts2=t1.split('o'); // o ispjauna ir padaro du zodzius. 
 const t1Parts3=t1.split('d'); // d ispjauna ir palieka zo is 
 console.log(t1Parts);

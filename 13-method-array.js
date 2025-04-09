@@ -254,6 +254,57 @@ console.log(texts5Updated2);
 //let perdarytas=patikslintas.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')+'';
 
 
+// sort
+/// every 
+//fill
+// reduce
+
+// Array().fill() array sukuria kiek bus o fill kokios bus. 
+
+const default5=[0,0,0,0,0];
+const default7=Array(7).fill(99)// Arrejus 7 poziciju kuriu reiksme bus [99,99,99,99,99,99,99]
+console.log(default7);
+
+const zeros=Array(10).fill(0);// array butinas nes sukuriam kiek bus poziciju o fill kokios jos bus 
+console.log(zeros)
+
+const emptySpace=Array(4).fill('')//[ '', '', '', '' ]
+console.log(emptySpace);
+
+const labas5=Array(5).fill('labas');
+console.log(labas5);
+
+const demo=[10,2,8,4,6];
+
+demo.fill(777); // jeigu supildysim uzpildes esama array su nauja reiksme. 
+console.log(demo)// Dazniausiai naudojamas kaip kuri nauja masyva norimo dydzio. 
+
+// every() panasu i map ir filter, eina kaip ciklas per visa array Duoda true arba false; TRUE FALSE 
+
+const trees=['uosis','egle','azuolas','tuopa'];
+
+
+const allTreesValid=trees.every(s=>s.length>0); // arba visi elementai tenkina salyga jeigu netenkina bent 1 fallse. 
+console.log(allTreesValid);
+const allTreeNameSize5=trees.every(s=>s.length===5);// jeigu ne visi 5 ilgiu, duos false. 
+console.log(allTreeNameSize5);
+
+// some() kai kuriam salyga turi tenkinti bent vienas.TRUE FALSE.
+
+const someTreesValid=trees.some(s=>s.length>0);
+console.log(someTreesValid); /// ats bus true nes bent 1 bus didesnis uz 0;
+
+// sort() rikiuoja nuo 0 iki 9; 
+
+
+
+
+
+
+
+
+
+
 
 
 

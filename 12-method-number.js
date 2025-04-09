@@ -28,7 +28,7 @@ console.log(Number.isNaN({}),isNaN({}));
 
 
 //number.parseFloat() vienas viena su desimtainiais // universalesnis nes paima ir sveikuosius ir desimtine dali. 
-// parseInt() su sveikaisiaias. PAKEICIA I STRING REIKSME. 
+// parseInt() su sveikaisiaias. Pakeicia i number reiksme 
 
 const userInput='22';
 const userName=parseInt(userInput) /// pakeiciam i number reiksme. tada +5 prides 5. 

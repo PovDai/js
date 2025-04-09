@@ -2,13 +2,15 @@ const person={
     name:'Jonas',
     age:99,
     isMarried:true,
-};
+};// pirmas budas 
 const keys=Object.keys(person); //object.keys automatizuota eilute grazina array raktu [ 'name', 'age', 'isMarried' ]
 console.log(keys);
 
 for(const key of keys){
     console.log(person[key]);
 }
+
+//// antras budas 
 for(const key in person){ //// for inas reiskia issitraukia is objecto reiksmes visas. 
     console.log(person[key]);
 }
