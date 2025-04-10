@@ -1782,18 +1782,6 @@ function dutyFree(normPrice, discount, hol){
 
 
 
-  function addLength(...str) {
-    let zodziai='';
-    let ilgis=0;
-      for(const zodis of str){
-        zodziai+=zodis;
-        ilgis=pavienis.lenght; 
-        console.log(zodziai)
-      }
-    return zodziai, ilgis
-     };
-    console.log(addLength('Apple','Ban'))
-
 
 
 
