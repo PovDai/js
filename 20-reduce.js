@@ -36,7 +36,7 @@ for(const name of names){
     abbr=name[0]+'.';
 }
 console.log(abbr);
-/// cia su reduce  pavyzdys kaip paimti pirmas raides. Is daug reiksmiu padaro viena reiksme.
+/// cia su reduce  pavyzdys kaip paimti pirmas raides. Is daug reiksmiu padaro viena,. 
 
 const abbr2=names.reduce((total,name)=>total+name[0]+'.','');
 console.log(abbr2);

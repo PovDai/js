@@ -1759,10 +1759,40 @@ function dutyFree(normPrice, discount, hol){
   return Math.floor(  hol/(normPrice/(100/discount)));
   };
   console.log(dutyFree(12,50,1000));
+/// su ifais ir sakiniais
+  function cookie(x){
+    if(typeof x==='string'){
+      return `Who ate the last cookie? It was Zach!`
+    } if(typeof x==='number'){
+    return "Who ate the last cookie? It was Monica!";
+    } if(typeof x!=='string'||typeof x!=='number'){
+      return "Who ate the last cookie? It was the dog!";
+    }
+  };
+  console.log(cookie(26));
+  console.log(cookie(true));
+
+  // be zodzio false, duok ats false; 
+
+  function ifChuckSaysSo(type){
+    return Number.isInteger(type);
+  
+  };
+  console.log(ifChuckSaysSo(NaN))
 
 
 
-
+  function addLength(...str) {
+    let zodziai='';
+    let ilgis=0;
+      for(const zodis of str){
+        zodziai+=zodis;
+        ilgis=pavienis.lenght; 
+        console.log(zodziai)
+      }
+    return zodziai, ilgis
+     };
+    console.log(addLength('Apple','Ban'))
 
 
 

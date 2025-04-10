@@ -372,6 +372,18 @@ const abbr2=names.reduce((total,name)=>total+name[0]+'.','');
 console.log(abbr2);
 
 
+/// slice() veikia ir masyve. 
+
+const names=['Jonas','Maryte','Petras','Ona'];
+const n1=names[0];
+const n2=names[1];
+const n34=names.slice(2);
+
+console.log(n1);
+console.log(n2);
+console.log(n34);
+
+
 
 
 

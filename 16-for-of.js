@@ -1,3 +1,4 @@
+/// for of eina per masyvus. 
 const marks=[10,2,8,4,6];
 let sum=0;
 

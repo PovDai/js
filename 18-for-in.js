@@ -1,9 +1,12 @@
+//// for in eina per objektus
+
+
 const person={
     name:'Jonas',
     age:99,
     isMarried:true,
 };// pirmas budas 
-const keys=Object.keys(person); //object.keys automatizuota eilute grazina array raktu [ 'name', 'age', 'isMarried' ]
+const keys=Object.keys(person); //object.keys automatizuota eilute grazina array raktu [ 'name', 'age', 'isMarried' ] pagamina masyva toki. 
 console.log(keys);
 
 for(const key of keys){
