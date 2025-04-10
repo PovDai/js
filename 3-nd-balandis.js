@@ -165,7 +165,7 @@ console.log(dovanai(15));
 console.log(dovanai(26));
 /// reikia perdaryti su math random, ifais ir sarasu su juo. 
 
-function dovanosPagalMetus(metai,vardas){
+function dovanosPagalMetus(metai){
 const geri = ['Vienaragis', 'Masina', 'Butas','Pilis','Sala','Kruizas po pasauly','1000 000 eur']
 const nelabai=['Kojines','Bananas','Ananasas','Piestukas','obuolys','pirstines','akiniai','delfi prenumerata']
 
@@ -186,6 +186,47 @@ const nelabai=['Kojines','Bananas','Ananasas','Piestukas','obuolys','pirstines',
     console.log(dovanosPagalMetus(36));
     console.log(dovanosPagalMetus(35));
     console.log(dovanosPagalMetus(2));
+
+/// kazino rulete :) 
+let skaiciai=[];
+for(let i=0;i<=35;i++){
+    skaiciai.push(i)
+};
+const atsitiktinis=skaiciai[Math.floor(Math.random()*36)];
+console.log('Rulete isrideno skaiciu',atsitiktinis)
+/// kauliuko ridenimas. 
+let skaicius=[];
+for (let i=1;i<=6;i++){
+    skaicius.push(i);
+};
+const ridenu=skaicius[Math.floor(Math.random()*6 )];
+console.log('Kamuoliukas isrideno',ridenu);
+
+/// vaskici
+
+const kombinacijos=['zirkles','sulinys','popierius'];
+
+const manoKombinacijos=kombinacijos[Math.floor(Math.random()*kombinacijos.length )];
+
+console.log(manoKombinacijos);
+
+const kompiuterioKombinacijos=kombinacijos[Math.floor(Math.random()*kombinacijos.length )];
+console.log(kompiuterioKombinacijos);
+
+if(kompiuterioKombinacijos===manoKombinacijos){
+    return `Lygiosios`
+}if  (  (manoKombinacijos === 'zirkles' && manoKombinacijos === 'popierius') ||
+        (manoKombinacijos === 'popierius' && manoKombinacijos === 'šulinys') ||
+        (manoKombinacijos === 'šulinys' && manoKombinacijos === 'zirkles')
+){
+            return `As laimejau !!!`
+        }else{
+           
+        };
+        return `Kompiuteris laimejo`
+
+
+
 
 
 
