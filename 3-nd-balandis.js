@@ -92,35 +92,35 @@ let perimetr= ((plotis+ilgis)*2)*2
 let  plytplotis=0.2*0.1;
 let plytosKain=(perimetr/plytplotis)*plytos
 
-namoKaina=po2m*(durys+(6*langai)+plytosKain);
+let  namoKai=po2m*(durys+(6*langai)+plytosKain);
 
-        return `Namo kaina po 2m sienas statant ${Math.round(namoKaina)} Eur`;
+        return `Namo kaina po 2m sienas statant ${Math.round(namoKai)} Eur`;
     }if(aukstis%2.5===0){ 
 let po25m=aukstis/2.5
 let perimetroPloti= ((plotis+ilgis)*2.5)*2
 let  plytosPlot=0.2*0.1;
 let plytosKainuos=(perimetroPloti/plytosPlot)*plytos
-namoKaina=po25m*(durys+(6*langai)+plytosKainuos);
+let  namoKain=po25m*(durys+(6*langai)+plytosKainuos);
 
-        return `Namo kaina po 2.5m sienas statant  ${Math.round( namoKaina)} Eur`;
+        return `Namo kaina po 2.5m sienas statant  ${Math.round(namoKain)} Eur`;
     }else{ 
         let po2m=aukstis/2
         let perimetroPlo= ((plotis+ilgis)*2)*2
         let  plytosPl=0.2*0.1;
         let plytosKainu=(perimetroPlo/plytosPl)*plytos
         
-        Aukstaipo2m=po2m*(durys+(6*langai)+plytosKainu);
+        let    Aukstaipo2m=po2m*(durys+(6*langai)+plytosKainu);
         
         let po25m=aukstis/2.5
         let perimetroPlot= ((plotis+ilgis)*2.5)*2
         let  plytosPlot=0.2*0.1;
         let plytosKai=(perimetroPlot/plytosPlot)*plytos
 
-        Aukstaipo25m=po25m*(durys+(6*langai)+plytosKai);
+        let     Aukstaipo25m=po25m*(durys+(6*langai)+plytosKai);
 
-        bendraSuma=Aukstaipo2m+Aukstaipo25m;
+        let    bendraSuma=Aukstaipo2m+Aukstaipo25m;
 
-        return`Namo kaina  ${Math.round( bendraSuma)}Eur`;
+        return`Namo kaina  ${Math.round(bendraSuma)}Eur`;
     }
 };
 console.log(kaina(1,1000,500,1,2,12));
@@ -201,7 +201,7 @@ for (let i=1;i<=6;i++){
 };
 const ridenu=skaicius[Math.floor(Math.random()*6 )];
 console.log('Kamuoliukas isrideno',ridenu);
-
+/*
 /// vaskici
 
 const kombinacijos=['zirkles','sulinys','popierius'];
@@ -224,6 +224,312 @@ if(kompiuterioKombinacijos===manoKombinacijos){
            
         };
         return `Kompiuteris laimejo`
+
+/// uzbgti su vaskici reiks */
+
+
+// simple skaiciuotuvas
+
+export function suskaiciuok(a,b,zenklas){
+    if(b===0){
+        return `Dalyba is nulio negalima`;
+    }
+    if(zenklas==='+'){
+        return `Rezultatas sudedant: ${a}+${b}=${a+b}`;
+    }if( zenklas==='-'){
+        return `Rezultatas atemant: ${a}-${b}=${a-b}`;
+    }if(zenklas==='*'){
+        return `Rezultatas dauginant: ${a}*${b}=${a*b}`;
+    }if(zenklas==='/'){
+        return `Rezultatas daulinant: ${a}/${b}=${a/b}`;
+    }if(zenklas==='**'){
+        return `Rezultatas keliant laipsniu: ${a}**${b}=${a**b}`;
+    }
+    };
+    console.log(suskaiciuok(2,10,'/'));
+    
+    function getPlanetName(id){
+        var name;
+        switch(id){
+          case 1:
+            name = 'Mercury'
+            break;
+          case 2:
+            name = 'Venus'
+            break;
+          case 3:
+            name = 'Earth'
+            break;
+          case 4:
+            name = 'Mars'
+            break;
+          case 5:
+            name = 'Jupiter'
+            break;
+          case 6:
+            name = 'Saturn'
+            break;
+          case 7:
+            name = 'Uranus'
+            break;
+          case 8:
+            name = 'Neptune'
+            break;
+        }
+    
+        return name;
+    
+      }
+      console.log(getPlanetName(3));
+
+      /*. Parašykite funkciją, kuri išvestų skaičiaus faktorialą 
+2. Parašykite funkciją, kuri apskaičiuotų kiek kartų tam tikra raidė pasikartojo žodyje arba 
+sakinyje 
+3. Padarykite funkciją, kuri grąžintų visus skaičiaus 3 kartotinius nuo 1 iki 50 
+4. Parašykite funkciją, kuri patikrintų ar duotas žodis yra palindromas 
+5. Parašyk funkciją, kuri suskaičiuoja kiek balsių yra žodyje 
+6. Sukurk funkciją, kuri visus tarpus tekste pakeičia pabraukimais (underscore) 
+7. Sukurk funkciją, kuri padvigubina visus skaičius masyve 
+8. Sukurk funkciją, kuri suranda ilgiausią žodį sakinyje 
+9. Funkcija, kuri išrikiuoja žodžius pagal ilgį didėjančia tvarka 
+10. Funkcija, kuri grąžina pirmą skaičių masyve, kuris dalinasi iš 7 
+11. Funkcija, kuri priima masyvą vardų ir grąžina tik tuos, kurie prasideda „A“ raide 
+12. Funkcija, kuri turi sąraše rasti skaičių, kuris jame kartojasi daugiau nei vieną kartą 
+13. Sukurk funkciją, kuri grąžins visus duoto sąrašo skaičius, kurie yra tarp dviejų nurodytų 
+reikšmių ([2, 5, 36, 8, 15, 6] masyvui nurodžius 5 20 intervalą, bus grąžinama [5, 8, 15, 
+6] ) 
+14. Parašykite funkciją, kuri iš žodžių sąrašo išrinktų ir grąžintų tik tuos žodžius, kuriuose 
+yra raidė e  */
+
+
+// faktorialas
+
+function faktorial(skaicius){
+   let naujas=[];/// pasidarom arraiju 
+   for(let i=skaicius;i>0;i--){
+    naujas.push(i);// ispaudziam arejui viskas reiksmes 
+   };
+   const ats=naujas.reduce((total,n)=>total*n,1); //reducinam 
+ return ats;
+}
+console.log(faktorial(5))
+
+//  Parašykite funkciją, kuri apskaičiuotų kiek kartų tam tikra raidė pasikartojo žodyje arba sakinyje 
+
+function kartotis (duomenys){
+    let count=0;
+    let ieskoma='a';
+    for(let i=0;i<duomenys.length;i++){
+        if(duomenys[i]===ieskoma){
+            count++
+        }
+    }
+    return count;
+};
+console.log(kartotis('labas rytas lietuva, jau atkeliavome '))
+// 3. Padarykite funkciją, kuri grąžintų visus skaičiaus 3 kartotinius nuo 1 iki 50 
+
+function kartotinis(min,max){
+    let kartotiniai=[];
+    for(let i=min;i<max;i++){
+        if([i]%3===0){
+            kartotiniai.push(i)
+        }
+    }
+    return kartotiniai;
+}
+console.log(kartotinis(1,50));
+
+// 4. Parašykite funkciją, kuri patikrintų ar duotas žodis yra palindromas  
+
+function palindro(zodis){
+    let naujas='';
+
+    for(let i=zodis.length-1;i>=0;i--){
+        naujas+=zodis[i];
+        if(naujas===zodis){
+            return `${zodis} yra palindromas nes zodis apsukus gaunasi reiksme ${naujas}`        
+    } else{
+    } 
+}
+return `${zodis} nera palindromas nes zodis apsukus gaunasi reiksme ${naujas}` 
+};
+console.log(palindro('aba'));
+console.log(palindro('abba'));
+console.log(palindro('caca'));
+
+// Parašyk funkciją, kuri suskaičiuoja kiek balsių yra žodyje .
+
+function balses(duomenys){
+    let count=0;
+    let balses=['a','e','i','o','u']
+
+    for(let i=0; i<duomenys.length;i++){
+        if(balses.includes(duomenys[i])){
+            count++
+        }
+    }
+    return count;
+}
+console.log(balses('labas rytas Lietuva'));
+
+// 6. Sukurk funkciją, kuri visus tarpus tekste pakeičia pabraukimais (underscore) 
+
+function pabraukti(tekstas){
+
+    let naujas=tekstas.replaceAll(' ','_');
+
+    return naujas;
+}
+console.log(pabraukti('Labas rytas Lietuva, kaip laikaisi'));
+
+//7. Sukurk funkciją, kuri padvigubina visus skaičius masyve 
+
+function duX(duomenys){
+let skaiciai=[];
+for(const n of duomenys){
+    skaiciai.push(n*2 )
+
+}
+return skaiciai;
+}
+console.log(duX([5,4,3,2,1]))
+
+function duY(duomenys){
+    let nauji=[];
+    for(const n of duomenys){
+        nauji.push(n*2);
+    }
+    return nauji;
+}
+console.log(duY([2,3,5,4,5]));
+
+//8. Sukurk funkciją, kuri suranda ilgiausią žodį sakinyje 
+
+function ilgiausia(duomenys){
+    let zodziai=duomenys.split(' ');
+    let ilgis=zodziai[0].length
+
+for(let i=0;i<=zodziai.length-1;i++){
+    if(zodziai[i].length>ilgis){
+       ilgis=zodziai[i].length;
+    }
+    }
+    return`Ilgiausias zodis sakinyje yra ${ilgis} raidziu`
+};
+
+console.log(ilgiausia('laba diena kaip jus gyvenate'));
+///9.Funkcija, kuri išrikiuoja žodžius pagal ilgį didėjančia tvarka 
+
+function rikiuoti(duomenys){
+    let naujas=duomenys.split(' ');
+console.log(naujas);
+
+return naujas.sort((a,b)=>a.length-b.length).join(' ')
+};
+console.log(rikiuoti('Sveiki kaip gyvenate ar yra kazko naujo pas jus'));
+
+function pakartojimui(duomenys){
+    let naujiena=duomenys.split(' ');
+
+return naujiena.sort((a,b)=>a.length-b.length).join(' ');
+};
+console.log(pakartojimui("Sveiki visis kaip laikoties ir ar yra kas gero "))
+
+/// 10. Funkcija, kuri grąžina pirmą skaičių masyve, kuris dalinasi iš 7 
+
+function grazinti(duomenys){
+    let skaicius=[];
+    for(let i=0;i<duomenys.length;i++){
+        if(duomenys[i]%7===0){
+            skaicius.push(duomenys[i]);
+        }
+    }
+
+return skaicius[0];
+}
+console.log(grazinti([1,2,3,4,5,6,14,21,28]));
+
+// arba  su for of motodu. 
+
+function grazinam(duomenys){
+    let number=[];
+    for(const numeriai of duomenys){
+        if(numeriai%7===0){
+            number.push(numeriai);
+        }
+    }
+    return number[0];
+};
+console.log(grazinam([1,2,3,4,5,6,14,21,28]));
+
+
+
+
+
+
+
+//11. Funkcija, kuri priima masyvą vardų ir grąžina tik tuos, kurie prasideda „A“ raide 
+
+function aPrasideda(duomenys){
+    let naujasMasyvas=[];
+ for(const vardai of duomenys){
+    if(vardai[0]==='A'){
+        naujasMasyvas.push(vardai);
+    }
+    } 
+    return naujasMasyvas;
+    };
+
+console.log(aPrasideda(['Jonas','Petras','Maryte','Azuolas','Agota']));
+
+//12. Funkcija, kuri turi sąraše rasti skaičių, kuris jame kartojasi daugiau nei vieną kartą 
+
+function radom(duomenys){
+
+return duomenys.filter((skaicius,indeksas)=>duomenys.indexOf(skaicius)!==indeksas);
+};
+console.log(radom([1,2,3,4,5,2]));
+console.log(radom([1,2,3,3,5,8]));
+
+/* 13. Sukurk funkciją, kuri grąžins visus duoto sąrašo skaičius, kurie yra tarp dviejų nurodytų 
+reikšmių ([2, 5, 36, 8, 15, 6] masyvui nurodžius 5 20 intervalą, bus grąžinama [5, 8, 15, 
+    6] ) */
+
+function ieskome(duomenys, intervalas) {
+    const min = Math.min(...intervalas);
+    const max = Math.max(...intervalas);
+    return duomenys.filter(skaicius => skaicius >= min && skaicius <= max);
+}
+console.log(ieskome([2, 5, 36, 8, 15, 6], [5, 20]));
+
+
+
+
+/*14. Parašykite funkciją, kuri iš žodžių sąrašo išrinktų ir grąžintų tik tuos žodžius, kuriuose 
+yra raidė e  */
+function suraskE(sakinys){
+    let zodziai=[];
+    let raide='e'
+    let sakinysMasyvu=sakinys.split(' ');
+
+    for(let i=0;i<sakinysMasyvu.length;i++){
+        if(sakinysMasyvu[i].includes(raide)){
+            zodziai.push(sakinysMasyvu[i]);
+        }
+        }
+        return zodziai.join(' ')
+    };
+
+console.log(suraskE('laba diena jau penktadienis o jums diena praejo jau ?'))
+
+
+
+
+
+
+
+
 
 
 
