@@ -1960,6 +1960,90 @@ function soluti(n){
 };
 console.log(soluti(4.3));
 
+function spEng(sentence){
+  let pataisyta=sentence.toLowerCase(); // mazinta 
+  if(pataisyta==="english"){
+    return true;
+  }else{
+  }
+    return false;
+  }
+  console.log(spEng('english'));
+  console.log(spEng("egnlish"));
+
+
+  function validateCode (code) {
+    let a=code.toFixed().split('');
+    let b=parseFloat( a[0]);
+    if(b===1||b===2||b===3){
+      return true;
+    }
+
+     return false;
+    }
+    console.log(validateCode(123));
+    console.log(validateCode(423));
+
+    function quotable(name, quote){
+      return `${name} said: "${quote}"`;
+    }
+    console.log(quotable('Grae', 'Practice makes perfect'));
+
+
+    function defineSuit(card) {
+      let b=card.slice(-1);
+      if(b==='♣'){
+        return 'clubs'
+      }if(b==='♦'){
+        return 'diamonds'
+      }if(b==='♥'){
+        return 'hearts'
+      }if(b==='♠'){
+        return 'spades'
+      }
+    };
+    console.log(defineSuit('10♣'))
+
+    function friend(friends){
+      let zodziai=[];
+      for (const vardai of friends){
+        if(vardai.length===4){
+          zodziai.push(vardai);
+        }
+      } 
+      return zodziai;
+    }
+    console.log(friend(["Ryan", "Kieran", "Mark"]));
+
+    function removeSmallest(numbers) {
+      const naujaKopija=[...numbers]; 
+
+      let min=Math.min(...naujaKopija);
+      let ind=naujaKopija.indexOf(min);
+      naujaKopija.splice(ind,1); /// iskerpa vienetuka tokiu budu. 
+  
+        return naujaKopija /// cia grazina originalo kopija be 1. 
+       }; 
+       console.log(removeSmallest([5, 3, 2, 1, 4]));
+
+       //arba su for of. 
+
+function iesk(skaiciai){
+  let nauja=[];
+  let indeksas=Math.min(...skaiciai);
+  for(const skaicius of skaiciai){
+    if (skaicius !==indeksas){
+      nauja.push(skaicius);
+    }
+  }
+  return nauja;
+}
+console.log(iesk([5, 3, 2, 1, 4]));
+
+     
+
+
+     
 
 
 
