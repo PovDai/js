@@ -7,7 +7,7 @@ console.log(Math.SQRT2);// Dvejoto kvadratine saknis kaip pvz.
 
 
 //abs - vercia minusinius i pliusinisu duoda absoliuce verte. Vercia minusus i pliusu. Jeigu reikia keisti reiksme - daryti. 
-console.log(- Math.abs(5)) // JEIGU Reikia keisti pliusa i minusa ir minusa i pliusa. 
+console.log(- Math.abs(5)) 
 console.log(Math.abs(5));
 console.log(Math.abs(-5)); // Absoliutine verte. jkeigu -10 bus 10. Arba minusinius pavercia i pozityvius. 
 console.log('\nabs'); // new line ir spauzdinti. 

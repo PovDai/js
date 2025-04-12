@@ -1,14 +1,14 @@
 
 
 
-function findNeedle(haystack) {
+function surask(haystack) {
     for(let i=0;i<=haystack.length;i++){
       if(haystack[i]==='needle'){
         return `found the needle at position ${i}`
       }}};
 
   const z1=["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
-  console.log(findNeedle(z1));
+  console.log(surask(z1));
 
   /*Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
 
@@ -225,35 +225,11 @@ function hoopCount (n) {
  }
  console.log(hoopCount(3));
  console.log(hoopCount(11));
-    function setAlarm(employed, vacation) {
-        return employed && !vacation;
-    };
+  
 
 
 console.clear();
 
-function setAlarm(employed, vacation){
-    if(employed===true&&vacation===true){
-      return false;
-    }if(employed===false&&vacation===true){
-      return true;
-    }if(employed!==false&&vacation!==true){
-        return false;
-    }if(employed!==true&&vacation!==true){
-        return false;
-    }
-    };
-    console.log(setAlarm(true,true));
-    console.log(setAlarm(false,true));
-    console.log(setAlarm(true,false));
-    console.log(setAlarm(false,false));
-
-    /*
-    employed | vacation 
-    true     | true     => false
-    true     | false    => true
-    false    | true     => false
-    false    | false    => false*/
     function setAlarm(employed, vacation) {
         if (employed && !vacation) {
             return true;
@@ -413,7 +389,7 @@ function getCount(str) {
     let atvirukoSuma = 0;
     const raides= ['a', 'e', 'i','o','u']
 
-    for(i=0;i<str.length;i++){
+    for(let i=0;i<str.length;i++){
      if(raides.includes(str[i])){
         atvirukoSuma++}
     }
@@ -469,15 +445,15 @@ console.log('-------------')
   }
   console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
 
-  function greet (name, owner) {
+  function greef (name, owner) {
     if(name===owner){
       return 'Hello boss'
     }if(name!==owner){
       return 'Hello guest'
     }
   };
-  console.log(greet('Daniel','Daniel'));
-  console.log(greet('Greg','Daniel'));
+  console.log(greef('Daniel','Daniel'));
+  console.log(greef('Greg','Daniel'));
 
 // kai reikia isimti kazkoki elementa is zodio. siuo atveju sauktuka. 
   function removeExclamationMarks(s) {
@@ -502,10 +478,10 @@ const c=[9, 2, 0, 7];
 console.log(reverseList(b));
 console.log(reverseList(c));
 
-function greet(name){
+function greek(name){
   return `Hello,${name} how are you doing today`
 }
-console.log(greet("Ryan"));
+console.log(greek("Ryan"));
 
 // kai reikia patikrinti ar antras zodis tinka pirmo pabaigai. 
 function solution(str, ending){
@@ -552,7 +528,7 @@ console.log(bmi(50,1.80));
 
 ///////////
 /// patikrinti ar pateiktas a turi savyje x 
-function check(a, x) {
+function chec(a, x) {
   for(let i=0;i<a.length;i++){
     if(a[i]===x){
       return true;
@@ -560,9 +536,9 @@ function check(a, x) {
   }
   return false;
 }
-console.log(check([66, 101], 66));
-console.log(check([101, 45, 75, 105, 99, 107], 107));
-console.log(check(['t', 'e', 's', 't'], 'e'));
+console.log(chec([66, 101], 66));
+console.log(chec([101, 45, 75, 105, 99, 107], 107));
+console.log(chec(['t', 'e', 's', 't'], 'e'));
 
 
 ////// nauja funkcija array.map()  pakeiciam mapu ir padarom per parseint numeriu, tada galim su ciklu suskaiciut. 
@@ -613,10 +589,10 @@ function zeroFuel(distanceToPump, mpg, fuelLeft) {
 
   /// arba 
 
-  function numberToString(num) {
+  function numberTo(num) {
     return num.toString();
   };
-  console.log(numberToString(67));
+  console.log(numberTo(67));
 //// pakeisti stringa i array eilute prase splitint pagal ' ' tarpa. 
   function stringToArray(string){
     return string.split(" "); // splitinam pagal tarpa. ir padarom [ eilute. ]
@@ -780,7 +756,7 @@ console.log(countBy(2,5));
 
 
 
-function highAndLow(numbers){
+function highAndLo(numbers){
   let n0=numbers.split(' '); // pasiverciam i object po 1 skaiciu. 
 
  const max = Math.max(...n0); // Didžiausia reikšmė BUTINA DETI ... nes neiskos masyve skaiciu. 
@@ -789,10 +765,10 @@ function highAndLow(numbers){
 return ''+`${max} ${min1}`
 };
 
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+console.log(highAndLo("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
 
 //// kai reikia skaiciu pakeisti 0 arba 1 iki 5 ir virs 5 ribose. 
-function fakeBin(x){
+function fakeBi(x){
   let naujas=''; // nulinis lygis stringo reiksme 
   let masyvas=x.split([])// isskirstom string eilute po 1 skaiciu [] reiksmeje 
   for(let i=0; i<masyvas.length;i++){
@@ -805,7 +781,7 @@ function fakeBin(x){
   return naujas+''
 
 }
-console.log(fakeBin('45385593107843568'));
+console.log(fakeBi('45385593107843568'));
 /// kai reikia eiluteje surasti maziausia skaiciu. 
 function findSmallestInt(arr) {
   let maziukas=arr[0]
@@ -887,7 +863,7 @@ function minMax(arr) {
 console.log(minMax([1,2,3,4,5]));
 // arba for ciklu 
 
-function minMax(arr) {
+function minMa(arr) {
   if (arr.length === 0) return []; // jei masyvas tuščias
   
   let mini = arr[0];
@@ -905,7 +881,7 @@ function minMax(arr) {
   return [mini, maxi];
 }
 
-console.log(minMax([1, 2, 3, 4, 5]))
+console.log(minMa([1, 2, 3, 4, 5]))
 
 /// Ar Zaidzia banjo su string metodais; 
 
@@ -1145,7 +1121,7 @@ function smallEnough(a, limit){
 };
 console.log(smallEnough([66,101],200));
 
-function reverseSeg(n){
+function reverseSe(n){
   let nauja=[];
 
   for(let i=5;i>0;i--){
@@ -1153,7 +1129,7 @@ function reverseSeg(n){
   }
   return [nauja.join('')]
 };
-console.log(reverseSeg(5));
+console.log(reverseSe(5));
 
 
 
@@ -1360,7 +1336,8 @@ function validateHello(greetings) {
 }
 console.log(validateHello('meh'));
 
-function greet(name){
+function grees(name){
+
   if(name==="Johnny"){
     return `Hello my love!`
   }else {
@@ -1369,8 +1346,8 @@ function greet(name){
   return `Hello, ${name}!`
  
 };
-console.log(greet('Jim'));
-console.log(greet("Johnny"));
+console.log(grees('Jim'));
+console.log(grees("Johnny"));
 
 // su rodykline pabandziau 
 
@@ -1438,7 +1415,7 @@ if(trupmena>0){
   console.log(findNextSquare(319225));
 //////// kaip paskaiciuoti kiek metu truks kol pasieks norimas pinigu suma su procentais atemus mokescius. 
 console.log('------------')
-  function calculateYears(principal, interest, tax, desired) {
+  function calculateYear(principal, interest, tax, desired) {
     let count=0;
 
     while(principal<desired){
@@ -1453,7 +1430,7 @@ console.log('------------')
     return count;
   };
 
-    console.log(calculateYears(1000,0.05,0.18,1100));
+    console.log(calculateYear(1000,0.05,0.18,1100));
   //// lengvas paskaiciuoti ar suma lyginis ar ne. 
     function oddOrEven(array) {
       let sum=0;
@@ -1491,7 +1468,7 @@ console.log('------------')
     console.log(validatePIN('-1.224'));
     console.log(validatePIN('1234'));
 // while funkcija suskaiciupti kiek uztruks metu priaugui gauti. 
-    function nbYear(p0, percent, aug, p) {
+    function nbYea(p0, percent, aug, p) {
       let count=0;
     while(p0<p){ // nuo kiek iki kiek salyga 
       let prieaugis=Math.floor(p0*(percent/100)+aug)
@@ -1500,9 +1477,9 @@ console.log('------------')
     }
     return count;
   }
-  console.log(nbYear(1500,5,100,5000))
+  console.log(nbYea(1500,5,100,5000))
 /// daug ifu tikriausiai galima padaryti greiciau su objektais bet dar nlb iseina 
-  function greet(language) {
+  function gree(language) {
     if(language==='english'||language==='IP_ADDRESS_INVALID'||language==='IP_ADDRESS_NOT_FOUND'||language==='IP_ADDRESS_REQUIRED'){
       return 'Welcome';
     }
@@ -1551,15 +1528,15 @@ console.log('------------')
       return "Croeso";
     }
     };
-  console.log(greet('english'));
-  console.log(greet('IP_ADDRESS_INVALID'));
+  console.log(gree('english'));
+  console.log(gree('IP_ADDRESS_INVALID'));
 //// apsukti sarasa;
-  function reverseList(list) {
+  function reverseLis(list) {
     const naujas=list.reverse();
   
     return naujas;
     }
-  console.log(reverseList([1,2,3,4]));
+  console.log(reverseLis([1,2,3,4]));
   /// istaisyti ir pateikti pataisyta varianta 
   function rainAmount(mm){
     let needs=40-mm;
@@ -1609,7 +1586,7 @@ console.log(checkAlive(5));
 console.log(checkAlive(-1));
 console.log(checkAlive(0));
 //// is string reiksmes padaryti stringa reiksmes per tritaski ir sujungti atgal i stringa/. 
-function solution(a, b){
+function solutio(a, b){
   let a1=a.split('  '); [45]
   let b1=b.split('  '); [1]
 
@@ -1619,8 +1596,8 @@ function solution(a, b){
     return [...a1,...b1,...a1].join('');
   }
 };
-console.log(solution('45', '1'));
-console.log(solution('13', '200'));
+console.log(solutio('45', '1'));
+console.log(solutio('13', '200'));
 /// suskaiciuoti atstuma tarp stulpu 
 function pillars(numPill, dist, width) {
   if(numPill<=1){
@@ -1696,13 +1673,7 @@ console.log(arrayMadness([1,2,3,4,5],[2,2,2,2,2,2,1,1,1]))
 console.log(arrayMadness([2,4,6,8,10,12,14],[1,3,5,7,9,11,13]))
 /// is objecto padaryt zodzio reiksme ir jo ilgi. 
 
-function addLength(...str) {
-str.reduce(( total,n)=>total+n[i])
-let nauja=str.map(w=>w +' '+ w.length );
-return nauja;
-    };
-    console.log(addLength('Apple','Ban'))
-    console.log(addLength('you will win'));
+
 
 // surast kurioje quadranto puseje yra reiksme; 
 
@@ -1720,9 +1691,6 @@ function quadrant(x,y) {
 console.log(quadrant([1,2,1]));
 // kitoks uzrasymas 
 
-function quadrant(x, y) {
-  return x > 0 ? y > 0 ? 1 : 4 : y > 0 ? 2 : 3;
-}
 
 /// padaryt rodykline kad atrodytu 56^7
 const derive=(coefficient,exponent)=>`${coefficient*exponent}x^${exponent-1}`
@@ -1739,7 +1707,7 @@ function getAverage(marks){
 console.log(getAverage([2,2,2,2]));
 
 // basic pakeist pagal reiksme veiksma;
-function basicOp(operation, value1, value2){
+function basicO(operation, value1, value2){
   if(operation==='+'){
     return value1+value2;
   }if(operation==='-'){
@@ -1750,10 +1718,10 @@ function basicOp(operation, value1, value2){
     return value1/value2;
     }
 };
-console.log(basicOp('+', 4, 7));
-console.log(basicOp('-', 15, 18));
-console.log(basicOp('*', 5, 5));
-console.log(basicOp('/', 49, 7));
+console.log(basicO('+', 4, 7));
+console.log(basicO('-', 15, 18));
+console.log(basicO('*', 5, 5));
+console.log(basicO('/', 49, 7));
 // paskaiciuoti butelius :D
 function dutyFree(normPrice, discount, hol){
   return Math.floor(  hol/(normPrice/(100/discount)));
@@ -1780,9 +1748,217 @@ function dutyFree(normPrice, discount, hol){
   };
   console.log(ifChuckSaysSo(NaN))
 
+  console.clear();
+  
+  export function suskaiciuok(a,b,zenklas){
+    if(zenklas==='+'){
+        return `Rezultatas sudedant: ${a}+${b}=${a+b}`;
+    }if( zenklas==='-'){
+        return `Rezultatas atemant: ${a}-${b}=${a-b}`;
+    }if(zenklas==='*'){
+        return `Rezultatas dauginant: ${a}*${b}=${a*b}`;
+    }if(zenklas==='/'){
+        return `Rezultatas daulinant: ${a}/${b}=${a/b}`;
+    }
+    };
+    console.log(suskaiciuok(1,10,'+'));
 
 
+    const jubiliejai=[
+      {age:1, dovana:'Vienaragis'},
+      {age:5, dovana:'Pilis'},
+      {age:10, dovana:'dviratis'},
+      {age:15, dovana:'Motociklas'},
 
+  ];
+  function dovanai(metai){
+  
+  for(const {age,dovana}of jubiliejai){ 
+      if(metai===age){
+     return `Gimtadienio  dovana ${age} proga, yra ${dovana}`
+      }else {
+      }
+  }
+  return `Tokiems metams dovana nenumatyta`
+  
+  };
+
+  function mystery() {
+    var results =
+      {sanity: 'Hello'};
+    return results
+  }
+  console.log(mystery())
+// isvardint bezdziones 
+  function monkeyCount(n) {
+    let monkeys=[];
+      for(let i=1;i<=n;i++){
+        monkeys.push(i);
+      }
+      return monkeys;
+    }
+    console.log(monkeyCount(5));
+
+    function calculateTip(amount, rating) {
+  let ratingMazintas=rating.toLowerCase();
+  
+  if(ratingMazintas==='terible'){
+    return Math.round((amount*0)-amount);
+  }if(ratingMazintas==='poor'){
+    return Math.round((amount*1.05)-amount);
+  }if(ratingMazintas==='good'){
+    return Math.round((amount*1.1)-amount)
+  }if(ratingMazintas==='great'){
+    return Math.round((amount*1.15)-amount);
+  }if(ratingMazintas==='excellent'){
+    return Math.round((amount*1.2)-amount)
+  }
+
+};
+console.log(calculateTip(20,'Excellent'));
+
+function reverseS(n){
+  let nauja=[];
+  for(let i=n;i>0;i--){
+    nauja.push(i)
+  }
+  return nauja;
+};
+console.log(reverseS(5));
+
+/*
+Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:*/
+function multiply(number){
+  let ats=Math.abs(number).toString().length;
+
+  return number*(5**ats);
+};
+console.log(multiply(10));
+console.log(multiply(-2));
+
+function toCamelCase(str){
+  let naujas=str.replaceAll('_',' ').replaceAll('-',' ').split(' ');
+  let zodis='';
+  console.log(naujas);
+  for(const zodziai of naujas){
+   let a=  zodziai[0].toUpperCase();
+   let b= zodziai.slice(1).toLowerCase();
+  
+  }
+  
+  return 
+
+};
+console.log(toCamelCase("the_stealth_warrior"));
+
+//// sudeti suma visu x rezultatu. 
+function points(games) {
+let suma=0;
+  for(const kombinacijos of games){
+  const skaicius=kombinacijos.split(':'); // isskiriam skaicius per : gaunasi 1 ir 0 pvz 
+  suma+=parseFloat(skaicius[0]);/// sudedam skaicius is pirmos pozicijos ir paverciam juos Number tipu. 
+  } 
+  return suma;
+}
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+//// susumuot array skaicius. 
+function sum (numbers) {
+
+  return numbers.reduce((total,n)=>total+n,0);
+}
+console.log(sum([1, 5.2, 4, 0, -1]));
+//// ar sakinys poarasytas caps locku. 
+function isUpperCase(sakinys){
+  let naujas=sakinys.toUpperCase();
+   if(naujas===sakinys){
+ return true 
+   } else{
+     
+   }
+   
+   return false; 
+ }
+ console.log(isUpperCase('hello I AM DONALD'));
+ console.log(isUpperCase('HELLO I AM DONALD'));
+/// kuriam metu ketvirciui priklauso menuo S
+ const quarterOf = (month) => {
+  if(month>=1&&month<4){
+    return 1;
+  }if(month>=4&&month<7){
+    return 2;
+  }if(month>=7&&month<=9){
+    return 3;
+  } else{
+    
+  }
+  return 4;
+}
+console.log(quarterOf(11));
+console.log(quarterOf(1));
+console.log(quarterOf(3));
+
+function firstNonConsecutive(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1] + 1) {
+      return arr[i];
+    }
+  }
+  return null;
+}
+
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
+/// patikrint kuri reiksme didziausia ir grazinti .
+function expressionMatter(a, b, c) {
+  
+  let a1=a*(b+c)
+
+  let b1=a*b*c
+
+  let c1=a+b*c
+
+
+  let d1=(a+b)*c
+  let e1 = a + b + c;
+
+  return Math.max(a1, b1, c1, d1,e1);
+}
+console.log(expressionMatter(2,1,2));
+console.log(expressionMatter(1,1,1));
+console.log(expressionMatter(1,6,1));
+// apsukst apsukta 
+function reverseWord(str) {
+let a=str.split('').reverse().join('').split(' ').reverse().join(' ')
+
+return a;
+}
+console.log(reverseWord('The quick brown fox jumps over the lazy dog.'));
+
+function myFirstKata(a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+     return false;
+  }
+   return  a % b + b % a;
+  };
+
+console.log(myFirstKata(3,5));
+
+function soluti(n){
+  let abc= Math.trunc(n)
+  console.log(abc)
+  let abs=n-abc
+  let fix=abs.toFixed(1);
+  let num=parseFloat(fix);
+  
+  if(num>=0.1&&num<=0.2){
+    return Math.floor(n);
+  }
+  if(num>=0.3&&num<=0.7){
+    return abc+0.5;
+  }if(num>=0.8)
+    return Math.ceil(n);
+  
+};
+console.log(soluti(4.3));
 
 
 
