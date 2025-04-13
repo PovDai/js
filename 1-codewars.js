@@ -2040,10 +2040,22 @@ function iesk(skaiciai){
 }
 console.log(iesk([5, 3, 2, 1, 4]));
 
-     
+function sumTwoSmallestNumbers(numbers) {  
+  let copija=[...numbers]; // reikia pasidaryti kopija, kad paskui iskirpti splicu minimuma 
+
+  let a=Math.min(...copija); // is kopijos pasiimam minimuma 
+  console.log(a,'--------')
+  let index=copija.indexOf(a);// minimumo pozicija 
+
+  copija.splice(index,1); // iskerpam minimuma lieka nauja eilute be minimumo 
+  console.log(copija)
+  let b=Math.min(...copija);// vel pasidarom minimumo matavima. 
+  let sum=a+b
+  return sum;
+};
+console.log(sumTwoSmallestNumbers([5,8,12,19,22]));
 
 
-     
 
 
 
