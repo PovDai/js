@@ -2056,6 +2056,65 @@ function sumTwoSmallestNumbers(numbers) {
 console.log(sumTwoSmallestNumbers([5,8,12,19,22]));
 
 
+function busStops(numbers){
+let keleiviu=0;
+
+  for(const numeriai of numbers ){
+  const ilipo=numeriai[0];
+  const islipo=numeriai[1];
+  keleiviu+=ilipo-islipo
+
+  }
+  return keleiviu;
+  };
+console.log(busStops([[10,0],[3,5],[5,8]]));
+
+
+function isAnagram(test, original) {
+ 
+  const normalize = (str) => str.toLowerCase().split('').sort().join('');/// pagal sorta surikiuoja visas raides vienodai del to galima palyginti. 
+  console.log(normalize);
+  return normalize(test) === normalize(original);
+}
+console.log(isAnagram('foefet','toffee'));
+
+
+function sumArray(array) {
+  if(array===null||array.length===0||array.length===1||array.length===2){
+    return 0;
+  } const kopija=[...array];
+    let a=Math.min (...kopija);
+    let aIndex=kopija.indexOf(a)
+    let b=Math.max (...kopija);
+    let bIndex=kopija.indexOf(b)
+    kopija.splice(aIndex,1)
+    kopija.splice(bIndex,1);
+  
+  return kopija.reduce((total,n)=>total+n,0);
+  }
+ 
+  console.log(sumArray([ -6, 20, -1, 10, -12 ]));
+
+
+
+
+  function multiTable(number) {
+   let skaicius='';
+    for (let i=1;i<=10;i++){
+      skaicius+=`${i}*${number}=${i*number}\n`;
+    }
+    return skaicius;
+  }
+  console.log(multiTable(6));
+
+
+
+
+
+
+
+
+
 
 
 
