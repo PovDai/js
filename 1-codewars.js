@@ -2127,6 +2127,115 @@ function hello(name) {
 console.log(hello('johN'));  
 
 
+function getMiddle(s) {
+  if (s.length <= 2) { /// sukranta variantai kur 0 / 1 arba 2 raides. 
+    return s;
+  }
+  const middle = Math.floor(s.length / 2);// darom iki sveiko skaiciaus kad galetum slice priimti i indexus. 
+  if (s.length % 2 === 0) {
+    return s.slice(middle - 1, middle + 1);
+  } else {
+    return s[middle];
+  }
+}
+
+console.log(getMiddle('test'));    // "es"
+console.log(getMiddle('testing')); // "t"
+console.log(getMiddle('middle'));  // "dd"
+console.log(getMiddle("A"));    
+
+
+function reverseLetter(str) {
+  
+  return str.split('').reverse().join('')
+  
+}
+console.log(reverseLetter('krishan'))
+
+function getSize(width, height, depth){
+let tur=width*height*depth;
+let plotas=((height*width)*2)+((height*depth)*2)+((width*depth)*2);
+
+return [plotas,tur]
+};
+console.log(getSize(4, 2, 6));
+console.log(getSize(10, 10,10));
+
+function factorial(n){
+  let derinukas=[];
+  for(let i=n;i>=1;i--){
+    derinukas.push(i)
+  }
+  
+  return derinukas.reduce((total,n)=>total*n,1);
+}
+console.log(factorial(1));
+
+function stringClean(s){
+  let keista=s.split('')
+  let nauja=[];
+  for(const skaiciai of keista){
+    if(skaiciai!=='1'&&skaiciai!=='2'&&skaiciai!=='0'&&skaiciai!=='3'&&skaiciai!=='4'&&skaiciai!=='5'&&skaiciai!=='6'&&skaiciai!=='7'&&skaiciai!=='8'&&skaiciai!=='9'){
+      nauja.push(skaiciai);
+
+    }
+  }
+
+  return nauja.join('');
+}
+console.log(stringClean('E3at m2e2!!'));
+/// su min ir max suzinoti atstuma ir sudet taskus 
+function getSum(a, b){
+  let sum=0;
+  let aMin=Math.min(a,b);
+  let bMax=Math.max(a,b);
+for(let i=aMin;i<=bMax;i++){
+  sum+=i;
+}
+return sum; 
+
+}
+console.log(getSum(0,1)); // 1 
+console.log(getSum(0,-2));// -3
+
+function animal(obj){
+
+    
+  
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs`
+}
+console.log(animal({name: "dog", legs: 4, color: "white"}))
+
+function mango(quantity, price){
+  if(quantity<=2){
+    return quantity * price; 
+  }
+  if(quantity%3===0){
+    return (quantity- (quantity/3))*price;
+  } else{
+    let apvalinta=Math.floor(quantity/3);
+    let ats=(quantity-apvalinta)*price;
+    return ats;
+
+  }
+
+};
+console.log(mango(7,5))
+
+function angle(n) {
+  return (n-2)*180
+}
+console.log(angle(3));
+
+function cockroachSpeed(s) {
+  return Math.round(s*27.7777)
+}
+console.log(cockroachSpeed(1.09));
+
+
+
+
+
 
 
 
