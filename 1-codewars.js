@@ -2106,9 +2106,25 @@ function sumArray(array) {
     return skaicius;
   }
   console.log(multiTable(6));
+/// nupjauti pirmas tris reiksmes 
+
+function take(arr, n) {
+
+  return arr.splice(0,n) 
+}
+console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
 
 
 
+
+function hello(name) {
+  if(!name || name.length === 0) {
+    return 'Hello, World!';
+  }
+  let pirma = name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase();
+  return `Hello, ${pirma}!`;
+};
+console.log(hello('johN'));  
 
 
 
