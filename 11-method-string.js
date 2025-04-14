@@ -187,7 +187,9 @@ console.log('Pomidoras'.slice(0,3));// Pom
 console.log('LIETUVA'.slice(1,3));// Ispjauna IE, nes nuo 2 raides iki 4 raides ispjauna 
 console.log('SENUKAS'.slice(0,-1));// reiskiasi nupjauna paskutine raide. 
 console.log('MOCIUTE'.slice(0,-2));
-console.log('JONUKAS'.slice(-6,-2)); // reiskiasi ima 6 nuo galo ir nuo ten pjauna iki 2 nuo galo. 
+console.log('JONUKAS'.slice(-6,-2));// reiskiasi ima 6 nuo galo ir nuo ten pjauna iki 2 nuo galo. 
+console.log('JONUKAS'.slice(-1)); // REISKIASI LIEKA TIK PASKUTINE RAIDE ARBA SIMBOLIS.  
+
 
 // trim panaikina tarpus is priekio ir is galo, per vidury nevalo tarpu. naudojamas pvz registraciju formose, panaikinti tarpus prie username. 
 

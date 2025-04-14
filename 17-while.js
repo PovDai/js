@@ -27,3 +27,7 @@ while(sum3 <1000000){// naudojamas kol reikia suzinoti kol pasieks rezultata. ki
 }
 console.log(count)
 console.log(sum3)
+
+
+
+for(let i=0;i<=11;i+=((if(i%2===0))))

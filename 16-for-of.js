@@ -44,3 +44,4 @@ for (const name of namo){
     op.push(details) /// pvz sumeta vardu ilgius. 
 }
 console.log(op)
+
