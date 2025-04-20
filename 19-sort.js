@@ -32,3 +32,23 @@ people.sort((a,b)=>a.name.length-b.name.length);// pagal vardo ilgi isrikiuoja
 people.sort((a,b)=>a.name>b.name?1:-1);// pagal abecele sulygina charcoda.
 people.sort((a, b) => a.isMarried > b.isMarried ? 1 : a.isMarried === b.isMarried ? 0 : -1);
 console.log(people);
+
+
+///// naudojamas pvz suskaiciuoti didziausias dvi reiksmes arba maziausias dvi reiksmes. 
+
+// cia maziausias; 
+
+function largestPairSu(numbers) {
+    var [a, b] = numbers.sort((a, b) => a - b)
+    return `${a} ir ${b}`
+  }
+  console.log(largestPairSu([10,14,2,23,19]));
+
+  // cia didziausias
+
+  function largestPairSum(numbers) {
+    var [a, b] = numbers.sort((a, b) => b-a)
+    return `${a} ir ${b}`
+  }
+  console.log(largestPairSum([10,14,2,23,19]));
+

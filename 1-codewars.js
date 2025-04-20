@@ -696,26 +696,7 @@ function squareSum(numbers){
     return Number(str)
   }
   console.log(stringToNumber('1234'));
-/// neisprestas sitas nes kai pirmoje pozicijoe nesigauna 
-  function findUniq(arr) {
-    let naujas=arr[0]
-    let antras=arr[1];
 
-    for(let i=0;i<arr.length;i++){
-      if(naujas===antras){
-      }
-      if(arr[i]!==arr[0]){
-        naujas=arr[i]
-      }
-    }
-    return naujas;
-  }
-  console.log(findUniq([1,0,0]));
-  console.log(findUniq([0,1,0]));
-  console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
-  console.log(findUniq([ 3, 10, 3, 3, 3 ]));
-
- 
 console.log('-------------------')
 
 
@@ -1867,19 +1848,7 @@ function sum (numbers) {
   return numbers.reduce((total,n)=>total+n,0);
 }
 console.log(sum([1, 5.2, 4, 0, -1]));
-//// ar sakinys poarasytas caps locku. 
-function isUpperCase(sakinys){
-  let naujas=sakinys.toUpperCase();
-   if(naujas===sakinys){
- return true 
-   } else{
-     
-   }
-   
-   return false; 
- }
- console.log(isUpperCase('hello I AM DONALD'));
- console.log(isUpperCase('HELLO I AM DONALD'));
+
 /// kuriam metu ketvirciui priklauso menuo S
  const quarterOf = (month) => {
   if(month>=1&&month<4){
@@ -2232,19 +2201,927 @@ function cockroachSpeed(s) {
 }
 console.log(cockroachSpeed(1.09));
 
+function humanYearsCatYearsDogYears(humanYears) {
+  if(humanYears===1){
+    return [humanYears,15,15];
+  } if(humanYears===2){
+    return [humanYears,24,24];
+  }
+    
+
+  return [humanYears,(24+((humanYears-2)*4)),(24+((humanYears -2)*5))];
+};
+console.log(humanYearsCatYearsDogYears(10));
 
 
 
 
 
+function stray(numbers) {
+  if (numbers[0] !== numbers[1] && numbers[0] !== numbers[2]) { // patikrina ar 1 nelygus 2 arba pirmas nelygus 3 
+    return numbers[0];// jeigu 1 nelygus likusiems grazinam pirma kaip ats. 
+  }
+  
+  for (let i = 1; i < numbers.length; i++) {/// ciklas jeigu isvardinti skaiciai nelygus 1 variantui grazinam skaiciu [i]
+    if (numbers[i] !== numbers[0]) {// imama cikla nuo 2 nario nes pirma jau patikrinome 
+      return numbers[i];
+    }
+  }
+  return numbers[0];
+};
+
+console.log(stray([1,1,2]));  
+console.log(stray([1,2,1]));   
+console.log(stray([17, 17, 3, 17, 17, 17, 17]));  
+
+function cubeChecker(volume, side){
+  if(volume<=0){
+    return false; 
+  }
+  if(Math.cbrt(volume)===side){
+    return true;
+  }else{
+    
+  }
+  return false; 
+};
+
+console.log(cubeChecker(8,3));
+console.log(cubeChecker(8,2));
+
+
+  function largestPairSum (numbers) {
+    let kopija=[...numbers] // reikalinga kad isimti skaicius didziausius.
+    let max1=Math.max(...kopija)
+    let index=kopija.indexOf(max1)
+    kopija.splice(index,1);// palieka kopija be didziausio skaiciaus kad vel galetume naudoti math max funkcija. 
+    console.log(kopija);
+ 
+    let max2=Math.max(...kopija);
+    
+    return max1+max2;
+  }
+  console.log(largestPairSum([10,14,2,23,19]));
+
+  /// su sortu variantas
+
+  function largestPairSu(numbers) {
+    var [a, b] = numbers.sort((a, b) => a - b)
+    return `${a} ir ${b}`
+  }
+  console.log(largestPairSu([10,14,2,23,19]));
+
+  function sumOfMinimums(arr) {
+let sum=0;
+for (const deriniai of arr){
+  const min=Math.min(...deriniai)
+    sum+=min;
+  }
+  return sum;
+}
+  console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
+/// pakeisti is binari i normale reiksme 
+  function binaryArrayToNumber ( arr){
+    let skaiciai='';
+for(let i=0;i<arr.length;i++){
+  skaiciai+=arr[i]
+}
+    return parseInt(skaiciai,2);
+  };
+  console.log(binaryArrayToNumber([0,0,0,1]))
+  
+  function mergeArrays(arr1, arr2) {
+    let c=arr1.concat(arr2);
+    
+      
+      return 0
+    };
+    console.log(mergeArrays([1,2,3,4],[7,6,5,8]));
+    console.log(mergeArrays([1,3,5,7,9], [10,8,6,4,2]));
+    console.log(mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]));
+
+/// kai reikia isfiltruoti is array daug reiksmiu vienodu tik unikales. ir surikiuoti nuo maziausios i didziausoia 
+    function mergeArray(arr1, arr2) {
+      let c=arr1.concat(arr2);/// concar sujungimas 
+        let  b=c.sort((a,b)=>a-b);/// rikiavimas pagal eiliskuma nuo maziausio 
+        return c.filter((reiksme,indexas)=>b.indexOf(reiksme)===indexas);// filtravimas 
+      };
+      console.log(mergeArray([1,2,3,4],[7,6,5,8]));
+      console.log(mergeArray([1,3,5,7,9], [10,8,6,4,2]));
+      console.log(mergeArray([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]));
+
+
+      function countSheep(num){
+        if(num===0){
+          return "";
+        }
+        let sum='';
+      for(let i=1;i<=num;i++){
+        sum+=i+' '+'sheep...'
+      }
+      return sum;
+    }
+        console.log(countSheep(0));
+        console.log(countSheep(1));
+        console.log(countSheep(2));
+        console.log(countSheep(3));
+/// skaiciu isdeliojimas su kelimu laipsniu 
+        function powersOfTwo(n) {
+          let num = [];
+          for (let i = 0; i <= n; i++) {
+              num.push(Math.pow(2, i)); 
+          }
+          return num;
+      }
+      
+      console.log(powersOfTwo(0)); 
+      console.log(powersOfTwo(4)); 
+/// kai reikia is array paimti ir surasti viena nr kuris issikiria is kitu 
+      function findUniq(arr) {
+        let naujas=arr[0]
+        let antras=arr[1];
+        if(arr[0]!==arr[1]&&arr[0]!==arr[2]){
+          return arr[0];
+        }
+    
+        for(let i=0;i<arr.length;i++){
+          if(naujas===antras){
+          }
+          if(arr[i]!==arr[0]){
+            naujas=arr[i]
+          }
+        }
+        return naujas;
+      }
+      console.log(findUniq([1,0,0]));
+      console.log(findUniq([0,1,0]));
+      console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+      console.log(findUniq([ 3, 10, 3, 3, 3 ]));
+    
+      
+      function sayHell( name, city, state ) {
+        let pagerintas=name.join(' ')
+
+        console.log(pagerintas,'-------');
+
+        return `Hello, ${pagerintas}! Welcome to ${city}, ${state}!`
+      };
+      
+console.log(sayHell(['Franklin','Delano','Roosevelt'], 'Chicago', 'Illinois'));
+
+function sumOfDifferences(arr) {
+  if(arr.length===0||arr===null){
+    return 0;
+  }
+  let a=arr.sort((a,b)=>b-a)// surikiavom nuo didziausio iki mazesnio 
+  let suma=0;
+  for (let i = 0; i < a.length - 1; i++) {
+    suma += a[i] - a[i + 1];
+  }
+  
+  return suma;
+  }
+console.log(sumOfDifferences([1,2,10]));// reikai gauti 9
+console.log(sumOfDifferences([-3, -2, -1]));
+
+function factoria(n){
+  if(n<0||n>12){
+    return 'RangeError'
+  }
+  let eile=[];
+  for(let i=n;i>=1;i--){
+    eile.push(i)
+  }
+  return eile.reduce((total,n)=>total*n,1)
+  
+    // Calculate the factorial here
+  }
+  console.log(factoria(13))
+  console.log(factoria(2))
+  
+
+  function nearestSq(n){
+    let skaicius=Math.round( Math.sqrt(n))
+    return skaicius*skaicius
+}
+console.log(nearestSq(10));
+console.log(nearestSq(9999));
+//// pakeisti paprastos reiksmes i binary reiksme. 
+function toBinary(n){
+  return parseInt(n.toString(2));
+}
+console.log(toBinary(5));
+
+function arrayMadnes(a, b) {
+  return (a.reduce((total,n)=>total+n**2,0))>(b.reduce((total,n)=>total+n**3,0)) ? true:false
+};
+
+
+console.log(arrayMadnes([1,2,3],[0,1,2]))
+console.log(arrayMadnes([5,3,2,4,1],[15]))
+console.log(arrayMadnes([2,5,3,4,1],[3,3,3,3,3]))
+console.log(arrayMadnes([1,3,5,2,4],[2,2,2,2,2,2,2,1]))
+console.log(arrayMadnes([1,2,3,4,5],[2,2,2,2,2,2,1,1,1]))
+console.log(arrayMadnes);([2,4,6,8,10,12,14],[1,3,5,7,9,11,13])
+
+
+
+ function isIsogra(word){
+  word = word.toLowerCase().split("").sort();
+  for (var i=0;i<word.length-1;i++){
+    if (word[i]===word[i+1]) return false;
+    }
+  return true;
+}
+
+console.log(isIsogra('Dermatoglyphics'))
+ console.log(isIsogra('moOse'));
+            
+
+ function isIsogram(word){
+  word=word.toLowerCase().split('').sort();
+     for( let i=0; i<word.length-1;i++){
+       if(word[i]===word[i+1]) {
+        return false;
+       }
+      }
+return true;
+
+  }; 
+  console.log(isIsogram('Dermatoglyphics'))
+   console.log(isIsogram('moOse'));
+   
+   function reverse(string){
+    return string.split(' ').reverse().join(' ')
+  }
+  console.log(reverse('I am an expert at this'))
+
+  function flattenAndSort(array) {
+   let a=[].concat(...array).sort((a,b)=>a-b);/// [] pries concat reiskia kad daro visiskai naujaeilute. kurioje atsiranda destrukturizuotas array. 
+
+    return a;
+  }
+  console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]));
+
+
+
+/// is 4tadalio apskritimo ilgio, surasti kvadrato plota ji sumazinti iki decimal reiksmiu. 
+
+  function squareArea(A){
+    let ats=(Math.pow(A*2,2)/(Math.pow(Math.PI,2))).toFixed(2)
+    let b=parseFloat(ats);
+  
+    return b;
+  }
+
+  console.log(squareArea(2))
+
+
+  function addLeng(...str) {
+    if (str.length === 1 && str[0].includes(' ')) {
+      str = str[0].split(' ');
+    }
+    let nauja=[];
+    for(const zodziai of str){
+      nauja.push(zodziai + ' ' + zodziai.length)
+
+    }
+  return nauja.join(', ')
+  
+  }
+      console.log(addLeng('Apple','Ban'))
+      console.log(addLeng('you will win'))
+
+      function array(string) {
+        const arr = string.split(',');
+        if (arr.length <= 2 || string === '') {
+          return null;
+        }
+        return arr.slice(1, -1).join(' ');
+      }
+      console.log(array('A1,B2'));
+      console.log(array('1,2,3'));
+
+      function  calculateAge(a,b) {
+        if(b-a===1){
+          return `You are 1 year old.`
+        } if(b-a===-1){
+          return `You will be born in 1 year.`
+        }
+        if(a===b){
+          return 'You were born this very year!';
+        }if(a<b){
+          return  `You are ${Math.abs(b-a)} years old.`
+        }if(a>b){
+          return `You will be born in ${Math.abs(a-b)} years.`
+        }
+
+      }
+      console.log(calculateAge(2012,2016));
+      console.log(calculateAge(2000,2000));
+
+      function twoDecimalPlaces(n) {
+        let ats=n.toFixed(2)
+       
+        return parseFloat(ats);
+      }
+      console.log(twoDecimalPlaces(4.659725356));
+      function getCha(c){
+  
+        const s2=String.fromCharCode(c);
+        }
+        console.log(getCha(55))
+
+        function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+          return Math.floor((Math.sqrt(age1*age1+age2*age2+age3*age3+age4*age4+age5*age5+age6*age6+age7*age7+age8*age8))/2)
+        }
+        console.log(predictAge(65,60,75,55,60,63,64,45))
+
+
+        function howManyLightsabersDoYouOwn(name) {
+          if(name==='Zach'){
+          return 18;
+          } else{
+          }
+          return 0;
+          
+        }
+        console.log( howManyLightsabersDoYouOwn())
+
+
+        function noOdds( values ){
+          return values.filter((skaiciai)=>skaiciai%2===0)
+        }
+        console.log(noOdds([0,1,2,3]));
+
+        function reverseLette(str) {
+
+
+  
+          return str.split('').reverse().join('').replace(/[0-9]/g,'').replace(/[^\w\s]|_/g, '').replaceAll(' ','');
+        }
+        console.log(reverseLette('egkuxrcife\\hsyvkxormxoanhyglcrnlvdjioozr    goood'))
+
+function strCount(str,letter){
+  return str.split(letter).length-1;/// isskiria teksta hell ir o tada matuoja ilgi 2 gaunasi minus 1 iseina 1
+} ;
+console.log(strCount('Hello','o'));
+/// kai reikia is masyvo paimti max ir min nari ir ju skirtuma 
+function differenceInAge(ages){
+  let x = ages.sort((a,b) => a - b)[0]// cia pirmas naris min 
+  let y = ages.sort((a,b) => a - b)[ages.length - 1]// cia paskutinis narys eilutes max 
+  return [x, y, y - x]
+};
+
+console.log(differenceInAge([82, 15, 6, 38, 35]));
+
+function tripleTroubl(one, two, three){
+  let ats='';
+  
+  for(let i=0;i<one.length;i++){
+    ats+=one[i]+two[i]+three[i];
+  }
+  
+  
+  return ats;
+ }
+console.log(tripleTroubl("aaa","bbb","ccc"));
+
+/// kai reikia sudeti tekstu 1 raides is triju tekstu. 
+function tripleTroub(a, b, c){
+  return a.split('').map((s,i)=>s+b[i]+c[i]).join('')
+}
+console.log(tripleTroub("aaa","bbb","ccc"));
+
+function calculator(a,b,sign){
+  if(typeof a!=='number'|| typeof b!=='number'){
+    return 'unknown value'
+  }
+  if(sign==='-'){
+    return a-b;
+  } if(sign==='+'){
+    return a+b;
+  }if(sign==='*'){
+    return a*b;
+  }if(sign==='/'){
+    return a/b;
+  } else{
+  
+  }
+  return 'unknown value'
+}
+console.log(calculator(1,'h','-'))
+
+function alphabetWar(fight){
+
+  if(fight==='w'||fight==='p'||fight==='b'||fight==='s'){
+    return `Left side wins!`;
+  }
+  if (fight==='m'||fight==='q'||fight==='d'||fight==='z'){
+    return `Right side wins!`;
+  }
+
+  let leftCount=0;
+  let rightCount=0;
+  
+  for(let i=0;i<fight.length;i++){
+    if(fight[i]==='w'){
+      leftCount+=4;
+    }if(fight[i]==='p'){
+      leftCount+=3;
+    }if(fight[i]==='b'){
+      leftCount+=2;
+    }if(fight[i]==='s'){
+      leftCount+=1;
+    } if(fight[i]==='m'){
+      rightCount+=4;
+    } if(fight[i]==='q'){
+      rightCount+=3;
+    }if(fight[i]==='d'){
+      rightCount+=2;
+    }if(fight[i]==='z'){
+      rightCount+=1;
+  }
+  }
+  if(leftCount>rightCount){
+    return `Left side wins!`;
+  }if(leftCount<rightCount){
+    return `Right side wins!`
+  }else {
+    return  `Let's fight again!`
+  }
+
+  };
+
+console.log(alphabetWar("zdqmwpbs"));
+
+
+
+function disemvowe(str) {
+  const balses='aeiouAEIOU'
+let naujas='';
+for(const raides of str){
+  if(!balses.includes(raides)){
+    naujas+=raides
+  }
+}
+ return naujas;
+}
+
+console.log(disemvowe("This website is for losers LOL!"));
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length*width*height
+  }
+}
+console.log(Kata.getVolumeOfCuboid(1,2,2));
+
+
+function wordsToMarks(string){
+  const skaiciai = {
+    a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10,
+    k: 11, l: 12, m: 13, n: 14, o: 15, p: 16, q: 17, r: 18,
+    s: 19, t: 20, u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
+  };
+  let sum=0;
+for(const raides of string){
+  
+    sum+=skaiciai[raides]
+  }
+  return sum;
+}
+
+console.log(wordsToMarks('attitude'));
+/// kai reikia paskaiciuoti per kiek laiko nugaruos gesintuvas iki nenaudojamos ribos. 
+function evaporator(content, evap_per_day, threshold) { 
+  let days = 0;
+  const thresholdAmount = content * (threshold / 100);
+  let currentAmount = content;
+  
+  while (currentAmount > thresholdAmount) { // kiek dienu atliks cikl
+    currentAmount -= currentAmount * (evap_per_day / 100);/// esamasminus per cikla  esamas padauginta is nugaravimo. 
+    days++;
+  }
+  
+  return days;
+}
+
+console.log(evaporator(10, 10, 10)); // Output: 22
+
+function gooseFilter (birds) {
+  const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  let nauja=[''];
+for(const zodziai of birds){
+  if(!geese.includes(zodziai)){
+    nauja.push(zodziai)
+  }
+
+}
+return nauja.splice(1)
+};
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+
+
+//"Mallard", "Hook Bill", "Crested", "Blue Swedish"]);
+
+[ 'Mallard', 'Hook Bill', 'Crested', 'Blue Swedish' ]
+
+function gooseFilte (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(b => !geese.includes(b));
+};
+console.log(gooseFilte(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+
+function apple(x){
+  const b=parseFloat(x);
+  if(b**2>1000){
+    return `It's hotter than the sun!!`
+  } else{
+    
+  }
+return 'Help yourself to a honeycomb Yorkie for the glovebox.'
+}
+console.log(apple('50'));
+
+function evenNumbers(array, number) {
+  let ats=array.filter((n)=>n%2===0).slice(-number)
+  return ats
+}
+console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+
+function vowelIndices(word){
+  const pataisytas=word.toLowerCase();
+  const balses='aeiouy'
+  let result=[];
+  
+  for(let i=0;i<pataisytas.length;i++){
+    if(balses.includes(pataisytas[i])){
+      result.push(i+1)
+    }
+  }
+  return result
+}
+console.log(vowelIndices('apple'));
+
+function usdcny(usd) {
+  let ats=(usd*6.75.toFixed(2))
+  let atstrunc= ats-Math.trunc(ats)
+  if(atstrunc===0 ){
+    return ats+'.00'+' Chinese Yuan'
+  } if(atstrunc===0.1||atstrunc===0.2||atstrunc===0.3||atstrunc===0.4||atstrunc===0.5||atstrunc===0.6||atstrunc===0.7||atstrunc===0.8||atstrunc===0.9){
+    return ats+'0'+' Chinese Yuan'
+  }
+  else{
+    
+  }
+
+  return `${ats} Chinese Yuan`
+}
+console.log(usdcny(8861));
+
+function addBinary(a,b) {
+  
+  const sum=a+b
+ return sum.toString(2)
+}
+console.log(addBinary(1,2));
+//// dar reikia padirbet 
+function longestConsec(strarr, k) {
+  if(strarr.length===0||strarr.length < k || k <=0 ){
+    return ""; 
+
+  }
+  if(strarr.length===3&&strarr[0].length<strarr[1].length&&strarr[1].length> strarr[2].length){
+   return strarr.slice(0,k).join('')
+ }else{
+ 
+ }
+   return strarr.sort((a,b)=>b.length-a.length).slice(0,k).join('')
+ };
+ console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2));
+ console.log(longestConsec(["wlwsasphmxx","owiaxujylentrklctozmymu","wpgozvxxiu"],2));
+ console.log(longestConsec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1));
+ console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3));
+
+ function helloWorld(info){
+  const str=info;
+  return str;
+};
+
+console.log(helloWorld('Hello World!'));
+console.log("Hello World!");
+
+
+/// panaikinti paskutini elementa !
+
+
+function remove(string){
+
+  if(string[string.length-1]==='!'){
+    return string.slice(0,-1)
+
+  }
+  return string;
+
+}
+
+console.log(remove("Hi!!!")); // Grąžins "Hi!!"
+console.log(remove("Hi!"));   // Grąžins "Hi"
+console.log(remove("Hi"));    // Grąžins "Hi"
+
+
+function digits(n) {
+ let ats=[];
+  for (const skaicius of n){
+    const pirmas=skaicius[0]
+    const string=pirmas.toFixed()
+    const ilgis=string.length;
+    ats.push(ilgis);
+
+  }
+    
+    return ats;
+  
+  }
+  console.log(digits([
+      [0, 1],[9, 1],[66, 2],[12345, 5],[128685, 6],[9876543210, 10],[9007199254740991, 16],
+    ]));
+  
+
+    function sumArra(array) {
+      if(array===undefined||array===null||array.length===0||array.length===1||array.length===2){
+        return 0;
+      } 
+      const c= array.sort((a,b)=>a-b).slice(1,-1)
+    
+      
+      return c.reduce((a,b)=>a+b,0);
+      }
+     
+      console.log(sumArra([ 6,2,1,8,10]));
+      console.log(sumArra([-6, 20, -1, 10, -12]));
+
+
+      function isUpperCase(sakinys){
+        if(sakinys.length===0){
+          return `${sakinys} is upper case`
+        }
+     const caps='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            let naujas=[];
+            const testui=sakinys.replaceAll(' ','');
+
+              for(const raides of sakinys ){
+                if(caps.includes(raides)){
+                  naujas.push(raides)
+                }
+              }
+
+              return naujas.length===testui.length? `${sakinys} is upper case`:`${sakinys} is not upper case`
+            }
+            console.log(isUpperCase(''));
+
+
+
+function cockroachSpee(s) {
+    let konst=1000/36;
+      return Math.floor((s*konst));
+    }
+console.log(cockroachSpee(0.6704108509808064));// turi buti 
+
+
+
+function twoSort(s) {
+  const a=s.sort()
+  console.log(a);
+  return a[0].split('').join('***')
+
+}
+console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+console.log(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]));
+
+
+
+function descendingOrder(n){
+
+
+return parseFloat(n.toFixed().split('').sort((a,b)=>b-a).join(''));
+}
+console.log(descendingOrder(1021));
+
+function getDivisorsCnt(n){
+  let count=0;
+  let nauja=[];
+  for(let i=1;i<=n;i++){
+    nauja.push(i)
+  }
+ for(let i=0;i<=nauja.length;i++){
+  if(n%i===0){
+    count++
+  }
+ }
+ return count;
+    // todo
+}
+console.log(getDivisorsCnt(54));
+///// kuris nenuluzta ;
+
+function getDivisorsCn(n) {
+  let count = 0;
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      // If divisors are equal, count only one
+      if (n / i === i) {
+        count++;
+      } else {
+        // Otherwise count both
+        count += 2;
+      }
+    }
+  }
+  return count;
+}
+
+console.log(getDivisorsCn(10)); 
+
+function dnaStrand(dna){
+  let naujas='';
+    for(const raides of dna){
+      if(raides==='A'){
+        naujas+='T'
+      }if(raides==='C'){
+        naujas+='G'
+      }if(raides==='T'){
+        naujas+='A'
+      }if(raides==='G'){
+        naujas+='C'
+      }
+    }
+    return naujas;
+  
+  
+    }
+  console.log(dnaStrand('AAA'))
+  console.log(dnaStrand('ATTGC'))
+
+
+  function century(year) {
+    let maziems=year.toFixed().length
+    let antra=parseFloat(year.toFixed().split('').slice(0,1).join(''));
+    const pirma=parseFloat(year.toFixed().split('').slice(0,2).join(''));
+    const fix=parseFloat(year.toFixed().split('').slice(-2).join('')); 
+
+    if(maziems===2||maziems===1){
+      return 1}
+      if(fix>0){
+        return pirma+1
+        }if(fix===0){
+        return pirma
+        }
+    if(maziems===3&&fix>0||maziems===3&&fix>0){
+
+        return antra+1
+      }if(fix===0){
+        return antra;
+      }
+    }
+  console.log(century(101));
+
+  function capitals (word) {
+    let sarasas=[];
+     for(let i=0;i<word.length;i++){
+       if(word[i]>='A'&& word[i]<='Z'){
+         sarasas.push(i)
+       }
+     }
+     return sarasas;
+     }
+console.log(capitals('CodEWaRs'));
+
+function busStop(number){
+  let skaicius=[];
+ for(const skaiciai of number){
+  skaicius.push(skaiciai[0]-skaiciai[1])
+ }
+    return skaicius.reduce((a,b)=>a+b,0)
+    };
+  console.log(busStop([[10,0],[3,5],[5,8]]));
+  console.log(busStop([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]));
+  console.log(busStop([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]));
+
+  function findAverag(nums) {
+    return nums.reduce((total,b)=>total+b,0)/nums.length
+  }
+  console.log(findAverag([1,3,5,7]));
+
+
+  function distinct(a) {
+    
+    return a.sort().filter((reiksme,i)=>a.indexOf(reiksme)===i)
+  }
+  console.log(distinct([1,2,1,1,3,2]));
+
+
+  function sumCubes(n){
+    let naujas=[];
+    for(let i=1;i<=n;i++){
+      naujas.push(i)
+    }
+   return naujas.reduce((total,n)=>total+n**3,0)
+  }
+  console.log(sumCubes(10));
+
+
+  var gre = function(name) {
+    let naujas=name.toLowerCase().slice(1) // galas
+    let sudurtinis=name.slice(0,1).toUpperCase();
+    let geras=sudurtinis+naujas;
+    return `Hello ${geras}!`
+  
+  };
+  console.log(gre('riley'))
+
+  function solve(s) {
+    const isimtibalses=s.replaceAll('a',' ').replaceAll('e',' ').replaceAll('i',' ').replaceAll('o',' ').replaceAll('u',' ').split(' ')
+    console.log(isimtibalses)
+
+    const skaiciai = {
+    a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10,
+    k: 11, l: 12, m: 13, n: 14, o: 15, p: 16, q: 17, r: 18,
+    s: 19, t: 20, u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
+  };
+  
+  let sums=[];
+  for(const raides of isimtibalses){
+    let sum=0;
+    for(const raideles of raides){
+      sum+=skaiciai[raideles]
+    }
+    sums.push(sum)
+  }
+  return Math.max(...sums)
+  }
+console.log(solve('chruschtschov'))
+
+function findLongest(array){
+let nauja=array.map((n)=>n.toFixed())
+
+  return  parseInt(nauja.sort((a,b)=>a.length-b.length).slice(-1).join(''))
+}
+console.log(findLongest([1,10,100]));
+
+function findLonges(array) {
+  return array.reduce((a, b) => 
+    Math.abs(a).toString().length >= Math.abs(b).toString().length ? a : b
+  );
+}
+  console.log(findLonges([1,10,100]));
+
+  function remov(string) {  
+    if(string.at(-1)==='!'){
+      return string.slice(0,-1)}
+    else{
+      return string;
+    } 
+  }
+  console.log(remov("Hi! Hi!"));
+
+  function solu(nums){
+    if(nums.length===0|| nums===null){
+      return []
+    }
+    return nums.sort((a,b)=>a-b);
+  
+  }
+  console.log(solu([1,2,3,10,5]))
+  function rem(string) {  
+    if(string.endsWith('!')){
+      return string.slice(0,-1);
+    }
+   return string;
+  }
+  console.log(rem('Hi!!!'));
+  
+  function alphabetPosition(text) {
+    const skaiciai = {
+        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10,
+        k: 11, l: 12, m: 13, n: 14, o: 15, p: 16, q: 17, r: 18,
+        s: 19, t: 20, u: 21, v: 22, w: 23, x: 24, y: 25, z: 26
+      };
+      const mazintas=text.toLowerCase()
+      let naujas=[];
+      for(const raides of mazintas){
+      
+        naujas.push(skaiciai[raides])
+    }
+  return naujas.join(' ').replaceAll('  ',' ').replaceAll('  ',' ')
+  }
+    console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 
 
 
 
-
-
-
-
-
-
-
+ 

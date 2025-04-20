@@ -178,8 +178,8 @@ console.log('-----slice-------')
 
 console.log('Pomidoras'.slice());
 console.log('Pomidoras'.slice(0));// tiek nupjauna. 
-console.log('Pomidoras'.slice(1));//// reiskiasi nupjaunam viena pirma raide. 
-console.log('Pomidoras'.slice(2));
+console.log('Pomidoras'.slice(1));//// reiskiasi nupjaunam viena pirma raide. // OMIDORAS LIEKA 
+console.log('Pomidoras'.slice(0,1));// lieka tik P RAIDE. 
 console.log('Pomidoras'.slice(3));
 console.log('Pomidoras'.slice(0,1));
 console.log('Pomidoras'.slice(0,2));/// tiek palieka 
@@ -189,6 +189,7 @@ console.log('SENUKAS'.slice(0,-1));// reiskiasi nupjauna paskutine raide.
 console.log('MOCIUTE'.slice(0,-2));
 console.log('JONUKAS'.slice(-6,-2));// reiskiasi ima 6 nuo galo ir nuo ten pjauna iki 2 nuo galo. 
 console.log('JONUKAS'.slice(-1)); // REISKIASI LIEKA TIK PASKUTINE RAIDE ARBA SIMBOLIS.  
+console.log('Jonukas'.slice(1,-1)// NUPJAUS PIRMA IR PASKUTINI NARI. )
 
 
 // trim panaikina tarpus is priekio ir is galo, per vidury nevalo tarpu. naudojamas pvz registraciju formose, panaikinti tarpus prie username. 
@@ -261,10 +262,10 @@ if('labas'>'labai' ){ // pagal koda lygina.
   console.log('maziau')
 }
 
-const s1=String.fromCharCode(65); // is kodo suzinota simbolis abeceleje. 
+const s1=String.fromCharCode(); // is kodo suzinota simbolis abeceleje. 
 console.log(s1);
 
-const s2=String.fromCharCode(4845); // is kodo suzinota simbolis abeceleje. Visi simboliai yra.
+const s2=String.fromCharCode(00); // is kodo suzinota simbolis abeceleje. Visi simboliai yra.
 console.log(s2);
 const s3=String.fromCharCode(100001); // is kodo suzinota simbolis abeceleje. Visi simboliai yra.
 console.log(s3);

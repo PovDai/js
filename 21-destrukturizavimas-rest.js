@@ -124,6 +124,7 @@ for(const {name,age}of students){ /// padaro pirmoje eiluteje kad ieskos student
 
 }
 ///////// jeigu uzduotis [] darome for (const [kazkas ir like pvz] of kazko (duomenu gautu))
+console.log('---------------------')
 const numbers=[
     [1,11],
     [2,2,222],
