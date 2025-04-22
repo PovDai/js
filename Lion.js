@@ -40,22 +40,7 @@ console.log(liutukas.feed());
 liutukas.nealkanas(false);
 console.log(liutukas.feed());
 
-if(typeof a!=='number'|| typeof b!=='number'){
-    return 'unknown value'
-  }
-  if(sign==='-'){
-    return a-b;
-  } if(sign==='+'){
-    return a+b;
-  }if(sign==='*'){
-    return a*b;
-  }if(sign==='/'){
-    return a/b;
-  } else{
-  return 'unknown value'
 
-}
-console.log(calculator(1,2,'+'))
 
 
 

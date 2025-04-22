@@ -3121,7 +3121,146 @@ function findLonges(array) {
   }
     console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 
+    function quote(fighter) {
+      let name=fighter.toLowerCase();
+      if(name==='george saint pierre'){
+        return "I am not impressed by your performance."
+      }if(name==='conor mcgregor'){
+        return "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+      }
+    };
+    
+    console.log(quote('george saint pierre'))
+
+    function sumEvenNumbers(input) {
+      return input.filter(n=>n%2===0).reduce((total,n)=>total+n,0);
+    }
+    console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+    function createArray(number) {
+      const newArray = [];
+      for (let counter = 1; counter <= number;counter++) {
+          newArray.push(counter);
+      }
+      return newArray;
+  }
+  console.log(createArray(2));
+
+  function sumMul(n,m){
+    if(m<0||n===0){
+      return 'INVALID'
+    }
+  let sum=0;
+    for(let i=n;i<m;i++){
+      if(i%n===0){
+        sum+=i
+      }
+    }
+    return sum;
+  }
+  console.log(sumMul(2,9));
+
+  function toNumberArray(stringarray){
+    const naujas=stringarray.map(zodis=>parseFloat(zodis));
+   
+  return naujas
+  }
+  console.log(toNumberArray(["1.1","2.2","3.3"]));
+
+  function bump(x){
+    let count=0;
+    for(const raides of x){
+      if(raides==='n'){
+        count++
+      }
+    }
+    return count<=15 ? 'Woohoo':'Car Dead'
+  
+  }
+  console.log(bump("__nn_nnnn__n_n___n____nn__nnn"));
+
+  function solv(s){
+    const didziosios='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let count=0;
+    for(const raides of s){
+      if(didziosios.includes(raides)){
+        count++
+      }
+      }
+      if(count<=s.length/2){
+        return s.toLowerCase();
+      }else{
+
+      }
+
+      return s.toUpperCase();
+    };
+  console.log(solv('LABADiena'))
+
+  function hexToDec(hexString){
+  
+    return hexString.toString(2)
+  }
+  console.log(hexToDec('1'))
+  console.log(hexToDec('16'))
+
+  function sameCase(a, b){
+    const didziosios='ABCDEFGHIJKLM N O P Q R S T U V W X Y Z'
+    const mazosios='a b c d e f g h i j k l m n o p q r s t u v w x y z'
+    
+    if(didziosios.includes(a)&& didziosios.includes(b)){
+      return 1
+    }if(mazosios.includes(a)&& mazosios.includes(b)){
+      return 1
+    }if(didziosios.includes(a)&&mazosios.includes(b)){
+      return 0
+    } if(mazosios.includes(a)&&didziosios.includes(b)){
+      return 0
+    } else{
+    }
+    return -1
+    } 
+  
+  console.log(sameCase('G',','))
+
+  function billboard(name, price = 30){
+    let skaicius=0;
+    for(const raides of name){
+      skaicius+=price
+    }
+  return skaicius;
+  } 
+  console.log(billboard("Jeong-Ho Aristotelis"));
 
 
 
- 
+function isVow(a){
+  const balses={97:'a',101:'e',105:'i',111:'o',117:'u'};
+
+  let naujas=[];
+  for(const skaiciai of a){
+    if(balses[skaiciai]){
+      naujas.push(balses[skaiciai])
+    } else{
+      naujas.push(skaiciai);
+    }
+
+  }
+  return naujas;
+}
+console.log(isVow([118,117,120,98,106,107,97,101,111,117]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

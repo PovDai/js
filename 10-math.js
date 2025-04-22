@@ -167,7 +167,12 @@ function makeNegative(num) {
   }
   console.log(makeNegative(42));
 
+  /// Math.log2( ) pvz skaiciuoja logoritma 2 pagrindu Math.log2(16) bus lygu 4 
 
+  console.log(isPowerOfTwo(4096));
+
+  console.log(Math.log2(16))
+ 
 
 
 
