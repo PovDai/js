@@ -172,5 +172,34 @@ const ddd=[1,2,3]; /// kai is masyvo reikia padaryt pavienus skaicius
 console.log(Math.min(...ddd));
 console.log(Math.max(...ddd));
 
+/// Use [...array] to create a copy of the array before sorting /// JEIGU NORIM SORTINT ARRAY EILUTE, REIKIA SUKURTI nauja koipija. 
+// nes kitaip javascriptas mano kad originala keiciam ir nieko nesigauna. 
+
+function isSortedAndHow(array) {
+  
+    let sortintaMaz=[...array].sort((a,b)=>a-b).toString()// nuo maziausios.
+    let sortintaDid=[...array].sort((a,b)=>b-a).toString()// nuo didziausios
+    let nekeista=array.toString()
+  
+    console.log(sortintaMaz)
+    console.log(sortintaDid)
+    console.log(nekeista)
+  
+    if(nekeista===sortintaMaz){
+      return "yes, ascending"
+    } if(nekeista===sortintaDid){
+      return "yes, descending"
+    } else{
+  
+    }
+  
+    return 'no'
+  }
+  console.log(isSortedAndHow([1,2])) // yes 
+  console.log(isSortedAndHow([15,7,3,-8]));// no, descending
+  console.log(isSortedAndHow([4,2,30]))
+
+
+
 
 

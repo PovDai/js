@@ -3251,6 +3251,39 @@ function isVow(a){
 console.log(isVow([118,117,120,98,106,107,97,101,111,117]))
 
 
+function isSortedAndHow(array) {
+  
+  let sortintaMaz=[...array].sort((a,b)=>a-b).toString()// nuo maziausios.
+  let sortintaDid=[...array].sort((a,b)=>b-a).toString()// nuo didziausios
+  let nekeista=array.toString()
+
+  console.log(sortintaMaz)
+  console.log(sortintaDid)
+  console.log(nekeista)
+
+  if(nekeista===sortintaMaz){
+    return "yes, ascending"
+  } if(nekeista===sortintaDid){
+    return "yes, descending"
+  } else{
+
+  }
+
+  return 'no'
+}
+console.log(isSortedAndHow([1,2])) // yes 
+console.log(isSortedAndHow([15,7,3,-8]));// no, descending
+console.log(isSortedAndHow([4,2,30]))
+
+function gimme (triplet) {
+  let nauja=parseFloat([...triplet].sort((a,b)=>a-b).slice(1,-1).toString())
+  return triplet.indexOf(nauja)
+}
+console.log(gimme([5,10,14]));
+
+
+
+
 
 
 
