@@ -3282,6 +3282,143 @@ function gimme (triplet) {
 console.log(gimme([5,10,14]));
 
 
+function totalGoals(laLigaGoals,championsLeagueGoals,copaDelReyGoals){
+
+return laLigaGoals+championsLeagueGoals+copaDelReyGoals
+}
+console.log(totalGoals(43,10,5))
+
+
+function isUpperCas(sakinys){
+  if(sakinys.length===0){
+    return true;
+  }
+  const caps='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+  let naujas='';
+
+  for(const raides of sakinys){
+    if(caps.includes(raides)){
+      naujas+=raides
+    }
+  }
+
+return  naujas===sakinys.split(' ').join('') ? true:false
+     
+ }
+ console.log(isUpperCas('ACSKLDFJSgSKLDFJSKLDFJ'));
+
+ function saleHotdogs(n){
+  
+  if(n<5){
+    return n*100
+  } else if(n>=5 && n<10){
+    return n*95
+  } if(n>=10){
+   
+  }
+  return n*90
+}
+console.log(saleHotdogs(4));
+
+function adjacentElementsProduct(array) {
+  let naujas=[];
+for(let i=0;i<array.length-1;i++){
+  naujas.push(array[i]*array[i+1])
+}
+  return Math.max(...naujas)
+}
+console.log(adjacentElementsProduct([1, 5, 10, 9]));
+
+//arba
+
+function adjacentElementsProduc(array) {
+  let naujas=[];
+for(const skaiciai of array){
+  naujas.push(skaiciai*(skaiciai+1))
+}
+  return Math.max(...naujas)
+}
+console.log(adjacentElementsProduc([1, 5, 10, 9]));
+
+
+function capitalize(s){
+  let pirmas='';
+  let antras='';
+
+  for(let i=0;i<s.length;i++){
+    if(i%2===0){
+      pirmas+=s[i].toUpperCase();
+    }else{
+      pirmas+=s[i]
+    }
+  }
+for(let i=0;i<s.length;i++ ){
+  if(i%2!==0){
+    antras+=s[i].toUpperCase();
+  } else{
+    antras+=s[i]
+  }
+}
+
+  return [pirmas,antras]
+}
+  
+  console.log(capitalize('abcdef'))// ['AbCdEf', 'aBcDeF']
+
+  function remainder(n, m){
+    if(m===0||n===0||n<0||m<0){
+      return NaN;
+    } if(n<m){
+      return m%n
+    }else{
+      
+    }
+  
+    return n%m
+    
+  }
+  console.log(remainder(-13,-13));
+
+  function suk(duomenys){
+    const raide='ek';
+
+    let naujas=duomenys.split('').reverse().join('')
+    let text='';
+
+    for(const raides of duomenys){
+      if(!raide.includes(raides)){
+        text+=raides;
+      }
+    }
+
+
+    return text.split(' ').map(w=>w.toUpperCase()+' '+w.length)
+  }
+  console.log(suk('Dukrele buvo kieme'));
+
+  function addLen(...str) {
+   let naujas=str.toString().replaceAll(' ',',').split(',')
+   
+    return naujas.map(w=>w+' '+w.length)
+    }
+        console.log(addLen('Apple','Ban'))
+        console.log(addLen('you will win'))
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
