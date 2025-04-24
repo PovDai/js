@@ -3404,12 +3404,81 @@ for(let i=0;i<s.length;i++ ){
     }
         console.log(addLen('Apple','Ban'))
         console.log(addLen('you will win'))
+
+//Patikrinkite, ar sąraše [1, -2, 3, -4] yra teigiamų skaičių. 
+
+function teig(duomenys){
+return duomenys.filter(w=>w>0).toString().replaceAll(',','').split('').map(w=>w+' '+typeof w)
+}
+console.log(teig([1, -2, 3, -4]));
   
 
 
+//Patikrinkite, ar didziausias didesnis negu 10 
+
+function as(duomenys){
+
+  return Math.max(...duomenys)>10
+}
+console.log(as([2, 5, 12, 4]));
+
+/* Pavyzdys: Patikrinkite, ar [2, 2, 2, 2, 2, 5, 6] turi daugiau nei 3 skaičiaus 2 
+elementus.*/
+function tu(duomenys){
+
+  return duomenys.map(w=>w=2).length>3
+
+}
+console.log(tu([2, 2, 2, 2, 2, 5, 6]))
+//Pavyzdys: Patikrinkite, ar sąraše [1, 2, 3, 4] yra skaičius 3.
+
+ const jus =duomenys=>parseFloat( duomenys.filter(w=>w===3).toString())===3
+
+ console.log(jus([1, 2, 3, 4]));
 
 
 
+function calculateT(amount, rating) {
+  if (!rating) return 'Rating not recognised';
+  
+  let ratingLower = rating.toLowerCase();
+  
+  if (ratingLower === 'terrible') {
+    return 0;
+  } else if (ratingLower === 'poor') {
+    return Math.ceil(amount * 0.05);
+  } else if (ratingLower === 'good') {
+    return Math.ceil(amount * 0.10);
+  } else if (ratingLower === 'great') {
+    return Math.ceil(amount * 0.15);
+  } else if (ratingLower === 'excellent') {
+    return Math.ceil(amount * 0.20);
+  } else {
+    return 'Rating not recognised';
+  }
+}
+
+console.log(calculateT(20, 'Excellent'));  // Output: 4
+
+function faktorial(n){
+  let naujas=[];
+  for(let i=1;i<=n;i++){
+    naujas.push(i)
+  }
+
+  return naujas.reduce((total,n)=>total*n,1)
+}
+console.log(faktorial(3));
+
+
+function validateHel(greetings) {
+  const pasisveikinimai=['hello','ciao','salut','hallo','hola','ahoj','czesc']
+  let greet=greetings.toLowerCase();
+
+return pasisveikinimai.some(w=>greet.includes(w));
+}
+console.log(validateHel('ahoj'));
+console.log(validateHel('tSchuSS hOw, saLUT! LA; WiE, wIE: QUe tRES, hoMBRE, hAStA? LA. Bien. HOW. yoU, HastA lA hOW wIe? qUe viStA! TRES TReS You HaStA DoINg aRE: YoU,'));
 
 
 
