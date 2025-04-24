@@ -2476,22 +2476,6 @@ return true;
 
   console.log(squareArea(2))
 
-
-  function addLeng(...str) {
-    if (str.length === 1 && str[0].includes(' ')) {
-      str = str[0].split(' ');
-    }
-    let nauja=[];
-    for(const zodziai of str){
-      nauja.push(zodziai + ' ' + zodziai.length)
-
-    }
-  return nauja.join(', ')
-  
-  }
-      console.log(addLeng('Apple','Ban'))
-      console.log(addLeng('you will win'))
-
       function array(string) {
         const arr = string.split(',');
         if (arr.length <= 2 || string === '') {
@@ -3472,16 +3456,148 @@ console.log(faktorial(3));
 
 
 function validateHel(greetings) {
-  const pasisveikinimai=['hello','ciao','salut','hallo','hola','ahoj','czesc']
-  let greet=greetings.toLowerCase();
+  
 
-return pasisveikinimai.some(w=>greet.includes(w));
+return ['hello','ciao','salut','hallo','hola','ahoj','czesc'].some(w=>greetings.toLowerCase().includes(w));
 }
 console.log(validateHel('ahoj'));
 console.log(validateHel('tSchuSS hOw, saLUT! LA; WiE, wIE: QUe tRES, hoMBRE, hAStA? LA. Bien. HOW. yoU, HastA lA hOW wIe? qUe viStA! TRES TReS You HaStA DoINg aRE: YoU,'));
 
 
 
+function lowercaseCount(str){
+  const sarasas='abcdefghijklmnopqrstuvwxyz'
+  let count=0;
+  
+  for(const raides of str){
+    if(sarasas.includes(raides)){
+      count++
+    }
+    
+  }
+    return count;
+
+}
+console.log(lowercaseCount('abc'));
+/// arba su regex 
+
+function lowercaseCoun(str){
+  return (str.match(/[a-z]/g) || []).length
+}
+console.log(lowercaseCoun('abc'));
+
+
+function minSum(arr) {
+  let sortedArr = arr.sort((a, b) => a - b);/// susirikiuojam nuo maziausio iki diziausio. 
+  let sum = 0;
+  let left = 0; // deklaruojam kaire ir desine puses 
+  let right = sortedArr.length - 1; /// desine puse 
+  
+  while (left < right) { // leidziam cikla kol kaire maziau uz desine 
+    sum += sortedArr[left] * sortedArr[right];
+    left++;/// zingsnis kad eina is prieko po 1 
+    right--;/// zingsnis kad eina is galo po 1 
+  }
+  
+  return sum;
+}
+
+console.log(minSum([5, 4, 2, 3]))
+
+
+function rowWeights(array){
+let pirmi=0;
+let antri=0;
+
+
+for(let i=0;i<array.length;i++){
+  if(i%2===0){
+    pirmi+=array[i];
+    
+  }else{
+    antri+=array[i]
+  }
+
+}
+return [pirmi,antri]
+
+}
+console.log(rowWeights([50,60,70,80]));
+
+function rowWeight(array){
+  let a= array.filter((x, i)=>i%2===0).reduce((total,n)=>total+n,0);///
+  let b= array.filter((x, i)=>i%2!==0).reduce((total,n)=>total+n,0);/// filteryje galiam i deklaruot
+    
+    return [a,b]
+  }
+  console.log(rowWeight([50,60,70,80]));
+
+
+
+  function removeTrailingExclamations(string) {
+    return string.replace(/!+$/, '');
+}
+
+console.log(removeTrailingExclamations('!Hi!!!')); // "!Hi"
+console.log(removeTrailingExclamations('Labas!!'));
+
+
+function re(s){
+  //coding and coding....
+  while (s[s.length - 1] === '!') {
+    s = s.slice(0, -1);
+  }
+  return s;
+}
+console.log(re('hi !!!'));
+
+
+function r(s,n){
+  
+let naujas='';
+
+  
+}
+console.log(r('Hi!!!',1));
+
+function whoIsPaying(name){
+  if(name.length>2){
+    return [name,name.slice(0,2)]
+  } else{ 
+  }
+  return [name];
+}
+console.log(whoIsPaying('Meee'))
+
+
+function digi(n) {
+  let ats = [];
+  let geras=[...n]
+  for (const skaicius of geras) {
+    const pirmas = skaicius[0];
+    const digitCount = Math.abs(pirmas).toString().length;
+    ats.push([skaicius+', '+digitCount]);
+  }
+  return ats;
+}
+
+console.log(digi([[0], [9], [66], [12345], [128685], [9876543210], [9007199254740991]]));
+
+function filterString(value) {
+  return parseFloat(value.replace(/[a-zA-Z]/g,''));
+}
+console.log(filterString('123asdasd'));
+
+
+function multiTab(number) {
+  let skaicius='';
+   for (let i=1;i<=10;i++){
+     skaicius+=`${i}*${number}=${i*number}`;
+     if(i<10) result +='\n';
+   }
+   return skaicius;
+ }
+ console.log(multiTab(6));
 
 
 

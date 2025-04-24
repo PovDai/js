@@ -271,6 +271,23 @@ const s3=String.fromCharCode(100001); // is kodo suzinota simbolis abeceleje. Vi
 console.log(s3);
 
 
+//// match() naudojamas su regex reiksme string eiluteje. pvz: 
+
+function lowercaseCoun(str){
+  return (str.match(/[a-z]/g) || []).length
+}
+console.log(lowercaseCoun('abc'));
+
+
+/// regex panaikinimas kazko gale, siuo atveju sauktuko
+
+function removeTrailingExclamations(string) {
+  return string.replace(/!+$/, '');
+}
+
+console.log(removeTrailingExclamations('!Hi!!!')); // "!Hi"
+console.log(removeTrailingExclamations('Labas!!'));
+
 
 
 

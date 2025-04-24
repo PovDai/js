@@ -83,10 +83,10 @@ console.log(student['name']);
 console.log(student.name);
 
 
-console.log(student.parents.length);
-console.log(student.parents[0].name);
-console.log(student.parents[1].name);
-console.log(student.parents[0].phoneNumbers.length);
+console.log(student.parents.length);// kiek yra tevu 
+console.log(student.parents[0].name);// pirmo tevo vardas 
+console.log(student.parents[1].name);// antro tevo vardas 
+console.log(student.parents[0].phoneNumbers.length);// pirmo tevo tel nr ilgis 
 console.log(student.parents[1].phoneNumbers);
 console.log(student.parents[1].phoneNumbers[1]); /// naujausias numeris onos. 
 
