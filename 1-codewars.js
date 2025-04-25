@@ -3593,11 +3593,124 @@ function multiTab(number) {
   let skaicius='';
    for (let i=1;i<=10;i++){
      skaicius+=`${i}*${number}=${i*number}`;
-     if(i<10) result +='\n';
+     if(i<10) skaicius +='\n';
    }
    return skaicius;
  }
  console.log(multiTab(6));
+ function pickIt(arr){
+  let odd = [], even = [];
+  
+  for(const skaiciai of arr){
+    if(skaiciai%2===0){
+      even.push(skaiciai)
+    }else{
+      odd.push(skaiciai)
+    }
+  }
+  
+  return [odd,even];
+}
+console.log(pickIt([10,20,30]))
+
+/// arba 
+
+function su(arr){
+
+
+  return [arr.filter(i=>i%2===0),arr.filter(i=>i%2!==0)]
+}
+console.log(su([10,20,30]))
+
+/// kaip sufiltruoti zodzius pagal eile jame esancio skaiciaus. 
+
+function ie(zodis) {
+  return zodis
+    .sort((a, b) => {
+      // Extract numbers from each word
+      const numA = parseInt(a.match(/[0-9]/)[0]);
+      const numB = parseInt(b.match(/[0-9]/)[0]);
+
+      return numA - numB;  // Sort by the numbers found in the words
+    });
+}
+
+console.log(ie(['Jon2as', 'Paul1s','Anna3'])); 
+// Output: ['Paul1s', 'Jon2as', 'Anna3']
+
+/*
+Nustatyti, ar sąraše yra teigiamas skaičius.
+a. Pavyzdys: Patikrinkite, ar sąraše [1, -2, 3, -4] yra teigiamų skaičių
+ */
+
+function nustat(duomenys){
+
+  return duomenys.filter(skaicius=>skaicius>0).length>0
+}
+console.log(nustat([1,-2,3,-4]));
+
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  let zmogauslaikas=pontoonDistance/youSpeed /// 10.33333333
+  let rykliolaikas=sharkDistance/sharkSpeed 
+  
+if(sharkDistance===0){
+  return 'Shark Bait!'
+}if(pontoonDistance===0){
+  return 'Alive!'
+}if(dolphin===true){
+  return zmogauslaikas<sharkDistance/(sharkSpeed/2)? 'Alive!':'Shark Bait!'
+} if(dolphin===false){
+  return zmogauslaikas<rykliolaikas ? 'Alive!':'Shark Bait!'
+}
+}  
+  
+console.log(shark(17,81,4,20,false)); // shark bait 
+
+
+function sortMyString (S) {
+
+  return `${S.split('').filter((k,i)=>i%2===0).join('')+' '+S.split('').filter((k,i)=>i%2!==0 ).join('') }`
+  
+}
+
+console.log(sortMyString('CodeWars')); "CdWr oeas"
+
+
+let startas=2000 // startas nuo ko pradeti 
+let result2=0; // ka skaiciuosim 
+
+while (startas<4000){ // tikslas kiek uztruks 
+let procentai=startas*1.1-startas // procentai kiek per mene padidenes 
+startas+=procentai //kiekvieno ciklo metu suma keisis sena * procentai 
+result2++ 
+}
+console.log(result2);
+console.log('iki susikaups mln praeis '+Math.round(result2/12)+' metu.');
+
+function switcheroo(x){
+  let naujas='';
+  for(let i=0;i<x.length;i++){
+    if(x[i]==='a'){
+      naujas+='b';
+    }else if(x[i]==='b'){
+      naujas+='a';
+    }else{
+      naujas+=x[i];
+    }
+    }
+    return naujas;
+  }
+
+console.log(switcheroo('aaabcccbaaa'))
+
+
+
+
+
+
+
+
+
 
 
 

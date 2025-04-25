@@ -289,6 +289,28 @@ console.log(removeTrailingExclamations('!Hi!!!')); // "!Hi"
 console.log(removeTrailingExclamations('Labas!!'));
 
 
+/// match() patikrina ar string eiluteje yra kazkoks norimas dalymas. cia pvz patikrino ar yra skaicius nuo 0-9 zodzio pirmoje dalytje. 
+
+
+function ie(zodis) {
+  return zodis
+    .sort((a, b) => {
+      // Extract numbers from each word
+      const numA = parseInt(a.match(/[0-9]/)[0]);
+      const numB = parseInt(b.match(/[0-9]/)[0]);
+
+      return numA - numB;  // Sort by the numbers found in the words
+    });
+}
+
+console.log(ie(['Jon2as', 'Paul1s','Anna3'])); 
+
+function how(number){
+  number.includes(/[0...-9]/g)
+  return true;
+  }
+  console.log(how([-5, -4, -5, -4]));
+
 
 
 

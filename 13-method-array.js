@@ -249,6 +249,21 @@ console.log(texts5Updated);
 const texts5Updated2=texts5.filter(t=>t);   /// irgi toks pats atsakymas. Tuscias tekstas negatyvi reiksme del to jis praleidziamas. 
 console.log(texts5Updated2);
 
+/// kai naudojamos FILTER visos 3 reiksmes, pirma reiksme array reiksme, antra indexas jo, trecia pats pirmas array 
+const numbers = [10, 20, 30, 40, 50];
+
+const filteredNumbers = numbers.filter((element, index, array) => {
+  console.log(`Elementas: ${element}, Indeksas: ${index}, Visas masyvas: [${array}]`);
+  
+  // Grąžiname `true`, jei:
+  // 1. Elementas > 20 IR
+  // 2. Indeksas yra lyginis (0, 2, 4...) IR
+  // 3. Elementas nėra paskutinis masyve
+  return element > 20 && index % 2 === 0 && index !== array.length - 1;
+});
+
+console.log("Filtruotas masyvas:", filteredNumbers);
+
 
 /// ${array1.at(index)} kai reikai ieskoti pirmos raides is 3 zodziu 
 //let perdarytas=patikslintas.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')+'';
@@ -383,6 +398,7 @@ console.log(n1);
 console.log(n2);
 console.log(n34);
 
+//// masyvas.find() // suranda pirmaji nari atitinkanti salyga. pvz /3 === 0 pirma kuris dalinasi is 3 
 
 
 

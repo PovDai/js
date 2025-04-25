@@ -16,6 +16,16 @@ if(){}else if (){} else { }
 
 if (a!=='number'||isNAN(a)); tinkamas jeigu atsakymas vienodas ar NaN ar infinity nesvarbu, beti jeigu atsakymas skirtingas darome isFinite(); arba IsNaN.
 
+Pagrindinis skirtumas:
+
+if visuomet yra pirmoji sąlyga ir tikrinama nepriklausomai nuo kitų.
+
+else if tikrinama tik jei visos ankstesnės sąlygos buvo klaidingos.
+
+else vykdomas tik jei visos ankstesnės sąlygos buvo klaidingos.
+
+Jei turi konkrečią programavimo kalbą ar pavyzdį, galiu paaiškinti detaliau! 😊
+
 
 
 */

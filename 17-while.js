@@ -98,3 +98,14 @@ function evaporator(content, evap_per_day, threshold) {
     return s;
   }
   console.log(re('hi !!!'));
+
+  let startas=2000 // startas nuo ko pradeti 
+let result2=0; // ka skaiciuosim 
+
+while (startas<4000){ // tikslas kiek uztruks 
+let procentai=startas*1.1-startas // procentai kiek per mene padidenes 
+startas+=procentai //kiekvieno ciklo metu suma keisis sena * procentai 
+result2++ 
+}
+console.log(result2);
+console.log('iki susikaups mln praeis '+Math.round(result2/12)+' metu.');
