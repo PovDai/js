@@ -3703,6 +3703,146 @@ function switcheroo(x){
 
 console.log(switcheroo('aaabcccbaaa'))
 
+function howManydays(month){
+  let days;
+  switch (month){
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+      days=31;
+      
+      break;
+      
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+      days=30;
+      
+      break;
+      case 2:
+      
+      days=28
+      break;
+      default:
+    
+  }
+  return days;
+}
+console.log(howManydays(2))
+
+
+function divCon(x){
+
+ return x.filter((men,i)=>typeof men==='number').reduce((total,n)=>total+n,0)- x.filter((men,i)=>typeof men==='string').map(Number).reduce((total,n)=>total+n,0)
+
+}
+console.log(divCon([9,3,'7','3']));
+
+console.log([1,2,3].map(String))
+
+function countRedBeads(n) {
+  if(n<=1){
+    return 0;
+  } else if(n===2){
+    return 2;
+  };
+    let count=0;
+  
+    for(let i=2; i<=n;i++){
+      count+=2
+    }
+    return count;
+  }
+
+console.log(countRedBeads(3));
+
+function leo(oscar){
+  switch(true){
+      case (oscar===88):
+      return "Leo finally won the oscar! Leo is happy"
+      case (oscar===86):
+      return "Not even for Wolf of wallstreet?!"
+      case (oscar<88):
+      return "When will you give Leo an Oscar?"
+      default:
+      return "Leo got one already!";
+  }
+}
+console.log(leo(86));
+
+function uefaEuro2016(teams, scores){
+  if(scores[0]===scores[1]){
+    return `At match ${teams[0]} - ${teams[1]}, teams played draw.`
+  } else{
+    
+  }
+  
+  return `At match ${teams[0]} - ${teams[1]}, ${scores[0]>scores[1]? teams[0]:teams[1]} won!`
+}
+console.log(uefaEuro2016(['Germany','Ukraine'],[2,0]));
+
+function uniTotal (string){
+
+  return string.split('').reduce((total,n)=>total+n.charCodeAt(0),0)
+
+  }
+  console.log(uniTotal('aaa'))
+  
+  reverse = function(array) {
+    
+    return array.reverse()
+  }
+  console.log(reverse([1,null,14,"two"]))
+
+  
+
+  reverse = function(array) {
+
+    let naujas=[];
+    for (let i=array.length-1;i>=0;i--){
+      naujas.push(array[i]);
+    }
+    
+    return naujas;
+  
+  }
+  console.log(reverse([1,2,3]))
+  console.log(reverse([1,null,14,"two"]))
+
+  function joinStrings(string1, string2){
+
+    if(typeof string1==='number'&&typeof string2==='number'){
+      return string1.toString().concat(" "+ string2.toString())
+    }else{
+
+    }
+    return string1.concat(" "+ string2)
+ }
+ console.log(joinStrings(123,343))
+
+
+ 
+ function joinStrin(string1, string2){
+  let a=[...string1,...' ',...string2]
+
+  return a.reduce((total,a)=>total+a,)
+}
+console.log(joinStrin('string1','string2'))
+
+function isDigit(s) {
+  return !isNaN(parseFloat(s)) && isFinite(s) && s.trim() !== '';
+}
+
+console.log(isDigit('-234.2'))
+
+
+
+
 
 
 
