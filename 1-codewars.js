@@ -3840,6 +3840,67 @@ function isDigit(s) {
 
 console.log(isDigit('-234.2'))
 
+function typeOfSum(a, b) {
+  const z=a+b
+  
+  return (typeof z)
+}
+console.log(typeOfSum(null,1))
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  return (blueStart-bluePulled)/(blueStart+redStart-bluePulled-redPulled) 
+}
+console.log(guessBlue(12,18,4,6))
+
+function isUpperC(sakinys){
+  if(sakinys.length===0){
+    return true;
+  }
+  const caps='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+  let naujas='';
+
+  for(const raides of sakinys){
+    if(caps.includes(raides)){
+      naujas+=raides
+    }
+  }
+
+return  naujas===sakinys.split(' ').join('') ? true:false
+     
+ }
+ console.log(isUpperC(''));
+
+
+
+function numberToPower(number, power){
+  let z=Array(power).fill(number)
+  
+ return z.reduce((total,n)=>total*n,1);
+ }
+ console.log(numberToPower(4,2))
+ 
+
+function zep(start,end){
+  let naujas=[];
+  let senas=[];
+
+  for(let i=start;i<=end;i+=2){
+    naujas.push(i)
+  };
+for(let i=end;i>=start;i--){
+  if(i%2===0){
+    senas.push(i)
+  }
+}
+
+  return [naujas,senas]
+}
+console.log(zep(7,11))
+
+console.log('Pomidoras'.slice(0,1));
+
+console.log('MOCIUTE'.slice(0,-2));
 
 
 
