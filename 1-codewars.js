@@ -3902,8 +3902,101 @@ console.log('Pomidoras'.slice(0,1));
 
 console.log('MOCIUTE'.slice(0,-2));
 
+let numbers = [1,2,3]
+  numbers[10]=11;
+  console.log(numbers.length)
+
+  function nthSmallest(arr, pos){
+    return arr.sort((a,b)=>a-b).slice(pos-1,pos).shift()
+  }
+  console.log(nthSmallest([3,1,2], 2));
+
+  function arrayMadnesss(a, b) {
+ 
+    return a.reduce((total,n)=>total+n**2,0)>b.reduce((total,n)=>total+n**3,0)
+  };
+  
+  
+  console.log(arrayMadnesss([4,5,6],[1,2,3]))
+
+  function strCo(str, letter){  
+    return str.split('').filter(w=>w===letter).length
+  }
+  console.log(strCo("hello",'o'))
+
+  function reverseWo(str){
+    return str.split(' ').reverse().join(' ')
+  }
+  console.log(reverseWo('hello world!'))
+
+  function betterThanAvera(classPoints, yourPoints) {
+    return classPoints.reduce((total,n)=>total+n,0)/classPoints.length<yourPoints
+  }
+  console.log(betterThanAvera([100, 40, 34, 57, 29, 72, 57, 88],75));
+
+  function solut(str){
+  
+    return str.split('').reverse().join('')
+    
+  }
+  console.log(solut('world'));
+
+  function digitize(n) {
+    return n.toString().split('').reverse().map(Number)
+  }
+  console.log(digitize(35231))
+
+  function removeChr(str){
+    //You got this!
+   return str.split('').slice(0,-1).join('').slice(1)
+   };
+   console.log(removeChr('eloquent'));
+
+   function sumM(x){
+  
+    return x.map(Number).reduce((total,n)=>total+n,0);
+  
+  }
+  console.log(sumM([9,3,'7','3']));
+
+  const reverseSeq = n => {
+    let naujas=[];
+    for(let i=1;i<=n;i++){
+      naujas.push(i);
+    }
+    
+    return naujas.reverse();
+  };
+  console.log(reverseSeq(5));
+
+  function isLochNessMonster(s) {
+    const a='tree fiddy'
+    const b ='3.50'
+    
+    return s.includes(a)||s.includes(b)||s.includes('three fifty')
+  }
+  console.log(isLochNessMonster("I'm from Scottland. I moved here to be with my family sir. Please, $3.50 would go a long way to help me find them"));
 
 
+
+  function find(seq) {
+  let a= seq.sort((a,b)=>a-b) // surikiuoti 1-13
+  let zingsnis=Math.abs(a[1]-a[0]) /// 2 
+  let pradzia=Math.min(...a);
+  let pabaiga=Math.max(...a);
+  let naujas=[];
+  for(let i=pradzia;i<=pabaiga;i+=zingsnis){
+    naujas.push(i)
+  };
+let ats=[];
+for(const skaiciai of naujas){
+  if(!seq.includes(skaiciai)){
+    ats.push(skaiciai)
+  }
+}
+    return parseFloat(ats)
+  }
+  console.log(find([3,9,1,11,13,5]))
 
 
 
