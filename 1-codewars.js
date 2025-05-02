@@ -3998,6 +3998,139 @@ for(const skaiciai of naujas){
   }
   console.log(find([3,9,1,11,13,5]))
 
+  function sol(str) {
+    const dalintas = str.split('');
+    let naujas = [];
+    
+    for (let i = 0; i < dalintas.length; i += 2) {
+        // Get the current character and the next one (or _ if it doesn't exist)
+        const first = dalintas[i];
+        const second = dalintas[i + 1] || '_';
+        naujas.push(first + second);
+    }
+    
+    return naujas;
+}
+
+console.log(sol('abcdefg')); // ["ab", "cd", "ef", "g_"]
+
+function htmlspecialchars(formData) {
+  let naujas=''
+
+  for(let i=0;i<formData.length;i++){
+    if(formData[i]==='<'){
+      naujas+='&lt;';
+    }else if(formData[i]==='>'){
+       naujas+='&gt;';
+    }else if(formData[i]==='"'){
+       naujas+='&quot;';
+    }else if(formData[i]==='&'){
+       naujas+='&amp;'
+    }else{
+       naujas+=formData[i];
+    }
+  }
+  return naujas;
+
+}
+console.log(htmlspecialchars("<h2>Hello World</h2>"));
+
+function f(array,element) {
+  for(let i=0;i<array.length;i++){
+    if(array[i]===element){
+      return i;
+    }else{
+    }
+  }
+return "Not Found"
+  }
+console.log(f([true, "Hello World", false, "Lorem Ipsum", 6, Math.PI],false));
+
+var splitInParts = function(s, partLength){
+  let pakeistas=[];
+
+  for(let i=0;i<s.length;i+=partLength){
+    const part=s.substr(i,partLength); // i pradzia yra o antras skaicius iki kur iskirpti /
+    pakeistas.push(part);
+
+  }
+  
+  return pakeistas.join(' ')
+}
+console.log(splitInParts('supercalifragilisticexpialidocious',3));
+
+console.log('labas'.substring(0,2));
+
+
+function myLanguages(results) {
+const keys=Object.keys(results) /// issidaliname raktus [Java Ruby Python ] raktus pasiimam.
+  let naujas=[];
+
+    for(let i=0;i<keys.length;i++){ // raktus leidziam per cikla ir paieskoje darome ifa 
+      if(results[keys[i]]>=60){// klausiam objekto per results [keys [i]] cia duoda rakto reiksme. 
+        naujas.push(keys[i])// grazinam vardus kuriu reiksmes atitiko. 
+      }
+    }
+    naujas.sort((a, b) => results[b] - results[a]);
+
+return naujas;
+
+}
+console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65}));// Ruby ir python
+
+// arba su filteriu. 
+
+function myLanguage(results) {
+  return Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
+}
+console.log(myLanguage({"Java" : 10, "Ruby" : 80, "Python" : 65}));
+
+
+function multiplyAndFilter(array, multiplier){
+  const naujas=[];
+
+  for(const skaiciai of array){
+    if(typeof skaiciai==='number'){
+    naujas.push(skaiciai*multiplier)
+  }
+  }
+  return naujas;
+}
+console.log(multiplyAndFilter([1, null, function(){}, 2.5, 'string', 10, undefined, {}, []], 3));
+/// arba 
+
+
+function multiplyAndFil(array, multiplier){
+
+  return array.filter(w=>typeof w==='number').map(w=>w*multiplier)
+}
+console.log(multiplyAndFil([1, null, function(){}, 2.5, 'string', 10, undefined, {}, []], 3));
+
+
+
+function halvingSum(n) {
+  let sum=0;
+  while(n>0){ // darys cikla kol pasieks 0 
+   sum+=n; // suma per cikla padides n+n/2 ... 
+   n=Math.floor(n/2);// zingsnis kitaip i++ vieta 
+  }
+  return sum;
+  
+}
+console.log(halvingSum(25))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
