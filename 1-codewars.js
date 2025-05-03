@@ -4119,6 +4119,38 @@ function halvingSum(n) {
 }
 console.log(halvingSum(25))
 
+function asteriscIt(n) { 
+  if(typeof n==='object'){
+    console.log(n.split)
+    let arr='';
+    for(let i=0;i<n.length;i++){
+      if(n[i]%2===0&&n[i+1]%2===0){
+        arr+=n[i]+'*'
+      }else{
+        arr+=n[i];
+      }
+    }
+    return arr;
+  }
+
+ let naujas= n.toString().split('').map(Number)
+ 
+let geras=[];
+ for(let i=0;i<naujas.length;i++){
+  if(naujas[i]%2===0&&naujas[i+1]%2===0){
+    geras.push(naujas[i]+'*')
+  }else{
+    geras.push(naujas[i]);
+  }
+ }
+
+return geras.map(String).join('')
+
+};
+console.log(asteriscIt([1, 4, 64, 68, 67, 23, 1]));//14*6*4*6*8*67231
+
+
+
 
 
 
