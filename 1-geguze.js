@@ -246,6 +246,102 @@ function pakeist(zodis){
 }
 console.log(pakeist('nebeprisikiskekoputeliavome'))
 
+//Parašykite funkciją, kuri apskaičiuoja skirtumą tarp dviejų datų dienomis. 
+
+
+//Parašykite funkciją, kuri konvertuoja pirmąją raidę į mažąją, jei ji buvo didžioji. 
+
+function convert(duomenys){
+    const raidynas='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let skirtas=duomenys.split(' ')
+    let naujas=''
+   for(const zodziai of skirtas){
+    if(raidynas.includes(zodziai[0])){
+        naujas+=zodziai[0].toLowerCase()+zodziai.slice(1)+' '
+    }else{
+        naujas+=' '+zodziai
+    }
+   }
+    return naujas;
+}
+console.log(convert('Jonas Buvo Aukstas'))
+
+/*Parašykite funkciją, kuri suskaičiuoja, kiek duotame tekste žodžių yra bent 5 simbolių 
+ilgio. */
+
+function count(duomenys){
+    let count=0;
+    let naujas=duomenys.split(' ')
+  for(const zodziai of naujas){
+    if(zodziai.length>=5){
+        count++
+    }
+  }
+    return count;
+}
+console.log(count('Sveiki gyvi ar jau ne vakaras kartais ir laikas eiti miegoti ?'));
+
+//Parašykite funkciją, kuri grąžina visus skaičius nuo start iki end kaip masyvą. 
+
+function startEnd(start,end){
+    let naujas=[];
+    for(let i=start;i<=end;i++){
+        naujas.push(i)
+    }
+    return naujas;
+}
+console.log(startEnd(2,10))
+
+//Parašykite funkciją, kuri randa antrą didžiausią skaičių masyve.
+
+function second(arr){
+
+    return parseInt(arr.sort().splice(-2,1))
+}
+console.log(second([1,7,3,5,4,6,9,8]))
+
+//Parašykite funkciją, kuri paverčia sekundes į formatą hh:mm:ss. 
+
+function sekundes(duomenys){
+    let valandos=Math.trunc(duomenys/3600).toString()
+    let minutes=Math.trunc((duomenys-(3600*valandos))/60).toString()
+    let sekundes=(((duomenys-(3600*valandos)))-minutes*60).toString()
+
+    if(valandos.length===1&&minutes.length===1&&sekundes.length===1){
+        return `0${valandos}:0${minutes}:0${sekundes}`
+    } else if(minutes.length===1&&sekundes.length===1){
+        return `${valandos}:0${minutes}:0${sekundes}`
+    } else if(sekundes.length===1){
+        return `${valandos}:${minutes}:0${sekundes}`
+    }
+    return `${valandos}:${minutes}:${sekundes}`
+}
+console.log(sekundes(43565));
+
+//Parašykite funkciją, kuri skaičiuoja, kiek kartų duotas simbolis pasikartoja string'e. 
+
+function kartojasi(string,symbol){
+
+    return string.split('').filter(r=>r===symbol).length
+}
+console.log(kartojasi('Sveiki, gyvi ar jau laikas miegot?','i'));
+
+/*Parašykite funkciją, kuri iš objektų masyvo išfiltruoja tik tuos, kurių reikšmė aktyvus: 
+true. */
+
+function filter(duomenys){
+    let keys=Object.keys(duomenys)
+    let naujas=[];
+
+    for(let i=0;i<keys.length;i++){
+        if(duomenys[keys[i]]===true){
+            naujas.push(keys[i])
+        }
+    }
+    return naujas;
+}
+console.log(filter({ "Objektas 1": true,"Objektas 2":  false,"Objektas 3": true, "Objektas 4":  false,"Objektas 5":  true, }));
+
 
 
 
