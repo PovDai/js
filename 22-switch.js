@@ -207,3 +207,106 @@ switch (stop) {
 }
 
 
+function gautiDienosPavadinima(dienosNumeris) {
+    let pavadinimas;
+    
+    switch (dienosNumeris) {
+      case 1:
+        pavadinimas = "Pirmadienis";
+        break;
+      case 2:
+        pavadinimas = "Antradienis";
+        break;
+      case 3:
+        pavadinimas = "Trečiadienis";
+        break;
+      case 4:
+        pavadinimas = "Ketvirtadienis";
+        break;
+      case 5:
+        pavadinimas = "Penktadienis";
+        break;
+      case 6:
+        pavadinimas = "Šeštadienis";
+        break;
+      case 7:
+        pavadinimas = "Sekmadienis";
+        break;
+      default:
+        pavadinimas = "Nežinoma diena";
+    }
+    
+    return pavadinimas;
+  }
+  
+  console.log(gautiDienosPavadinima(3));
+
+  function howManydays(month){
+    let days;
+    switch (month){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+        days=31;
+        
+        break;
+        
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+        days=30;
+        
+        break;
+        case 2:
+        
+        days=28
+        break;
+        default:
+      
+    }
+    return days;
+  }
+  console.log(howManydays(2))
+
+  function leo(oscar){
+    let skaicius
+    switch(oscar){
+        case 88:
+        skaicius="Leo finally won the oscar! Leo is happy"
+        break;
+        case 86:
+        skaicius="Not even for Wolf of wallstreet?!"
+        break;
+        case 87:
+        skaicius="When will you give Leo an Oscar?"
+        break;
+        case 89:
+        skaicius='Leo got one already!'
+     
+        default:
+    }
+    return skaicius;
+  
+  }
+  console.log(leo(90));
+
+  /// kai reikia salygu su rangu/ switch uzsiraso taip 
+
+  function leo(oscar){
+    switch(true){
+        case (oscar===88):
+        return "Leo finally won the oscar! Leo is happy"
+        case (oscar===86):
+        return "Not even for Wolf of wallstreet?!"
+        case (oscar<88):
+        return "When will you give Leo an Oscar?"
+        default:
+        return "Leo got one already!";
+    }
+  }
+  console.log(leo(86));

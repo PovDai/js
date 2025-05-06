@@ -4119,36 +4119,83 @@ function halvingSum(n) {
 }
 console.log(halvingSum(25))
 
-function asteriscIt(n) { 
-  if(typeof n==='object'){
-    console.log(n.split)
-    let arr='';
-    for(let i=0;i<n.length;i++){
-      if(n[i]%2===0&&n[i+1]%2===0){
-        arr+=n[i]+'*'
-      }else{
-        arr+=n[i];
-      }
+function asteriscI(n) { 
+  let str;
+
+  if (typeof n === 'object') {
+
+    str = n.join('');
+  } else {
+    str = n.toString();
+  }
+
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    result += str[i];
+    if (i < str.length - 1 && 
+        parseInt(str[i]) % 2 === 0 && 
+        parseInt(str[i + 1]) % 2 === 0) {
+      result += '*';
     }
-    return arr;
   }
 
- let naujas= n.toString().split('').map(Number)
- 
-let geras=[];
- for(let i=0;i<naujas.length;i++){
-  if(naujas[i]%2===0&&naujas[i+1]%2===0){
-    geras.push(naujas[i]+'*')
-  }else{
-    geras.push(naujas[i]);
-  }
- }
-
-return geras.map(String).join('')
-
+  return result;
 };
-console.log(asteriscIt([1, 4, 64, 68, 67, 23, 1]));//14*6*4*6*8*67231
 
+console.log(asteriscI([1, 4, 64, 68, 67, 23, 1])); // "14*6*4*6*8*67231"
+console.log(asteriscI(5312708)); // "531270*8"
+
+function calculate(num1, operation, num2) {
+  if(operation==='/'&&num2===0){
+    return null;
+  }
+  if(operation==='+'){
+    return num1+num2
+  } else if(operation==='-'){
+    return num1-num2
+  } else if(operation==='*'){
+    return num1*num2
+  } else if(operation==='/'){
+    return num1/num2
+  } else{
+  
+  }
+  return null
+}
+console.log(calculate(3.2,'+',8));
+console.log(calculate(-3,'+',0));
+
+function findScreenHeight(width, ratio) {
+ let pirmas= parseFloat( ratio.split(':').map(Number).slice(0,1))
+ let antras=parseFloat( ratio.split(':').map(Number).slice(1))
+
+ return `${width}x${(width/pirmas)*antras}`
+}
+console.log(findScreenHeight(1280,"16:9"))// '1280x720'
+
+function inAscOrder(arr) {
+  let naujas=[...arr].sort((a,b)=>a-b).join('')
+  
+  return naujas===arr.join('')
+  }
+  console.log(inAscOrder([1, 6, 10, 18, 2, 4, 20]));
+
+  function binaryCleaner(arr) {
+    let pirma=[];
+    let antra=[];
+    
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]===1||arr[i]===0){
+         pirma.push(arr[i])
+      }else{
+        antra.push(i)
+
+    }
+  }
+
+  return [pirma,antra]
+  }
+  console.log(binaryCleaner([0,1,2,1,0,2,1,1,1,0,4,5,6,2,1,1,0]));//[ 2, 5, 10, 11, 12, 13 ]
 
 
 

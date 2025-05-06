@@ -146,6 +146,7 @@ console.log(h.splice(0)); // viska istrina lieka tuscia.
 console.log(h.splice(1,2));// isima 22 ir 33 lieka 11 44 55 
 console.log(h.splice(2)); // lieka 11 22  44 55 
 console.log(h.splice(0,2))// 
+console.log('nebeprisikiskekoputeliavome'.splice(-4))// lieka tik vome paskutines 4 raides. 
 
 // reverse() funkcija grazina atbulini teksta 
 
@@ -401,11 +402,36 @@ console.log(n34);
 //// masyvas.find() // suranda pirmaji nari atitinkanti salyga. pvz /3 === 0 pirma kuris dalinasi is 3 
 
 
+//// kai norim is ['1','2','3'] reiksmes string padaryt number reiksmes darom map(Number) 
+// kai norim is [1,2,3,4] number reiksmes padaryt string reiksme map(String)
 
 
 
+// Object.keys() - grąžina objekto raktų masyvą
+const obj = {a: 1, b: 2};
+Object.keys(obj); // ['a', 'b']
+
+// Object.values() - grąžina objekto reikšmių masyvą
+
+const obj = {a: 1, b: 2};
+Object.values(obj); // [1, 2]
+
+/// Object.entries() - grąžina raktų-reikšmių porų masyvą
+
+const obj = {a: 1, b: 2};
+Object.entries(obj); // [['a', 1], ['b', 2]]
 
 
+//Object.assign() - kopijuoja savybes iš vieno ar kelių objektų į tiklinį objektą
+
+const target = {a: 1};
+const source = {b: 2};
+Object.assign(target, source); // {a: 1, b: 2}
+
+
+///// .map(Number) pakeis viduje esancia reiksme i number reiks pvz is string '2' i 2 
+
+/// .map(String) pakeis viduje esancia reiks i String pvz is 1 reiks '2' padaryt 
 
 
 

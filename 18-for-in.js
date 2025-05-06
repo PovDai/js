@@ -46,6 +46,23 @@ for(const s in symbols){
 console.log(maxSymbols);
 
 
+function myLanguages(results) {
+    const keys=Object.keys(results) /// issidaliname raktus [Java Ruby Python ]
+      let naujas=[];
+    
+        for(let i=0;i<keys.length;i++){
+          if(results[keys[i]]>=60){
+            naujas.push(keys[i])
+          }
+        }
+        naujas.sort((a, b) => results[b] - results[a]);
+    
+    return naujas;
+    
+    }
+    console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65}));
+
+
 
 
 

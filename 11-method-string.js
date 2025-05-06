@@ -174,19 +174,19 @@ console.log('Labas1221'.toLowerCase());
 console.log("The_Stealth-Warrior".replaceAll('-','').replaceAll('_','' ));
 
 console.log('-----slice-------')
-/// slice() nupjauna norima kieki zodzio.pirmas skaicius nuo kur antras iki kur. 
+/// slice() PALIEKA NORIMA SKILTELE NUO KIEK IKI KIEK ISPJAUTI IR GRAZINTI. 
 
 console.log('Pomidoras'.slice());
 console.log('Pomidoras'.slice(0));// tiek nupjauna. 
 console.log('Pomidoras'.slice(1));//// reiskiasi nupjaunam viena pirma raide. // OMIDORAS LIEKA 
 console.log('Pomidoras'.slice(0,1));// lieka tik P RAIDE. 
-console.log('Pomidoras'.slice(3));
+console.log('Pomidoras'.slice(3));// idoras lieka 
 console.log('Pomidoras'.slice(0,1));
 console.log('Pomidoras'.slice(0,2));/// tiek palieka 
 console.log('Pomidoras'.slice(0,3));// Pom
 console.log('LIETUVA'.slice(1,3));// Ispjauna IE, nes nuo 2 raides iki 4 raides ispjauna 
 console.log('SENUKAS'.slice(0,-1));// reiskiasi nupjauna paskutine raide. 
-console.log('MOCIUTE'.slice(0,-2));
+console.log('MOCIUTE'.slice(0,-2));// MOCIU lieka 
 console.log('JONUKAS'.slice(-6,-2));// reiskiasi ima 6 nuo galo ir nuo ten pjauna iki 2 nuo galo. 
 console.log('JONUKAS'.slice(-1)); // REISKIASI LIEKA TIK PASKUTINE RAIDE ARBA SIMBOLIS.  
 console.log('Jonukas'.slice(1,-1)// NUPJAUS PIRMA IR PASKUTINI NARI. )
@@ -310,6 +310,15 @@ function how(number){
   return true;
   }
   console.log(how([-5, -4, -5, -4]));
+
+// subString() iskarpymas galima cikle panaudoti. string.substring(startIndex, endIndex);
+
+const s = "LabasPasauli";
+const i = 2;          // Pradžios indeksas (nuo 0)
+const partLength = 5; // Norimos dalies ilgis
+
+const part = s.substring(i, i + partLength);
+console.log(part); // "basPa"
 
 
 

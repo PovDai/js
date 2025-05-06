@@ -4920,10 +4920,81 @@ function multiTab(number) {
 
   for (var i = 1; i <= 10; i++) {
     skaicius += "".concat(i, "*").concat(number, "=").concat(i * number);
-    if (i < 10) result += '\n';
+    if (i < 10) skaicius += '\n';
   }
 
   return skaicius;
 }
 
 console.log(multiTab(6));
+
+function pickIt(arr) {
+  var odd = [],
+      even = [];
+  var _iteratorNormalCompletion28 = true;
+  var _didIteratorError28 = false;
+  var _iteratorError28 = undefined;
+
+  try {
+    for (var _iterator28 = arr[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
+      var skaiciai = _step28.value;
+
+      if (skaiciai % 2 === 0) {
+        even.push(skaiciai);
+      } else {
+        odd.push(skaiciai);
+      }
+    }
+  } catch (err) {
+    _didIteratorError28 = true;
+    _iteratorError28 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion28 && _iterator28["return"] != null) {
+        _iterator28["return"]();
+      }
+    } finally {
+      if (_didIteratorError28) {
+        throw _iteratorError28;
+      }
+    }
+  }
+
+  return [odd, even];
+}
+
+console.log(pickIt([10, 20, 30])); /// arba 
+
+function su(arr) {
+  return [arr.filter(function (i) {
+    return i % 2 === 0;
+  }), arr.filter(function (i) {
+    return i % 2 !== 0;
+  })];
+}
+
+console.log(su([10, 20, 30])); /// kaip sufiltruoti zodzius pagal eile jame esancio skaiciaus. 
+
+function ie(zodis) {
+  return zodis.sort(function (a, b) {
+    // Extract numbers from each word
+    var numA = parseInt(a.match(/[0-9]/)[0]);
+    var numB = parseInt(b.match(/[0-9]/)[0]);
+    return numA - numB; // Sort by the numbers found in the words
+  });
+}
+
+console.log(ie(['Jon2as', 'Paul1s', 'Anna3'])); // Output: ['Paul1s', 'Jon2as', 'Anna3']
+
+/*
+Nustatyti, ar sąraše yra teigiamas skaičius.
+a. Pavyzdys: Patikrinkite, ar sąraše [1, -2, 3, -4] yra teigiamų skaičių
+ */
+
+function nustat(duomenys) {
+  return duomenys.filter(function (skaicius) {
+    return skaicius > 0;
+  }).length > 0;
+}
+
+console.log(nustat([1, -2, 3, -4]));
